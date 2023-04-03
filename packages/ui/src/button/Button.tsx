@@ -8,17 +8,17 @@ export interface ButtonProps {
   borderWidth?: string,
 }
 
-export const Button: any = styled(LoadingButton, {
+export const Button = styled(LoadingButton, {
   shouldForwardProp: (prop) =>
     prop !== 'backgroundColor' && prop !== 'LabelColor' && prop !== 'borderColor' && prop !== 'borderWidth',
 })<ButtonProps & LoadingButtonProps>(({ backgroundColor, LabelColor, borderColor, borderWidth }) => ({
   backgroundColor,
   color: LabelColor,
   borderColor,
-  height: 52,
-  borderRadius: 148,
+  height: 44,
+  borderRadius: 130,
   fontSize: 16,
-  fontWeight: 600,
+  fontWeight: 500,
   textTransform: 'inherit',
   boxShadow: 'none',
   borderWidth,

@@ -3,9 +3,9 @@ import MuiTextField from '@mui/material/TextField';
 
 import { colorPalette } from '../colors';
 
-export const MyTextField = styled(MuiTextField)(() => ({
+export const TextField = styled(MuiTextField)(() => ({
     '& .MuiInputBase-root': {
-        height: 54,
+        height: 44,
         fontSize: 14,
         color: colorPalette.gray900,
         '& input': {
@@ -30,7 +30,7 @@ export const MyTextField = styled(MuiTextField)(() => ({
             borderColor: 'inherit'
         },
         '&.Mui-focused fieldset': {
-            border: `1px solid ${colorPalette.gray900}`,
+            border: `1.5px solid ${colorPalette.purple}`,
 
         },
     },

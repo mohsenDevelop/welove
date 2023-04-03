@@ -2,13 +2,16 @@
   "name": "admin-panel",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "craco start",
+    "build": "GENERATE_SOURCEMAP=false REACT_APP_BASE_URL=https://api.jobabout.co.uk craco build",
+    "lint": "eslint --ext .tsx,.ts src",
+    "lint:fix": "eslint --ext .tsx,.ts --fix src",
+    "lint:prettier": "prettier --check \"src/**/*.tsx\" \"src/**/*.ts\"",
+    "fix:prettier": "prettier --write \"src/**/*.tsx\" \"src/**/*.ts\""
   },
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
@@ -24,6 +27,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
     "react-toastify": "^9.1.2",
     "recharts": "^2.5.0",
     "ui": "*",
@@ -40,5 +44,33 @@
     "eslint-config-custom": "*",
     "tsconfig": "*",
     "typescript": "^4.9.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   }
 }

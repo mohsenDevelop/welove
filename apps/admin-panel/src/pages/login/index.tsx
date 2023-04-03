@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { MyTextField } from 'ui';
+import { TextField, Button, colorPalette } from 'ui';
 
 const LoginPage = () => {
     return (
         <div>
-            <MyTextField placeholder='hello' />
-        </div>
+            <TextField placeholder='hello' />
+            <Button backgroundColor={colorPalette.purple} LabelColor={colorPalette.white} variant={'contained'}>Login</Button >
+        </div >
     );
 };
 
