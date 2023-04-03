@@ -1,37 +1,36 @@
-import { useState } from 'react'
-import { ReactComponent as ViteLogo } from './assets/react.svg'
-import LoginLogo from './assets/vite.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import { theme } from '@styles/theme';
+import { store } from '@store/store';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
-          <ViteLogo />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={LoginLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + mohse</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Provider store={store}>
+
+      <ThemeProvider theme={theme}>
+        <StyledEngineProvider injectFirst>
+          <CssBaseline />
+          <BrowserRouter></BrowserRouter>
+        </StyledEngineProvider>
+      </ThemeProvider>
+
+      <ToastContainer
+        position='top-left'
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+    </Provider>
+  );
 }
 
-export default App
+export default App;

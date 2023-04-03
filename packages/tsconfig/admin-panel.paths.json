@@ -4,59 +4,53 @@
             "@mui/styled-engine": [
                 "./node_modules/@mui/styled-engine-sc"
             ],
-            "@UiKits/*": [
-                "src/UiKits/*"
+            "@uiKits/*": [
+                "src/uiKits/*"
             ],
-            "@Assets/*": [
-                "src/Assets/*"
+            "@assets/*": [
+                "src/assets/*"
             ],
-            "@Images/*": [
-                "src/Assets/Images/*"
+            "@images/*": [
+                "src/Assets/images/*"
             ],
-            "@Icons/*": [
-                "src/Assets/Icons/*"
+            "@icons/*": [
+                "src/Assets/icons/*"
             ],
-            "@Styles/*": [
-                "src/Styles/*"
+            "@styles/*": [
+                "src/styles/*"
             ],
-            "@Layouts/*": [
-                "src/Layouts/*"
+            "@layouts/*": [
+                "src/layouts/*"
             ],
-            "@Pages/*": [
-                "src/Pages/*"
+            "@pages/*": [
+                "src/pages/*"
             ],
-            "@Routes/*": [
-                "src/Routes/*"
+            "@routes/*": [
+                "src/routes/*"
             ],
-            "@Mock/*": [
-                "src/Mock/*"
-            ],
-            "@Utils/*": [
-                "src/Utils/*"
-            ],
-            "@Services/*": [
+            "@services/*": [
                 "src/Services/*"
             ],
-            "@Hooks/*": [
+            "@hooks/*": [
                 "src/Hooks/*"
             ],
-            "@Types/*": [
-                "src/Models/*"
+            "@types/*": [
+                "src/models/*"
             ],
-            "@Config/*": [
-                "src/Config/*"
+            "@config/*": [
+                "src/config/*"
             ],
-            "@Api/*": [
-                "src/Api/*"
+            "@api/*": [
+                "src/api/*"
             ],
-            "@Slices/*": [
-                "src/Slices/*"
+            "@slices/*": [
+                "src/slices/*"
             ],
-            "@FormValidations/*": [
-                "src/FormValidations/*"
+            "@formValidations/*": [
+                "src/formValidations/*"
             ],
-            "@Store/*": [
-                "src/Store/*"
+            "@store/*": [
+                "src/store/*"
             ]
         }
     }
