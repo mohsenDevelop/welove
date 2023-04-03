@@ -1,0 +1,63 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "@mui/styled-engine": [
+                "./node_modules/@mui/styled-engine-sc"
+            ],
+            "@UiKits/*": [
+                "src/UiKits/*"
+            ],
+            "@Assets/*": [
+                "src/Assets/*"
+            ],
+            "@Images/*": [
+                "src/Assets/Images/*"
+            ],
+            "@Icons/*": [
+                "src/Assets/Icons/*"
+            ],
+            "@Styles/*": [
+                "src/Styles/*"
+            ],
+            "@Layouts/*": [
+                "src/Layouts/*"
+            ],
+            "@Pages/*": [
+                "src/Pages/*"
+            ],
+            "@Routes/*": [
+                "src/Routes/*"
+            ],
+            "@Mock/*": [
+                "src/Mock/*"
+            ],
+            "@Utils/*": [
+                "src/Utils/*"
+            ],
+            "@Services/*": [
+                "src/Services/*"
+            ],
+            "@Hooks/*": [
+                "src/Hooks/*"
+            ],
+            "@Types/*": [
+                "src/Models/*"
+            ],
+            "@Config/*": [
+                "src/Config/*"
+            ],
+            "@Api/*": [
+                "src/Api/*"
+            ],
+            "@Slices/*": [
+                "src/Slices/*"
+            ],
+            "@FormValidations/*": [
+                "src/FormValidations/*"
+            ],
+            "@Store/*": [
+                "src/Store/*"
+            ]
+        }
+    }
+}
