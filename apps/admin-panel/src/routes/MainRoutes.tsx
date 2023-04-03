@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import { Suspense, lazy, memo } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -22,33 +22,31 @@ const LoadingCircle = memo(() => (
 
 const LoginPage = lazy(() => import('@pages/login'));
 
-const MainRoutes = () => {
-    return (
-        <Routes>
-
-            <Route
-                path={LOGIN_URL}
-                element={
+const MainRoutes = createBrowserRouter([
+    {
+        path: LOGIN_URL,
+        element: (
+            <Suspense fallback={<LoadingCircle />}>
+                <LoginPage />
+            </Suspense>
+        ),
+    },
+    {
+        path: PANEL_URL,
+        element: (
+            <div>Layout</div>
+        ),
+        children: [
+            {
+                path: DASHBOARD_URL,
+                element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <LoginPage />
+                        <div>Dashboard</div>
                     </Suspense>
-                }
-            />
-
-            <Route path={PANEL_URL} element={<div>Layout</div>} >
-
-                <Route
-                    path={DASHBOARD_URL}
-                    element={
-                        <Suspense fallback={<LoadingCircle />}>
-                            <div>Dashboard</div>
-                        </Suspense>
-                    }
-                />
-            </Route>
-
-        </Routes>
-    );
-};
+                )
+            }
+        ]
+    }
+]);
 
 export default MainRoutes;

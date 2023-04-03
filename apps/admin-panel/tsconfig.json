@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
   },
   "include": [
     "src"
@@ -9,9 +9,4 @@
     "node_modules"
   ],
   "extends": "tsconfig/admin-panel.json",
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
 }

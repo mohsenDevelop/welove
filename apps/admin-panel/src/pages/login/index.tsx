@@ -1,6 +1,11 @@
+import * as React from 'react';
+import { MyTextField } from 'ui';
+
 const LoginPage = () => {
     return (
-        <div>LoginPage</div>
+        <div>
+            <MyTextField placeholder='hello' />
+        </div>
     );
 };
 

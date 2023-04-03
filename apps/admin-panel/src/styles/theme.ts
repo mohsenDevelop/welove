@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { colorPalette } from 'ui';
 
 export const theme = createTheme({
     components: {

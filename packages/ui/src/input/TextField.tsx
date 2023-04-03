@@ -3,11 +3,11 @@ import MuiTextField from '@mui/material/TextField';
 
 import { colorPalette } from '../colors';
 
-export const TextField = styled(MuiTextField)(() => ({
+export const MyTextField = styled(MuiTextField)(() => ({
     '& .MuiInputBase-root': {
-        height: 40,
+        height: 54,
         fontSize: 14,
-        color: colorPalette.black,
+        color: colorPalette.gray900,
         '& input': {
             height: 28,
             paddingTop: '5px',
@@ -16,20 +16,21 @@ export const TextField = styled(MuiTextField)(() => ({
             borderRadius: 100,
             backgroundColor: `${colorPalette.white} !important`,
             '::placeholder': {
-                color: colorPalette.black,
+                color: colorPalette.gray900,
+                opacity: .5
             }
         }
     },
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
-            border: '1px solid #fff',
-            borderRadius: 100,
+            border: '1px solid rgba(39, 64, 82, 0.25)',
+            borderRadius: 17,
         },
         '&:hover fieldset': {
             borderColor: 'inherit'
         },
         '&.Mui-focused fieldset': {
-            border: `1px solid ${colorPalette.black}`,
+            border: `1px solid ${colorPalette.gray900}`,
 
         },
     },

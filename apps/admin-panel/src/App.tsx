@@ -1,21 +1,23 @@
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import { theme } from '@styles/theme';
 import { store } from '@store/store';
+import MainRoutes from '@routes/MainRoutes';
 
 function App() {
 
   return (
-    <Provider store={store}>
 
+    <Provider store={store}>
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
           <CssBaseline />
-          <BrowserRouter></BrowserRouter>
+          <div>heloo</div>
+          <RouterProvider router={MainRoutes} />
         </StyledEngineProvider>
       </ThemeProvider>
 
@@ -30,6 +32,7 @@ function App() {
         pauseOnHover
       />
     </Provider>
+
   );
 }
 

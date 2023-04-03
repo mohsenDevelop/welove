@@ -16,4 +16,5 @@ export const colorPalette = {
     black: '#000000',
     gray30: '#E5E5E5',
     gray20: '#EEEEEE',
+    gray900: '#363537',
 };
