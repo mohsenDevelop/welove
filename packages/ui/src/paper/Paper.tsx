@@ -13,7 +13,7 @@ export const Paper: FC<PaperProps> = ({ children, sx }) => {
     return (
         <Box
             bgcolor={colorPalette.white}
-            border={'1px solid rgba(0, 0, 0, 0.08)'}
+            border={'1px solid rgba(0, 0, 0, 0.18)'}
             borderRadius={'12px'}
             sx={sx}
         >
