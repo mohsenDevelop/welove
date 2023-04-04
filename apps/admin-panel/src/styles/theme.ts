@@ -26,7 +26,7 @@ export const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Inter',
+        fontFamily: 'Inter !important',
         allVariants: {
             color: '#363537'
 

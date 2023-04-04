@@ -16,7 +16,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
           <CssBaseline />
-          <div>heloo</div>
           <RouterProvider router={MainRoutes} />
         </StyledEngineProvider>
       </ThemeProvider>

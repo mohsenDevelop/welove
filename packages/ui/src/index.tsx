@@ -5,3 +5,4 @@ export * from './input/TextField';
 export * from './paper/Paper';
 export * from './dialog/Dialog';
 export * from './container/Container';
+export * from './breadCrumb/BreadCrumb';
