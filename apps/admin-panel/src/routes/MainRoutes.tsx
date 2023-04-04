@@ -5,8 +5,16 @@ import CircularProgress from '@mui/material/CircularProgress';
 import {
     DASHBOARD_URL,
     LOGIN_URL,
-    PANEL_URL
+    PANEL_URL,
+    CLIENT_MANAGEMENT_URL,
+    REWARD_URL,
+    LEADERSHIP_BOARD_URL,
+    NOTIFICATION_URL,
+    NEWS_URL,
+    REPORT_URL,
+    SETTING_URL
 } from '@config/urls';
+import PanelLayout from '@layouts/PanelLayout';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -33,9 +41,7 @@ const MainRoutes = createBrowserRouter([
     },
     {
         path: PANEL_URL,
-        element: (
-            <div>Layout</div>
-        ),
+        element: <PanelLayout />,
         children: [
             {
                 path: DASHBOARD_URL,
@@ -44,7 +50,63 @@ const MainRoutes = createBrowserRouter([
                         <div>Dashboard</div>
                     </Suspense>
                 )
-            }
+            },
+            {
+                path: CLIENT_MANAGEMENT_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>Client</div>
+                    </Suspense>
+                )
+            },
+            {
+                path: REWARD_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>Rewards</div>
+                    </Suspense>
+                )
+            },
+            {
+                path: LEADERSHIP_BOARD_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>LeaderShip board</div>
+                    </Suspense>
+                )
+            },
+            {
+                path: NOTIFICATION_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>Notifications</div>
+                    </Suspense>
+                )
+            },
+            {
+                path: NEWS_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>News</div>
+                    </Suspense>
+                )
+            },
+            {
+                path: REPORT_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>Reports</div>
+                    </Suspense>
+                )
+            },
+            {
+                path: SETTING_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <div>Setting</div>
+                    </Suspense>
+                )
+            },
         ]
     }
 ]);

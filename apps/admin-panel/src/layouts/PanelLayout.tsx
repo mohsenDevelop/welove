@@ -1,12 +1,16 @@
+import { Outlet } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
+
+import Sidebar from './Sidebar';
 
 const PanelLayout = () => {
     return (
         <Stack
             flexDirection={'row'}
-            alignItems={'center'}
+            height={'100vh'}
         >
-
+            <Sidebar />
+            <Outlet />
         </Stack>
 
     );

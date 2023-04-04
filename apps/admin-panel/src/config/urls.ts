@@ -13,3 +13,9 @@ export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
 export const NOTIFICATION_URL = '/panel/notification';
 // Dashboard
 export const DASHBOARD_URL = '/panel/dashboard';
+// News
+export const NEWS_URL = '/panel/news';
+// Report
+export const REPORT_URL = '/panel/report';
+// Setting
+export const SETTING_URL = '/panel/setting';
