@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { useFormik, Form, FormikProvider } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -9,9 +10,11 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { colorPalette, Button, LoginTextField } from 'ui';
 import { EyeIcon } from 'assets-ui';
 import { initialValues, validationSchema, initialValuesProps } from '@formValidations/login';
+import { DASHBOARD_URL } from '@config/urls';
 
 const LoginForm = () => {
 
+    const navigate = useNavigate();
     const captchaRef = useRef<any>(null);
     const [showPassword, setShowPassword] = useState(false);
 
@@ -21,7 +24,7 @@ const LoginForm = () => {
         onSubmit: (values) => {
 
             console.log({ values });
-
+            navigate(DASHBOARD_URL, { replace: true });
             /// if there is error, captcha must be reset
             if (captchaRef) { captchaRef?.current.reset(); }
         },
@@ -123,6 +126,7 @@ const LoginForm = () => {
 
                         <Button
                             variant={'contained'}
+                            type={'submit'}
                             fullWidth={true}
                             backgroundColor={colorPalette.purple}
                             disabled={!isValid}

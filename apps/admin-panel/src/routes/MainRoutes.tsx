@@ -29,6 +29,7 @@ const LoadingCircle = memo(() => (
 ));
 
 const LoginPage = lazy(() => import('@pages/login'));
+const DashboardPage = lazy(() => import('@pages/dashboard'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -47,7 +48,7 @@ const MainRoutes = createBrowserRouter([
                 path: DASHBOARD_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>Dashboard</div>
+                        <DashboardPage />
                     </Suspense>
                 )
             },
