@@ -1,3 +1,5 @@
+import React from 'react';
+
 export * from './button/Button';
 export * from './colors';
 export * from './input/TextArea';
@@ -6,3 +8,4 @@ export * from './paper/Paper';
 export * from './dialog/Dialog';
 export * from './container/Container';
 export * from './breadCrumb/BreadCrumb';
+export * from './tag/Tag';

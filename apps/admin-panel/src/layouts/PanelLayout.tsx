@@ -15,7 +15,7 @@ const PanelLayout = () => {
 
             <Stack flex={1}>
                 <Header />
-                <Container sx={{ height: 'calc(100% - 60px)', overflow: 'scroll' }}>
+                <Container sx={{ height: 'calc(100% - 60px)', overflow: 'scroll', pb: '60px' }}>
                     <Outlet />
                 </Container>
             </Stack>
