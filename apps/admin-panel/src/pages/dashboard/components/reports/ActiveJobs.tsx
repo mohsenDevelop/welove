@@ -19,7 +19,6 @@ const ActiveJobs = () => {
                     display={'flex'}
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    p={'0px 5px'}
                 >
                     <Typography variant={'h1'} fontSize={17} fontWeight={600}>Active Jobs</Typography>
                     <Box
@@ -29,6 +28,7 @@ const ActiveJobs = () => {
                         justifyContent={'space-between'}
                         bgcolor={'rgba(67, 218, 136, 0.2)'}
                         borderRadius={'98px'}
+                        p={'0px 8px'}
                     >
                         <Typography fontSize={12} fontWeight={400}> last month</Typography>
                         <NorthOutlinedIcon sx={{ color: colorPalette.green200, width: 17, height: 17 }} />
