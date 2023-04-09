@@ -27,7 +27,7 @@ const Table = () => {
                                 hover={false}
                                 sx={{ '& td': { borderBottom: rows.length !== _index + 1 ? '1px solid rgba(0, 0, 0, 0.08)' : 'unset', pb: '20px', } }}
                             >
-                                <TableCell align={'left'}>
+                                <TableCell align={'left'} sx={{ pl: '0px' }}>
                                     <Typography fontSize={14}>{_el.company}</Typography>
                                 </TableCell>
 

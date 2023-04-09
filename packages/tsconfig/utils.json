@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": false,
+        "moduleResolution": "node",
+        "preserveWatchOutput": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "strict": true,
+        "lib": [
+            "ES2015"
+        ],
+        "module": "ESNext",
+        "target": "es6"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

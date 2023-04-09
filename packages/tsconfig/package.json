@@ -5,6 +5,7 @@
   "main": "index.js",
   "files": [
     "react-library.json",
-    "admin-panel.json"
+    "admin-panel.json",
+    "utils.json"
   ]
 }

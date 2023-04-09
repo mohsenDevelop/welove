@@ -10,7 +10,7 @@ import { TablePagination } from 'ui';
 import { commonTypes } from '@models/common';
 import Table from './components/Table';
 
-const LeadershipBoard = () => {
+const LeadershipBoardPage = () => {
 
     const [filters, setFilters] = useState<commonTypes.Filters>({ page: 1, limit: 20 });
 
@@ -44,4 +44,4 @@ const LeadershipBoard = () => {
     );
 };
 
-export default LeadershipBoard;
+export default LeadershipBoardPage;

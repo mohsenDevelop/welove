@@ -31,6 +31,7 @@
     "react-toastify": "^9.1.2",
     "recharts": "^2.5.0",
     "ui": "*",
+    "utils": "*",
     "yup": "^1.0.2"
   },
   "devDependencies": {
