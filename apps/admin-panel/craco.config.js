@@ -22,7 +22,6 @@ module.exports = {
             '@formValidations': path.resolve(__dirname, './src/formValidations'),
         },
 
-
     },
     eslint: {
         enable: true,

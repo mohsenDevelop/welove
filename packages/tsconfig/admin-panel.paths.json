@@ -34,7 +34,7 @@
             "@hooks/*": [
                 "src/Hooks/*"
             ],
-            "@types/*": [
+            "@models/*": [
                 "src/models/*"
             ],
             "@config/*": [

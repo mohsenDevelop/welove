@@ -9,3 +9,4 @@ export * from './dialog/Dialog';
 export * from './container/Container';
 export * from './breadCrumb/BreadCrumb';
 export * from './tag/Tag';
+export * from './pagination/TablePagination';

@@ -30,6 +30,7 @@ const LoadingCircle = memo(() => (
 
 const LoginPage = lazy(() => import('@pages/login'));
 const DashboardPage = lazy(() => import('@pages/dashboard'));
+const LeadershipBoardPage = lazy(() => import('@pages/leadershipBoard'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -72,7 +73,7 @@ const MainRoutes = createBrowserRouter([
                 path: LEADERSHIP_BOARD_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>LeaderShip board</div>
+                        <LeadershipBoardPage />
                     </Suspense>
                 )
             },
