@@ -5,6 +5,7 @@ import {
     StarFillIcon
 } from 'assets-ui';
 import TopRewards from './components/topRewards';
+import TopPerforming from './components/topPerforming';
 
 const RewardsPage = () => {
     return (
@@ -12,6 +13,7 @@ const RewardsPage = () => {
             <StarFillIcon />
             <Typography variant={'h1'} p={'24px 0px'}>Rewards</Typography>
             <TopRewards />
+            <TopPerforming />
         </Stack>
     );
 };
