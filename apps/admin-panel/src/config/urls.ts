@@ -7,6 +7,7 @@ export const PANEL_URL = '/panel';
 export const CLIENT_MANAGEMENT_URL = '/panel/client-management';
 // Reward
 export const REWARD_URL = '/panel/reward';
+export const REWARD_CLEINT_URL = '/panel/reward/client';
 // Leadership Board
 export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
 // Notifications

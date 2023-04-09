@@ -22,7 +22,7 @@ export const BreadCrumb: FC<BreadCrumbProps> = ({ list, sx, onClick }) => {
             display={'flex'}
             alignItems={'center'}
             gap={'4px'}
-            onClick={() => onClick!(_index)}
+            onClick={() => onClick!(_item.link)}
           >
             <Typography
               fontSize={13}
@@ -62,7 +62,7 @@ export const BreadCrumb: FC<BreadCrumbProps> = ({ list, sx, onClick }) => {
 export interface BreadCrumbProps {
   sx?: SxProps;
   list: { link: string, name: string }[];
-  onClick?: (index: number) => void;
+  onClick?: (link: string) => void;
 }
 
 BreadCrumb.defaultProps = {

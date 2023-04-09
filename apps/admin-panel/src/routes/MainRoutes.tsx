@@ -12,7 +12,8 @@ import {
     NOTIFICATION_URL,
     NEWS_URL,
     REPORT_URL,
-    SETTING_URL
+    SETTING_URL,
+    REWARD_CLEINT_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 
@@ -32,6 +33,7 @@ const LoginPage = lazy(() => import('@pages/login'));
 const DashboardPage = lazy(() => import('@pages/dashboard'));
 const LeadershipBoardPage = lazy(() => import('@pages/leadershipBoard'));
 const RewardsPage = lazy(() => import('@pages/rewards'));
+const RewardsClientPage = lazy(() => import('@pages/rewardsClient'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -68,7 +70,17 @@ const MainRoutes = createBrowserRouter([
                     <Suspense fallback={<LoadingCircle />}>
                         <RewardsPage />
                     </Suspense>
-                )
+                ),
+
+            },
+            {
+                path: REWARD_CLEINT_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <RewardsClientPage />
+                    </Suspense>
+                ),
+
             },
             {
                 path: LEADERSHIP_BOARD_URL,
