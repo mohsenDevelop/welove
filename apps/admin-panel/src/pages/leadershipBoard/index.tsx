@@ -9,7 +9,6 @@ import {
 import { TablePagination } from 'ui';
 import { commonTypes } from '@models/common';
 import Table from './components/Table';
-import { filter } from 'lodash';
 
 const LeadershipBoard = () => {
 
