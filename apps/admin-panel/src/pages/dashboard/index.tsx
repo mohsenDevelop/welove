@@ -6,6 +6,7 @@ import {
 } from 'assets-ui';
 import Reports from './components/reports';
 import AdminNotifications from './components/adminNotifications';
+import TopPerforming from './components/topPerforming';
 
 const DashboardPage = () => {
     return (
@@ -14,6 +15,7 @@ const DashboardPage = () => {
             <Typography variant={'h1'} pb={'24px'}>Dashboard</Typography>
             <Reports />
             <AdminNotifications />
+            <TopPerforming />
         </Stack>
     );
 };

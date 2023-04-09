@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 
-import { Paper, colorPalette } from 'ui';
+import { Paper } from 'ui';
 import AdminNotifHeader from './AdminNotifHeader';
 import NotifItems from './NotifItems';
 

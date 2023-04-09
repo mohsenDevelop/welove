@@ -17,6 +17,7 @@ export const colorPalette = {
     purple: '#884EB9',
     black: '#000000',
     blue900: '#1E1F27',
+    blue800: '#274052',
     gray30: '#E5E5E5',
     gray20: '#EEEEEE',
     gray500: '#7A7A7A',
