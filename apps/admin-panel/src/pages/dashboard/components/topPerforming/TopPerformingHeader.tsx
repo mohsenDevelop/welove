@@ -14,6 +14,8 @@ const TopPerformingHeader = () => {
             flexDirection={'row'}
             justifyContent={'space-between'}
             alignItems={'center'}
+            borderBottom={'1px solid rgba(0, 0, 0, 0.08)'}
+            pb={'24px'}
         >
             <Typography
                 fontSize={17}

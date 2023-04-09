@@ -4,6 +4,7 @@ import {
     Paper
 } from 'ui';
 import TopPerformingHeader from './TopPerformingHeader';
+import Table from './topPerformTabel/Table';
 
 const TopPerforming = () => {
     return (
@@ -14,6 +15,7 @@ const TopPerforming = () => {
                 p={'40px 20px 24px 20px'}
             >
                 <TopPerformingHeader />
+                <Table />
             </Stack>
         </Paper>
     );
