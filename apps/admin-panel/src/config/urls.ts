@@ -6,8 +6,9 @@ export const PANEL_URL = '/panel';
 // Client Management
 export const CLIENT_MANAGEMENT_URL = '/panel/client-management';
 // Reward
-export const REWARD_URL = '/panel/reward';
-export const REWARD_CLEINT_URL = '/panel/reward/client';
+export const REWARD_URL = '/panel/rewards';
+export const REWARD_CLEINT_URL = '/panel/rewards/clients';
+export const REWARD_COMPANY_URL = '/panel/rewards/company';
 // Leadership Board
 export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
 // Notifications

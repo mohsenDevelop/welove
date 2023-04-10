@@ -10,7 +10,7 @@ import { commonTypes } from '@models/common';
 import RewardClientHeader from './components/RewardClientHeader';
 import Table from './components/Table';
 
-const RewardsClient = () => {
+const RewardsClientPage = () => {
 
     const navigate = useNavigate();
     const [filters, setFilters] = useState<commonTypes.Filters>({ page: 1, limit: 20 });
@@ -52,4 +52,4 @@ const RewardsClient = () => {
     );
 };
 
-export default RewardsClient;
+export default RewardsClientPage;

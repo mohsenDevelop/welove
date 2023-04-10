@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import MuiTable from '@mui/material/Table';
@@ -10,6 +11,7 @@ import {
     Button,
     colorPalette
 } from 'ui';
+import { REWARD_COMPANY_URL } from '@config/urls';
 
 const rows = [
     { id: '1', company: 'Company Name Placeholder', Points: 54, Pending: 2, Approved: 1000 },
@@ -21,6 +23,9 @@ const rows = [
 ];
 
 const Table = () => {
+
+    const navigate = useNavigate();
+
     return (
         <TableContainer sx={{ width: '100%', pt: '16px' }}>
             <MuiTable>
@@ -60,6 +65,7 @@ const Table = () => {
                                             height: 34,
                                             width: 124
                                         }}
+                                        onClick={() => navigate(`${REWARD_COMPANY_URL}/${_el.id}`)}
                                     >
                                         View details
                                     </Button>
