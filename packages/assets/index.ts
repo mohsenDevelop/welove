@@ -3,6 +3,7 @@ export { ReactComponent as LogingImg } from './images/login_img.svg';
 
 export { ReactComponent as EyeIcon } from './icons/eye_icon.svg';
 export { ReactComponent as DashboardIcon } from './icons/dashboard_icon.svg';
+export { ReactComponent as DashboardFillIcon } from './icons/dashboard_fill_icon.svg';
 export { ReactComponent as UsersIcon } from './icons/users_icon.svg';
 export { ReactComponent as RewardIcon } from './icons/reward_icon.svg';
 export { ReactComponent as LeadershipIcon } from './icons/leaderboard_icon.svg';

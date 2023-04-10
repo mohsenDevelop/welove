@@ -11,10 +11,10 @@
                 "src/assets/*"
             ],
             "@images/*": [
-                "src/Assets/images/*"
+                "src/assets/images/*"
             ],
             "@icons/*": [
-                "src/Assets/icons/*"
+                "src/assets/icons/*"
             ],
             "@styles/*": [
                 "src/styles/*"
@@ -28,11 +28,8 @@
             "@routes/*": [
                 "src/routes/*"
             ],
-            "@services/*": [
-                "src/Services/*"
-            ],
             "@hooks/*": [
-                "src/Hooks/*"
+                "src/hooks/*"
             ],
             "@models/*": [
                 "src/models/*"
