@@ -10,3 +10,5 @@ export * from './container/Container';
 export * from './breadCrumb/BreadCrumb';
 export * from './tag/Tag';
 export * from './pagination/TablePagination';
+export * from './tab/Tab';
+export * from './menues/SortMenu';
