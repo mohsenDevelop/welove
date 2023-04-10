@@ -12,3 +12,4 @@ export * from './tag/Tag';
 export * from './pagination/TablePagination';
 export * from './tab/Tab';
 export * from './menues/SortMenu';
+export * from './rewardCard/RewardCard';

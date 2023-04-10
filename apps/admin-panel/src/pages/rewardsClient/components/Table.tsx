@@ -65,7 +65,7 @@ const Table = () => {
                                             height: 34,
                                             width: 124
                                         }}
-                                        onClick={() => navigate(`${REWARD_COMPANY_URL}/${_el.id}`)}
+                                        onClick={() => navigate(`${REWARD_COMPANY_URL}/${_el.id}?company=${_el.company}`)}
                                     >
                                         View details
                                     </Button>
