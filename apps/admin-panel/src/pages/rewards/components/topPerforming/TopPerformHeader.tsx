@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -6,8 +7,12 @@ import {
     Button,
     colorPalette,
 } from 'ui';
+import { REWARD_CLEINT_URL } from '@config/urls';
 
 const TopPerformHeader = () => {
+
+    const navigate = useNavigate();
+
     return (
         <Stack
             flexDirection={'row'}
@@ -38,6 +43,7 @@ const TopPerformHeader = () => {
                         fontSize: 13,
                         fontWeight: 500
                     }}
+                    onClick={() => navigate(REWARD_CLEINT_URL)}
                 >
                     Show all
                 </Button>
