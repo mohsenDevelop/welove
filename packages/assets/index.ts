@@ -12,6 +12,7 @@ export { ReactComponent as NotifIcon } from './icons/notif_icon.svg';
 export { ReactComponent as NewsIcon } from './icons/news_icon.svg';
 export { ReactComponent as ReportIcon } from './icons/report_icon.svg';
 export { ReactComponent as SettingIcon } from './icons/setting_icon.svg';
+export { ReactComponent as SettingFillIcon } from './icons/setting_fill_icon.svg';
 export { ReactComponent as AttentionIcon } from './icons/attention_outline_icon.svg';
 export { ReactComponent as CameraIcon } from './icons/camera_outline_icon.svg';
 export { ReactComponent as CardIcon } from './icons/card_outline_icon.svg';

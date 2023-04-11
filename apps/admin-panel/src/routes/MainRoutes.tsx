@@ -36,6 +36,7 @@ const LeadershipBoardPage = lazy(() => import('@pages/leadershipBoard'));
 const RewardsPage = lazy(() => import('@pages/rewards'));
 const RewardsClientPage = lazy(() => import('@pages/rewardsClient'));
 const RewardsCompanyPage = lazy(() => import('@pages/rewardCompany'));
+const SettingPage = lazy(() => import('@pages/setting'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -129,7 +130,7 @@ const MainRoutes = createBrowserRouter([
                 path: SETTING_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>Setting</div>
+                        <SettingPage />
                     </Suspense>
                 )
             },
