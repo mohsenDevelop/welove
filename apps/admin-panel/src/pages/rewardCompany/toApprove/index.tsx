@@ -6,7 +6,9 @@ import Typography from '@mui/material/Typography';
 import { commonTypes } from '@models/common';
 import {
     RewardCard,
-    TablePagination
+    TablePagination,
+    Button,
+    colorPalette
 } from 'ui';
 
 const approveList = [
@@ -90,10 +92,28 @@ const ToApprove = () => {
                             referral={_el.referral}
                             theme={'darkBlue'}
                             actions={(
-                                <Stack>
-                                    <Typography>
-                                        Approved
-                                    </Typography>
+                                <Stack
+                                    width={'100%'}
+                                    flexDirection={'row'}
+                                    alignItems={'center'}
+                                    gap={'23px'}
+                                >
+                                    <Button
+                                        variant={'contained'}
+                                        backgroundColor={colorPalette.purple}
+                                        LabelColor={colorPalette.white}
+                                        fullWidth={true}
+                                    >
+                                        Approve reward
+                                    </Button>
+                                    <Button
+                                        variant={'outlined'}
+                                        borderColor={'rgba(39, 64, 82, 0.12)'}
+                                        LabelColor={colorPalette.gray900}
+                                        fullWidth={true}
+                                    >
+                                        Decline
+                                    </Button>
                                 </Stack>
                             )}
                         />
