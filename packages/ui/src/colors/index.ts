@@ -1,6 +1,7 @@
 export const colorPalette = {
     white: '#ffffff',
     green600: '#047710',
+    green500: '#108C1D',
     green300: '#78BA5A',
     green200: '#43DA88',
     green750: '#004832',

@@ -6,8 +6,10 @@ import Typography from '@mui/material/Typography';
 import { commonTypes } from '@models/common';
 import {
     RewardCard,
-    TablePagination
+    TablePagination,
+    colorPalette
 } from 'ui';
+import { DoneBoldIcon } from 'assets-ui';
 
 const approveList = [
     {
@@ -90,9 +92,22 @@ const Completed = () => {
                             referral={_el.referral}
                             theme={'green'}
                             actions={(
-                                <Stack>
-                                    <Typography>
-                                        Approved
+                                <Stack
+                                    flexDirection={'row'}
+                                    alignItems={'center'}
+                                    justifyContent={'center'}
+                                    width={'100%'}
+                                    height={44}
+                                    bgcolor={'rgba(179, 252, 195, 0.4)'}
+                                    borderRadius={'176px'}
+                                >
+                                    <DoneBoldIcon />
+                                    <Typography
+                                        fontSize={14}
+                                        fontWeight={500}
+                                        color={colorPalette.green500}
+                                    >
+                                        COMPLETED
                                     </Typography>
                                 </Stack>
                             )}

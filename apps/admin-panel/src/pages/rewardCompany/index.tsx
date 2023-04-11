@@ -2,17 +2,13 @@ import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-// import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 import {
     BreadCrumb,
     Tabs,
-    TablePagination,
     colorPalette,
     SortMenu,
-    RewardCard
 } from 'ui';
 import {
     REWARD_CLEINT_URL,
