@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -7,8 +8,12 @@ import {
     Button,
     colorPalette,
 } from 'ui';
+import { LEADERSHIP_BOARD_URL } from '@config/urls';
 
 const TopPerformingHeader = () => {
+
+    const navigate = useNavigate();
+
     return (
         <Stack
             flexDirection={'row'}
@@ -52,6 +57,7 @@ const TopPerformingHeader = () => {
                         fontSize: 13,
                         fontWeight: 500
                     }}
+                    onClick={() => navigate(LEADERSHIP_BOARD_URL)}
                 >
                     Show all
                 </Button>
