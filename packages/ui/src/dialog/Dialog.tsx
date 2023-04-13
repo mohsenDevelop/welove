@@ -22,6 +22,7 @@ export const Dialog: FC<DialogProps> = ({ open, onClose, width, children }) => {
             sx={{
                 '& div.MuiDialog-paper': {
                     width: width ? width : '100%',
+                    minWidth: width ? width : '100%',
                     borderRadius: '20px',
                 }
             }}

@@ -133,14 +133,6 @@ const AccountForm = () => {
                                     Save
                                 </Button>
 
-                                {/* <Button
-                                    variant={'outlined'}
-                                    borderColor={'rgba(39, 64, 82, 0.15)'}
-                                    LabelColor={colorPalette.gray900}
-                                >
-                                    Cancel
-                                </Button> */}
-
                             </Stack>
                         </Stack>
                     </Stack>
