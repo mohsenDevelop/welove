@@ -21,3 +21,4 @@ export const NEWS_URL = '/panel/news';
 export const REPORT_URL = '/panel/report';
 // Setting
 export const SETTING_URL = '/panel/setting';
+export const CHNAGE_PASSWORD_URL = '/panel/setting/change-password';

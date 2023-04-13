@@ -17,7 +17,7 @@ export const Button = styled(LoadingButton, {
   borderColor,
   height: 44,
   borderRadius: 130,
-  fontSize: 16,
+  fontSize: 14,
   fontWeight: 500,
   textTransform: 'inherit',
   boxShadow: 'none',

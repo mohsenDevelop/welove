@@ -8,9 +8,21 @@ import {
     Tabs,
     colorPalette,
 } from 'ui';
+import MyAccountTab from './components/myAccount';
+import PushNotifsTab from './components/pushNotifs';
+import AdminsTab from './components/admins';
+import TermsConditionTab from './components/termsCondition';
+
+const TabsPage: { [key: string]: any } = {
+    '1': <MyAccountTab />,
+    '2': <PushNotifsTab />,
+    '3': <AdminsTab />,
+    '4': <TermsConditionTab />
+};
+
 const SettingPage = () => {
 
-    const [tabValue, setTabValue] = useState('1');
+    const [tabValue, setTabValue] = useState<string>('1');
 
     const handleChangeTabs = (event: React.SyntheticEvent, newValue: string) => {
         setTabValue(newValue);
@@ -41,6 +53,10 @@ const SettingPage = () => {
                 <Tab value={'3'} label={'Admins'} />
                 <Tab value={'4'} label={'Terms & conditions'} />
             </Tabs>
+
+            {
+                tabValue ? TabsPage[tabValue] : null
+            }
         </Stack>
     );
 };

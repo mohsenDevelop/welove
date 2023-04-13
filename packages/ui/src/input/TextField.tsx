@@ -12,8 +12,18 @@ export const TextField = styled(MuiTextField)(() => ({
             '::placeholder': {
                 color: colorPalette.gray900,
                 opacity: .5
-            }
+            },
+
+        },
+        '& .Mui-disabled': {
+            '-webkit-text-fill-color': colorPalette.blue800,
+            backgroundColor: 'unset',
+            borderRadius: 'unset',
         }
+    },
+    '& .Mui-disabled': {
+        backgroundColor: '#F0F0F0',
+        borderRadius: 17,
     },
     '& .MuiOutlinedInput-root': {
         '& fieldset': {

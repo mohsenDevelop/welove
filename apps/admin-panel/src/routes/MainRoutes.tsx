@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Outlet } from 'react-router-dom';
 import { Suspense, lazy, memo } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -14,9 +14,11 @@ import {
     REPORT_URL,
     SETTING_URL,
     REWARD_CLEINT_URL,
-    REWARD_COMPANY_URL
+    REWARD_COMPANY_URL,
+    CHNAGE_PASSWORD_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
+import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -131,8 +133,15 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <SettingPage />
+                        <Outlet />
                     </Suspense>
-                )
+                ),
+                children: [
+                    {
+                        path: CHNAGE_PASSWORD_URL,
+                        element: <ChangePasswordDialog />
+                    }
+                ],
             },
         ]
     }
