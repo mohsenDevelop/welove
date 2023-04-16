@@ -34,7 +34,7 @@ const ChangePasswordDialog = () => {
         },
     });
 
-    const { errors, touched, values, isValid, handleSubmit, getFieldProps, setFieldValue } = formik;
+    const { errors, touched, values, isValid, handleSubmit, getFieldProps } = formik;
 
     return (
         <Dialog
