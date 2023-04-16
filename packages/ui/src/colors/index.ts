@@ -25,7 +25,9 @@ export const colorPalette = {
     blue20: '#E4F0F3',
     gray30: '#E5E5E5',
     gray20: '#EEEEEE',
+    gray70: '#E9E9EA',
     gray500: '#7A7A7A',
     gray550: '#566D7D',
     gray900: '#363537',
+    pink200: '#E5167A',
 };

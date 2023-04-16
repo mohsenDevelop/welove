@@ -1,6 +1,14 @@
+import Stack from '@mui/material/Stack';
+
+import RemindMe from './RemindMe';
+import NotifList from './NotifList';
+
 const PushNotifsTab = () => {
     return (
-        <div>PushNotifs</div>
+        <Stack pt={'24px'}>
+            <RemindMe />
+            <NotifList />
+        </Stack>
     );
 };
 
