@@ -15,10 +15,12 @@ import {
     SETTING_URL,
     REWARD_CLEINT_URL,
     REWARD_COMPANY_URL,
-    CHNAGE_PASSWORD_URL
+    CHNAGE_PASSWORD_URL,
+    DELETE_ADMIN_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
+import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDialog';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -140,7 +142,11 @@ const MainRoutes = createBrowserRouter([
                     {
                         path: CHNAGE_PASSWORD_URL,
                         element: <ChangePasswordDialog />
-                    }
+                    },
+                    {
+                        path: DELETE_ADMIN_URL,
+                        element: <DeleteAdminDialog />
+                    },
                 ],
             },
         ]
