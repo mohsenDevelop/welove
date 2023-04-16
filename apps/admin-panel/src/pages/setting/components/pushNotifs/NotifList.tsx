@@ -61,14 +61,8 @@ const NotifList = () => {
                     alignItems={'center'}
                     justifyContent={'space-between'}
                     p={'34px 95px 34px 24px'}
-                    border={`1px solid ${colorPalette.white}`}
-                    sx={{
-                        transition: 'all ease .3s',
-                        ':hover': {
-                            borderColor: 'rgba(0, 0, 0, 0.08) !important',
-                            borderRadius: '12px'
-                        }
-                    }}
+                    bgcolor={colorPalette.gray10}
+                    borderRadius={'12px'}
                 >
                     <Typography
                         fontSize={14}
@@ -90,13 +84,6 @@ const NotifList = () => {
                     justifyContent={'space-between'}
                     p={'34px 95px 34px 24px'}
                     border={`1px solid ${colorPalette.white}`}
-                    sx={{
-                        transition: 'all ease .3s',
-                        ':hover': {
-                            borderColor: 'rgba(0, 0, 0, 0.08) !important',
-                            borderRadius: '12px'
-                        }
-                    }}
                 >
                     <Typography
                         fontSize={14}
@@ -117,14 +104,8 @@ const NotifList = () => {
                     alignItems={'center'}
                     justifyContent={'space-between'}
                     p={'34px 95px 34px 24px'}
-                    border={`1px solid ${colorPalette.white}`}
-                    sx={{
-                        transition: 'all ease .3s',
-                        ':hover': {
-                            borderColor: 'rgba(0, 0, 0, 0.08) !important',
-                            borderRadius: '12px'
-                        }
-                    }}
+                    bgcolor={colorPalette.gray10}
+                    borderRadius={'12px'}
                 >
                     <Typography
                         fontSize={14}

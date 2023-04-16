@@ -15,7 +15,7 @@ export const Switch = styled((props: SwitchProps) => (
         transitionDuration: '300ms',
         '&.Mui-checked': {
             transform: 'translateX(19px)',
-            color: '#fff',
+            color: colorPalette.white,
             '& + .MuiSwitch-track': {
                 backgroundColor: colorPalette.pink200,
                 opacity: 1,
@@ -26,7 +26,7 @@ export const Switch = styled((props: SwitchProps) => (
             },
         },
         '&.Mui-focusVisible .MuiSwitch-thumb': {
-            color: '#fff',
+            color: colorPalette.white,
             boxShadow: 'unset'
         },
         '&.Mui-disabled .MuiSwitch-thumb': {
