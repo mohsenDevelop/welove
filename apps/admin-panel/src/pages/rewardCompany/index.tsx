@@ -48,7 +48,7 @@ const RewardCompanyPage = () => {
                 justifyContent={'space-between'}
             >
                 <Tabs
-                    indicateColor={colorPalette.purple}
+                    indicatecolor={colorPalette.purple}
                     value={tabValue}
                     onChange={handleChangeTabs}
                 >

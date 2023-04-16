@@ -44,7 +44,7 @@ const SettingPage = () => {
             <Typography variant={'h1'} pb={'24px'}>Settings</Typography>
 
             <Tabs
-                indicateColor={colorPalette.purple}
+                indicatecolor={colorPalette.purple}
                 value={tabValue}
                 onChange={handleChangeTabs}
             >

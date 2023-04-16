@@ -4,7 +4,7 @@ import MuiTabs, { TabsProps as MuiTabProps } from '@mui/material/Tabs';
 import { colorPalette } from '../colors';
 
 export interface TabsProps extends MuiTabProps {
-    indicateColor: string;
+    indicatecolor: string;
 }
 
 export const Tabs: FC<TabsProps> = (props) => {
@@ -12,7 +12,7 @@ export const Tabs: FC<TabsProps> = (props) => {
         <MuiTabs
             sx={{
                 '& .MuiTabs-indicator': {
-                    bgcolor: props.indicateColor
+                    bgcolor: props.indicatecolor
                 },
                 '& .MuiTab-root.Mui-selected': {
                     color: colorPalette.blue800,
