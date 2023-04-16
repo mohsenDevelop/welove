@@ -23,3 +23,4 @@ export { ReactComponent as StarFillIcon } from './icons/star_fill_icon.svg';
 export { ReactComponent as PhotoIcon } from './icons/photo_icon.svg';
 export { ReactComponent as CloseIcon } from './icons/close_icon.svg';
 export { ReactComponent as TrashIcon } from './icons/trash_icon.svg';
+export { ReactComponent as EditIcon } from './icons/edit_icon.svg';

@@ -16,7 +16,8 @@ import {
     REWARD_CLEINT_URL,
     REWARD_COMPANY_URL,
     CHNAGE_PASSWORD_URL,
-    DELETE_ADMIN_URL
+    DELETE_ADMIN_URL,
+    POLICY_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -41,6 +42,7 @@ const RewardsPage = lazy(() => import('@pages/rewards'));
 const RewardsClientPage = lazy(() => import('@pages/rewardsClient'));
 const RewardsCompanyPage = lazy(() => import('@pages/rewardCompany'));
 const SettingPage = lazy(() => import('@pages/setting'));
+const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/policy'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -147,7 +149,19 @@ const MainRoutes = createBrowserRouter([
                         path: DELETE_ADMIN_URL,
                         element: <DeleteAdminDialog />
                     },
+                    {
+                        path: POLICY_URL,
+                        element: <PolicyPage />
+                    },
                 ],
+            },
+            {
+                path: `${POLICY_URL}/:id`,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <PolicyPage />
+                    </Suspense>
+                ),
             },
         ]
     }
