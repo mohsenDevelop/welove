@@ -2,7 +2,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { Tag, colorPalette } from 'ui';
-import { UserFillIcon } from 'assets-ui';
 
 const NotifItems = () => {
     return (
@@ -45,7 +44,6 @@ const NotifItems = () => {
                                 title={'Company name'}
                                 type={'company'}
                                 mode={'circle'}
-                                Icon={<UserFillIcon />}
                             />
                         </Stack>
 
