@@ -45,6 +45,7 @@ const RewardsClientPage = lazy(() => import('@pages/rewardsClient'));
 const RewardsCompanyPage = lazy(() => import('@pages/rewardCompany'));
 const SettingPage = lazy(() => import('@pages/setting'));
 const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/policy'));
+const NewsPage = lazy(() => import('@pages/news'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -122,7 +123,7 @@ const MainRoutes = createBrowserRouter([
                 path: NEWS_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>News</div>
+                        <NewsPage />
                     </Suspense>
                 )
             },

@@ -16,7 +16,7 @@ const typeBgColors = {
     'employee': 'rgba(45, 172, 194, 0.15)',
     'company': 'rgba(45, 172, 194, 0.15)',
     'video': 'rgba(255, 166, 0, 0.15)',
-    'copy': 'gba(136, 78, 185, 0.15)',
+    'copy': 'rgba(136, 78, 185, 0.15)',
 };
 
 const typeBgSvgs = {
