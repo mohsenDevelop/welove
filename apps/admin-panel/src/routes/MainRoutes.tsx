@@ -18,12 +18,14 @@ import {
     CHNAGE_PASSWORD_URL,
     DELETE_ADMIN_URL,
     POLICY_URL,
-    CREATE_ADMIN_URL
+    CREATE_ADMIN_URL,
+    NEWS_DELETE_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
 import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDialog';
 import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
+import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -124,8 +126,15 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <NewsPage />
+                        <Outlet />
                     </Suspense>
-                )
+                ),
+                children: [
+                    {
+                        path: `${NEWS_DELETE_URL}/:id`,
+                        element: <NewsDeleteDialog />
+                    },
+                ],
             },
             {
                 path: REPORT_URL,

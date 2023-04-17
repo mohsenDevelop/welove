@@ -1,10 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import { colorPalette, Tag } from 'ui';
+import { NEWS_DELETE_URL } from '@config/urls';
 
 const NewsList = () => {
+
+    const navigate = useNavigate();
+
     return (
         <Stack
             pt={'44px'}
@@ -81,6 +86,7 @@ const NewsList = () => {
                             fontWeight={500}
                             color={colorPalette.red200}
                             sx={{ cursor: 'pointer' }}
+                            onClick={() => navigate(`${NEWS_DELETE_URL}/1`)}
                         >
                             Delete
                         </Typography>
@@ -169,6 +175,7 @@ const NewsList = () => {
                             fontWeight={500}
                             color={colorPalette.red200}
                             sx={{ cursor: 'pointer' }}
+                            onClick={() => navigate(`${NEWS_DELETE_URL}/1`)}
                         >
                             Delete
                         </Typography>
