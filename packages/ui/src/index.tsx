@@ -16,3 +16,4 @@ export * from './menues/RemindMenu';
 export * from './menues/AddNewsMenu';
 export * from './rewardCard/RewardCard';
 export * from './switch/Switch';
+export * from './companyList/CompanyList';

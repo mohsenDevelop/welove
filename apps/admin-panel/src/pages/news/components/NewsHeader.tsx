@@ -1,4 +1,5 @@
 import { useState, MouseEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -8,8 +9,11 @@ import {
     colorPalette
 } from 'ui';
 import { CameraIcon, CardIcon } from 'assets-ui';
+import { NEWS_URL_COPY_ITEM_URL } from '@config/urls';
 
 const NewsHeader = () => {
+
+    const navigate = useNavigate();
 
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -127,6 +131,7 @@ const NewsHeader = () => {
                             display={'flex'}
                             flexDirection={'column'}
                             gap={'4px'}
+                            onClick={() => navigate(NEWS_URL_COPY_ITEM_URL)}
                         >
                             <Typography
                                 variant={'h1'}

@@ -17,6 +17,7 @@ export const NOTIFICATION_URL = '/panel/notification';
 export const DASHBOARD_URL = '/panel/dashboard';
 // News
 export const NEWS_URL = '/panel/news';
+export const NEWS_URL_COPY_ITEM_URL = '/panel/news/copy-item';
 export const NEWS_DELETE_URL = '/panel/news/delete';
 // Report
 export const REPORT_URL = '/panel/report';

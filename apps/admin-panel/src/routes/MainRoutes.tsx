@@ -19,7 +19,8 @@ import {
     DELETE_ADMIN_URL,
     POLICY_URL,
     CREATE_ADMIN_URL,
-    NEWS_DELETE_URL
+    NEWS_DELETE_URL,
+    NEWS_URL_COPY_ITEM_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -48,6 +49,7 @@ const RewardsCompanyPage = lazy(() => import('@pages/rewardCompany'));
 const SettingPage = lazy(() => import('@pages/setting'));
 const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/policy'));
 const NewsPage = lazy(() => import('@pages/news'));
+const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -135,6 +137,14 @@ const MainRoutes = createBrowserRouter([
                         element: <NewsDeleteDialog />
                     },
                 ],
+            },
+            {
+                path: NEWS_URL_COPY_ITEM_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <NewsCopyItemPage />
+                    </Suspense>
+                ),
             },
             {
                 path: REPORT_URL,
