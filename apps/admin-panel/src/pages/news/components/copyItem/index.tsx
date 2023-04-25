@@ -23,7 +23,7 @@ const CopyItemPage = () => {
             <Paper
                 sx={{
                     mt: '24px',
-                    p: '30px 57px 30px 30px',
+                    p: '30px',
                     boxShadow: '0px 1px 12px rgba(168, 168, 168, 0.08)'
                 }}
             >

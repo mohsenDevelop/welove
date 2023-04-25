@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useState, useMemo } from 'react';
+import { ChangeEvent, FC, useState } from 'react';
 import { SxProps } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import InputBase from '@mui/material/InputBase';
@@ -42,6 +42,7 @@ export const TextTag: FC<TextTagProps> = ({ sx, onTags }) => {
 
         setTags(newSelected);
         setValue('');
+        onTags(newSelected);
 
     };
 
@@ -54,11 +55,8 @@ export const TextTag: FC<TextTagProps> = ({ sx, onTags }) => {
             tags.slice(_tagIndex + 1),
         );
         setTags(newSelected);
+        onTags(newSelected);
     };
-
-    useMemo(() => {
-        onTags(tags);
-    }, [tags]);
 
     return (
         <Stack

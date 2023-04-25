@@ -31,4 +31,6 @@ export const colorPalette = {
     gray550: '#566D7D',
     gray900: '#363537',
     pink200: '#E5167A',
+    AquaBlue200: '#2DACC2',
+    Grape200: '#C2BE33',
 };
