@@ -34,8 +34,6 @@ export const CompanyList: FC<CompanyListProps> = ({ rows, sx }) => {
         const selectedIndex = selected.indexOf(_id);
         let newSelected: readonly string[] = [];
 
-        console.log({ _id });
-
         if (selectedIndex === -1) {
             newSelected = newSelected.concat(selected, _id);
         } else if (selectedIndex === 0) {
@@ -51,7 +49,6 @@ export const CompanyList: FC<CompanyListProps> = ({ rows, sx }) => {
             );
         }
 
-        console.log({ newSelected });
         setSelected(newSelected);
     };
 
