@@ -4,14 +4,15 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { BreadCrumb, Paper } from 'ui';
-import CopyItemForm from './CopyItemForm';
+import VideoOrPhotoForm from './VideoOrPhotoForm';
 
-const CopyItemPage = () => {
+const VideoOrPhotoPage = () => {
 
     const navigate = useNavigate();
 
     return (
         <Stack>
+
             <BreadCrumb
                 list={[
                     { link: NEWS_URL, name: 'News' },
@@ -27,6 +28,7 @@ const CopyItemPage = () => {
                     boxShadow: '0px 1px 12px rgba(168, 168, 168, 0.08)'
                 }}
             >
+
                 <Typography
                     variant={'h1'}
                     fontSize={14}
@@ -43,14 +45,14 @@ const CopyItemPage = () => {
                     fontWeight={600}
                     pb={'38px'}
                 >
-                    Copy Item
+                    Video or Photo
                 </Typography>
 
-                <CopyItemForm />
-
+                <VideoOrPhotoForm />
             </Paper>
+
         </Stack>
     );
 };
 
-export default CopyItemPage;
+export default VideoOrPhotoPage;

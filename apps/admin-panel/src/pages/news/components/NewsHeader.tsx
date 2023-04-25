@@ -9,7 +9,7 @@ import {
     colorPalette
 } from 'ui';
 import { CameraIcon, CardIcon } from 'assets-ui';
-import { NEWS_URL_COPY_ITEM_URL } from '@config/urls';
+import { NEWS_URL_COPY_ITEM_URL, NEWS_URL_VIDOE_PHOTO_URL } from '@config/urls';
 
 const NewsHeader = () => {
 
@@ -86,6 +86,7 @@ const NewsHeader = () => {
                             display={'flex'}
                             flexDirection={'column'}
                             gap={'4px'}
+                            onClick={() => navigate(NEWS_URL_VIDOE_PHOTO_URL)}
                         >
                             <Typography
                                 variant={'h1'}
