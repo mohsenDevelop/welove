@@ -4,6 +4,7 @@ export * from './button/Button';
 export * from './colors';
 export * from './input/TextArea';
 export * from './input/TextField';
+export * from './input/TextTag';
 export * from './paper/Paper';
 export * from './dialog/Dialog';
 export * from './container/Container';

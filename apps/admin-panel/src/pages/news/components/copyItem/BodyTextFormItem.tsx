@@ -8,7 +8,6 @@ import SunEditorCore from 'suneditor/src/lib/core';
 const BodyTextFormItem = () => {
 
     const { values, setFieldValue } = useFormikContext();
-    console.log({ values });
 
     const editor = useRef<SunEditorCore>();
 

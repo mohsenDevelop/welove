@@ -5,6 +5,7 @@ import HeaderFormItem from './HeaderFormItem';
 import BodyTextFormItem from './BodyTextFormItem';
 import LinkFormItem from './LinkFormItem';
 import ShareFormItem from './ShareFormItem';
+import TagFormItem from './TagFormItem';
 
 const CopyItemForm = () => {
 
@@ -25,6 +26,7 @@ const CopyItemForm = () => {
             >
                 <HeaderFormItem />
                 <BodyTextFormItem />
+                <TagFormItem />
                 <LinkFormItem />
                 <ShareFormItem />
             </Stack>

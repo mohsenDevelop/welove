@@ -1,15 +1,14 @@
-import { FC } from 'react';
 import { useFormikContext } from 'formik';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import {
-    TextField
+    TextTag
 } from 'ui';
 
-const HeaderFormItem: FC<any> = () => {
+const TagFormItem = () => {
 
-    const { values, getFieldProps } = useFormikContext();
+    const { setFieldValue } = useFormikContext();
 
     return (
         <Stack
@@ -26,7 +25,7 @@ const HeaderFormItem: FC<any> = () => {
                     fontSize={16}
                     fontWeight={500}
                 >
-                    * Header
+                    * #tag
                 </Typography>
 
                 <Typography
@@ -38,11 +37,12 @@ const HeaderFormItem: FC<any> = () => {
 
             </Stack>
 
-            <TextField
-                {...getFieldProps('header')}
+            <TextTag
                 sx={{ flex: 1 }}
+                onTags={(tags: readonly string[]) => setFieldValue('tags', tags)}
             />
         </Stack>
     );
 };
-export default HeaderFormItem;
+
+export default TagFormItem;
