@@ -9,7 +9,7 @@ import {
 
 const HeaderFormItem: FC<any> = () => {
 
-    const { values, getFieldProps } = useFormikContext();
+    const { getFieldProps } = useFormikContext();
 
     return (
         <Stack
