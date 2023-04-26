@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "craco start",
-    "build": "GENERATE_SOURCEMAP=false craco build",
+    "build:prod": "GENERATE_SOURCEMAP=false craco build",
     "lint": "eslint --ext .tsx,.ts src",
     "lint:fix": "eslint --ext .tsx,.ts --fix src",
     "lint:prettier": "prettier --check \"src/**/*.tsx\" \"src/**/*.ts\"",
