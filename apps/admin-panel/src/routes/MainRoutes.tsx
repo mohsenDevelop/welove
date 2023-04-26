@@ -52,6 +52,7 @@ const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/p
 const NewsPage = lazy(() => import('@pages/news'));
 const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'));
+const ClientsPage = lazy(() => import('@pages/clients'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -78,7 +79,7 @@ const MainRoutes = createBrowserRouter([
                 path: CLIENT_MANAGEMENT_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>Client</div>
+                        <ClientsPage />
                     </Suspense>
                 )
             },
