@@ -42,7 +42,7 @@ export const AddNewsMenu: FC<AddNewsMenuProps> = (
                 backgroundColor={btnBgcolor}
                 LabelColor={colorPalette.white}
                 startIcon={<AddOutlinedIcon />}
-                endIcon={open ? <ExpandMoreOutlinedIcon /> : <ExpandLessOutlinedIcon />}
+                endIcon={open ? <ExpandLessOutlinedIcon /> : <ExpandMoreOutlinedIcon />}
                 sx={{
                     height: 48,
                     fontWeight: 700
