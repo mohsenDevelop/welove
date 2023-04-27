@@ -14,6 +14,7 @@ import {
     colorPalette
 } from 'ui';
 import TableHeader from './TableHeader';
+import AccountStatus from './AccountStatus';
 
 const rows = [
     {
@@ -125,7 +126,7 @@ const Table = () => {
                                     <Typography fontSize={14} component={'span'}>{_el.id}</Typography>
                                 </TableCell>
 
-                                <TableCell align={'left'} sx={{ pl: '0px' }}>
+                                <TableCell align={'left'} sx={{ pl: '0px', width: '100%' }}>
                                     <Box
                                         display={'flex'}
                                         alignItems={'center'}
@@ -142,20 +143,27 @@ const Table = () => {
                                 </TableCell>
 
                                 <TableCell align={'right'}>
-                                    <Button
-                                        variant={'outlined'}
-                                        LabelColor={colorPalette.purple}
-                                        borderColor={'rgba(39, 64, 82, 0.15)'}
-                                        startIcon={<EditOutlinedIcon style={{ color: colorPalette.purple, width: 19, height: 19 }} />}
-                                        sx={{
-                                            fontSize: 13,
-                                            fontWeight: 500,
-                                            width: 84
-                                        }}
-                                    // onClick={() => navigate(DELETE_ADMIN_URL)}
+                                    <Box
+                                        display={'flex'}
+                                        alignItems={'center'}
+                                        gap={'15px'}
                                     >
-                                        Edit
-                                    </Button>
+                                        <Button
+                                            variant={'outlined'}
+                                            LabelColor={colorPalette.purple}
+                                            borderColor={'rgba(39, 64, 82, 0.15)'}
+                                            startIcon={<EditOutlinedIcon style={{ color: colorPalette.purple, width: 19, height: 19 }} />}
+                                            sx={{
+                                                fontSize: 13,
+                                                fontWeight: 500,
+                                                width: 84
+                                            }}
+                                        // onClick={() => navigate(DELETE_ADMIN_URL)}
+                                        >
+                                            Edit
+                                        </Button>
+                                        <AccountStatus />
+                                    </Box>
                                 </TableCell>
 
                             </TableRow>

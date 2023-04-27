@@ -3,21 +3,21 @@ import { styled } from '@mui/material/styles';
 
 import { colorPalette } from '../colors';
 
-export const Switch = styled((props: SwitchProps) => (
+export const AccountSwitch = styled((props: SwitchProps) => (
     <MuiSwitch focusVisibleClassName='.Mui-focusVisible' disableRipple={true} {...props} />
 ))(({ theme }) => ({
-    width: 44,
-    height: 24,
+    width: 28,
+    height: 16,
     padding: 0,
     '& .MuiSwitch-switchBase': {
         padding: 0,
         margin: 2,
         transitionDuration: '300ms',
         '&.Mui-checked': {
-            transform: 'translateX(19px)',
+            transform: 'translateX(12px)',
             color: colorPalette.white,
             '& + .MuiSwitch-track': {
-                backgroundColor: colorPalette.pink200,
+                backgroundColor: colorPalette.purple,
                 opacity: 1,
                 border: 0,
             },
@@ -41,8 +41,8 @@ export const Switch = styled((props: SwitchProps) => (
     },
     '& .MuiSwitch-thumb': {
         boxSizing: 'border-box',
-        width: 20,
-        height: 20,
+        width: 12,
+        height: 12,
     },
     '& .MuiSwitch-track': {
         borderRadius: 12,
