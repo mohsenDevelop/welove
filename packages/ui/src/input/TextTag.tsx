@@ -19,30 +19,31 @@ export const TextTag: FC<TextTagProps> = ({ sx, onTags }) => {
 
     const handleSubmit = (event: any) => {
 
-        event.stopPropagation();
-        event.preventDefault();
+        if (event.key === 'Enter') {
 
-        const selectedIndex = tags.indexOf(value);
-        let newSelected: readonly string[] = [];
+            const selectedIndex = tags.indexOf(value);
+            let newSelected: readonly string[] = [];
 
-        if (selectedIndex === -1) {
-            newSelected = newSelected.concat(tags, value);
-        } else if (selectedIndex === 0) {
-            newSelected = newSelected.concat(tags.slice(1));
+            if (selectedIndex === -1) {
+                newSelected = newSelected.concat(tags, value);
+            } else if (selectedIndex === 0) {
+                newSelected = newSelected.concat(tags.slice(1));
 
-        } else if (selectedIndex === tags.length - 1) {
-            newSelected = newSelected.concat(tags.slice(0, -1));
+            } else if (selectedIndex === tags.length - 1) {
+                newSelected = newSelected.concat(tags.slice(0, -1));
 
-        } else if (selectedIndex > 0) {
-            newSelected = newSelected.concat(
-                tags.slice(0, selectedIndex),
-                tags.slice(selectedIndex + 1),
-            );
+            } else if (selectedIndex > 0) {
+                newSelected = newSelected.concat(
+                    tags.slice(0, selectedIndex),
+                    tags.slice(selectedIndex + 1),
+                );
+            }
+
+            setTags(newSelected);
+            setValue('');
+            onTags(newSelected);
+
         }
-
-        setTags(newSelected);
-        setValue('');
-        onTags(newSelected);
 
     };
 
@@ -118,17 +119,12 @@ export const TextTag: FC<TextTagProps> = ({ sx, onTags }) => {
                         </Box>
                     )))}
 
-                    <form
-                        onSubmit={handleSubmit}
-                        autoComplete={'off'}
-                    >
-
-                        <InputBase
-                            onChange={(event: ChangeEvent<any>) => setValue(event.target.value)}
-                            value={value}
-                            sx={{ width: '100%', fontSize: 14, fontWeight: 400 }}
-                        />
-                    </form>
+                    <InputBase
+                        onChange={(event: ChangeEvent<any>) => setValue(event.target.value)}
+                        onKeyDown={handleSubmit}
+                        value={value}
+                        sx={{ fontSize: 14, fontWeight: 400 }}
+                    />
 
                 </Stack>
 
