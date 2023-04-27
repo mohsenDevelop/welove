@@ -53,6 +53,7 @@ const NewsPage = lazy(() => import('@pages/news'));
 const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'));
 const ClientsPage = lazy(() => import('@pages/clients'));
+const NotificationsPage = lazy(() => import('@pages/notifications'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -122,7 +123,7 @@ const MainRoutes = createBrowserRouter([
                 path: NOTIFICATION_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>Notifications</div>
+                        <NotificationsPage />
                     </Suspense>
                 )
             },
