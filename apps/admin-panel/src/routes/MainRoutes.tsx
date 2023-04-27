@@ -21,7 +21,8 @@ import {
     CREATE_ADMIN_URL,
     NEWS_DELETE_URL,
     NEWS_URL_COPY_ITEM_URL,
-    NEWS_URL_VIDOE_PHOTO_URL
+    NEWS_URL_VIDOE_PHOTO_URL,
+    NOTIFICATION_COMPOSE_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -54,6 +55,7 @@ const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'));
 const ClientsPage = lazy(() => import('@pages/clients'));
 const NotificationsPage = lazy(() => import('@pages/notifications'));
+const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -124,6 +126,14 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <NotificationsPage />
+                    </Suspense>
+                )
+            },
+            {
+                path: NOTIFICATION_COMPOSE_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <NotifComposePage />
                     </Suspense>
                 )
             },

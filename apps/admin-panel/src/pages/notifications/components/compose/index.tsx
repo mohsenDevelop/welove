@@ -3,10 +3,10 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { BreadCrumb, Paper } from 'ui';
-import { NEWS_URL } from '@config/urls';
-import CopyItemForm from './CopyItemForm';
+import { NOTIFICATION_URL } from '@config/urls';
+import ComposeForm from './ComposeForm';
 
-const CopyItemPage = () => {
+const NotfiComposePage = () => {
 
     const navigate = useNavigate();
 
@@ -14,8 +14,8 @@ const CopyItemPage = () => {
         <Stack>
             <BreadCrumb
                 list={[
-                    { link: NEWS_URL, name: 'News' },
-                    { link: '', name: 'Add News item' },
+                    { link: NOTIFICATION_URL, name: 'Notifications' },
+                    { link: '', name: 'Compose' },
                 ]}
                 onClick={(link: string) => navigate(link)}
             />
@@ -27,6 +27,7 @@ const CopyItemPage = () => {
                     boxShadow: '0px 1px 12px rgba(168, 168, 168, 0.08)'
                 }}
             >
+
                 <Typography
                     variant={'h1'}
                     fontSize={14}
@@ -43,14 +44,14 @@ const CopyItemPage = () => {
                     fontWeight={600}
                     pb={'38px'}
                 >
-                    Copy Item
+                    New Notifications
                 </Typography>
 
-                <CopyItemForm />
+                <ComposeForm />
 
             </Paper>
         </Stack>
     );
 };
 
-export default CopyItemPage;
+export default NotfiComposePage;

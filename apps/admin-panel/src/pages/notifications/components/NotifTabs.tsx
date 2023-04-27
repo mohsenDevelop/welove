@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Tab from '@mui/material/Tab';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
@@ -8,8 +9,11 @@ import {
     colorPalette,
     Button
 } from 'ui';
+import { NOTIFICATION_COMPOSE_URL } from '@config/urls';
 
 const NotifTabs = () => {
+
+    const navigate = useNavigate();
 
     const [tabValue, setTabValue] = useState('1');
 
@@ -53,6 +57,7 @@ const NotifTabs = () => {
                         height: 48,
                         fontWeight: 700
                     }}
+                    onClick={() => navigate(NOTIFICATION_COMPOSE_URL)}
                 >
                     Compose
                 </Button>

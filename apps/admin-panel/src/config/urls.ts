@@ -13,6 +13,7 @@ export const REWARD_COMPANY_URL = '/panel/rewards/company';
 export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
 // Notifications
 export const NOTIFICATION_URL = '/panel/notification';
+export const NOTIFICATION_COMPOSE_URL = '/panel/notification/compose';
 // Dashboard
 export const DASHBOARD_URL = '/panel/dashboard';
 // News
