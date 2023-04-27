@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -14,7 +14,7 @@ export interface NewsUploadFileProps {
     onRemoveFile: () => void;
 }
 
-export const NewsUploadFile: FC<NewsUploadFileProps> = ({ type, onDrop, uploadedFile, onRemoveFile }) => {
+const NewsUploadFileMemo: FC<NewsUploadFileProps> = ({ type, onDrop, uploadedFile, onRemoveFile }) => {
 
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
         accept: { 'image/*': ['.jpeg', '.png', '.jpg'], },
@@ -158,3 +158,5 @@ export const NewsUploadFile: FC<NewsUploadFileProps> = ({ type, onDrop, uploaded
         </Stack>
     );
 };
+
+export const NewsUploadFile = memo(NewsUploadFileMemo);

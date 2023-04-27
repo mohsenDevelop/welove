@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useState, memo } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Stack from '@mui/material/Stack';
 
@@ -65,4 +65,4 @@ export interface UploadPhotoProps {
     onImage: (link: string) => void;
 }
 
-export default UploadPhoto;
+export default memo(UploadPhoto, (prev, next) => prev !== next);
