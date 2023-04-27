@@ -6,7 +6,6 @@ import MuiTable from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-import TableHeader from './TableHeader';
 
 import {
     Button,
@@ -14,6 +13,7 @@ import {
 } from 'ui';
 import { TrashIcon } from 'assets-ui';
 import { DELETE_ADMIN_URL } from '@config/urls';
+import TableHeader from './TableHeader';
 
 const rows = [
     { id: '1', name: 'Randy Calzoni', email: 'DarleneRobertson@gmail.com' },
@@ -45,7 +45,7 @@ const Table = () => {
                                         '& td': {
                                             borderBottom: 'unset',
                                             pb: '20px',
-                                            bgcolor: _index % 2 === 0 ? '#F8F7F8' : 'inherit',
+                                            bgcolor: _index % 2 === 0 ? colorPalette.pink10 : 'inherit',
                                             borderRadius: '10px'
                                         }
                                     }}
