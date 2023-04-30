@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 export interface TagProps {
     mode: 'square' | 'circle',
     title: string,
-    type: 'success' | 'fail' | 'video' | 'employee' | 'copy' | 'company',
+    hasIcon?: boolean,
+    type: 'success' | 'fail' | 'video' | 'employee' | 'copy' | 'company' | 'none',
     sx?: SxProps,
 }
 
@@ -17,6 +18,7 @@ const typeBgColors = {
     'company': 'rgba(45, 172, 194, 0.15)',
     'video': 'rgba(255, 166, 0, 0.15)',
     'copy': 'rgba(136, 78, 185, 0.15)',
+    'none': '',
 };
 
 const typeBgSvgs = {
@@ -40,11 +42,11 @@ const typeBgSvgs = {
     </svg>,
     'copy': <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path fillRule='evenodd' clipRule='evenodd' d='M12.9325 4.87644L15.9465 5.68745C16.3451 5.79471 16.5812 6.20236 16.4743 6.59882L13.9539 15.948C13.8469 16.3452 13.4361 16.5809 13.0365 16.4745L7.29941 14.9465C6.89981 14.8401 6.66267 14.4318 6.76974 14.0346C6.87682 13.6374 7.28756 13.4017 7.68716 13.5082L12.7007 14.8434L14.8338 6.93073L12.541 6.31378C12.1417 6.20632 11.9056 5.79746 12.0137 5.40055C12.1218 5.00364 12.5332 4.76899 12.9325 4.87644ZM9.74067 1.5C10.1544 1.5 10.4897 1.83334 10.4897 2.24454V11.179C10.4897 11.5902 10.1544 11.9235 9.74067 11.9235H2.99907C2.58537 11.9235 2.25 11.5902 2.25 11.179V2.24454C2.25 1.83334 2.58537 1.5 2.99907 1.5H9.74067ZM8.9916 2.98907H3.74813V10.4344H8.9916V2.98907Z' fill='#274052' />
-    </svg>
-    ,
+    </svg>,
+    'none': ''
 };
 
-export const Tag: FC<TagProps> = ({ mode, title, type, sx }) => {
+export const Tag: FC<TagProps> = ({ mode, title, type, sx, hasIcon }) => {
     return (
         <Stack
             flexDirection={'row'}
@@ -55,7 +57,7 @@ export const Tag: FC<TagProps> = ({ mode, title, type, sx }) => {
             p={'4px 8px'}
             sx={sx}
         >
-            {type ? typeBgSvgs[type] : null}
+            {type && hasIcon ? typeBgSvgs[type] : null}
             <Typography
                 fontSize={12}
                 fontWeight={400}
@@ -64,6 +66,10 @@ export const Tag: FC<TagProps> = ({ mode, title, type, sx }) => {
             </Typography>
         </Stack>
     );
+};
+
+Tag.defaultProps = {
+    hasIcon: true
 };
 
 export default Tag;

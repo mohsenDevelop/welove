@@ -10,6 +10,7 @@ import {
     Button
 } from 'ui';
 import { NOTIFICATION_COMPOSE_URL } from '@config/urls';
+import ActiveList from './activeList';
 
 const NotifTabs = () => {
 
@@ -23,6 +24,7 @@ const NotifTabs = () => {
 
     return (
         <Stack>
+
             <Stack
                 flexDirection={'row'}
                 alignItems={'center'}
@@ -62,6 +64,10 @@ const NotifTabs = () => {
                     Compose
                 </Button>
             </Stack>
+
+            {
+                tabValue === '1' ? <ActiveList /> : <ActiveList />
+            }
         </Stack>
     );
 };

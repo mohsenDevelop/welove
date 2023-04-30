@@ -3,8 +3,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 import { Paper, TablePagination } from 'ui';
-import SearchField from './SearchField';
 import { commonTypes } from '@models/common';
+import SearchField from './SearchField';
 import Table from './Table';
 
 const ClientList = () => {
