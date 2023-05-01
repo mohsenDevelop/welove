@@ -14,6 +14,10 @@ export const Tabs: FC<TabsProps> = (props) => {
                 '& .MuiTabs-indicator': {
                     bgcolor: props.indicatecolor
                 },
+                '& .MuiTab-root': {
+                    pl: '0px',
+                    mr: '24px'
+                },
                 '& .MuiTab-root.Mui-selected': {
                     color: colorPalette.blue800,
                     fontWeight: 600,
