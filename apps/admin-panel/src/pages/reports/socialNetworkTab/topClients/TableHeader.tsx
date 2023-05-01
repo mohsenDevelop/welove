@@ -4,7 +4,7 @@ import TableRow from '@mui/material/TableRow';
 
 import { colorPalette } from 'ui';
 
-const PerformanceTabHeader = () => {
+const SocialTopClientsTableHeader = () => {
     return (
         <TableHead>
 
@@ -60,4 +60,4 @@ const PerformanceTabHeader = () => {
     );
 };
 
-export default PerformanceTabHeader;
+export default SocialTopClientsTableHeader;

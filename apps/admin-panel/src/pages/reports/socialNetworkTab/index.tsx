@@ -1,11 +1,13 @@
 import Stack from '@mui/material/Stack';
 
+import SocialTopClients from './topClients';
+
 const SocialNetworkTab = () => {
     return (
         <Stack
             pt={'24px'}
         >
-            hello
+            <SocialTopClients />
         </Stack>
     );
 };
