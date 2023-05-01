@@ -1,5 +1,3 @@
-import React from 'react';
-
 export * from './button/Button';
 export * from './colors';
 export * from './input/TextArea';

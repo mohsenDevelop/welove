@@ -1,7 +1,11 @@
-const path = require('path');
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
+import path from 'path';
 
-module.exports = {
-    webpack: {
+export default defineConfig({
+    plugins: [react(), svgr()],
+    resolve: {
         alias: {
             '@uiKits': path.resolve(__dirname, './src/uiKits'),
             '@assets': path.resolve(__dirname, './src/assets'),
@@ -21,9 +25,5 @@ module.exports = {
             '@slices': path.resolve(__dirname, './src/slices'),
             '@formValidations': path.resolve(__dirname, './src/formValidations'),
         },
-
     },
-    eslint: {
-        enable: true,
-    },
-};
+});
