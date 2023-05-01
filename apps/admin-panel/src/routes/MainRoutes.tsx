@@ -56,6 +56,7 @@ const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'
 const ClientsPage = lazy(() => import('@pages/clients'));
 const NotificationsPage = lazy(() => import('@pages/notifications'));
 const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
+const ReportsPage = lazy(() => import('@pages/reports'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -172,7 +173,7 @@ const MainRoutes = createBrowserRouter([
                 path: REPORT_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <div>Reports</div>
+                        <ReportsPage />
                     </Suspense>
                 )
             },
