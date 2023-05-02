@@ -29,3 +29,4 @@ export { ReactComponent as BookFillIcon } from './icons/book_icon_fill.svg';
 export { ReactComponent as SearchIcon } from './icons/search_icon.svg';
 export { ReactComponent as VideoIcon } from './icons/video_call_icon.svg';
 export { ReactComponent as ReportFillIcon } from './icons/report_fill_icon.svg';
+export { ReactComponent as CalendarIcon } from './icons/calendar_icon.svg';

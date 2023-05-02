@@ -8,3 +8,15 @@
 a {
   text-decoration: none;
 }
+
+.rdrDateDisplayWrapper {
+  display: none;
+}
+
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+
+.rdrMonthAndYearWrapper {
+  padding-top: 0;
+}

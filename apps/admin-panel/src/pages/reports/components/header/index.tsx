@@ -1,6 +1,7 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import WorkspaceMenu from '../WorkspaceMenu';
+import DateRange from '../DateRange';
 
 const ReportsHeader = () => {
     return (
@@ -18,6 +19,7 @@ const ReportsHeader = () => {
                 gap={'20px'}
             >
                 <WorkspaceMenu />
+                <DateRange />
 
             </Stack>
         </Stack>
