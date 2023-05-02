@@ -1,12 +1,8 @@
 import { useState, MouseEvent } from 'react';
 import { format } from 'date-fns';
 import { DateRangePicker, Range } from 'react-date-range';
-
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 
 import {
     Button,
@@ -15,11 +11,6 @@ import {
 import { CalendarIcon } from 'assets-ui';
 import { StyledMenu } from './style';
 
-type selectDate = {
-    startDate: Date,
-    endDate: Date,
-    key: string,
-}
 const DateRange = () => {
 
     const [isSelected, setIsSelected] = useState<boolean>(false);
