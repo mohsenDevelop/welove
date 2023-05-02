@@ -15,8 +15,8 @@ import {
     REWARD_COMPANY_URL,
     REWARD_URL
 } from '@config/urls';
-import ToApprove from './toApprove';
-import Completed from './completed';
+import ToApprove from './components/toApprove';
+import Completed from './components/completed';
 
 const RewardCompanyPage = () => {
 

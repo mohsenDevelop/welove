@@ -1,5 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import WorkspaceMenu from '../WorkspaceMenu';
 
 const ReportsHeader = () => {
     return (
@@ -10,6 +11,15 @@ const ReportsHeader = () => {
             pt={'24px'}
         >
             <Typography variant={'h1'}>Reports</Typography>
+
+            <Stack
+                flexDirection={'row'}
+                alignItems={'center'}
+                gap={'20px'}
+            >
+                <WorkspaceMenu />
+
+            </Stack>
         </Stack>
     );
 };
