@@ -24,13 +24,15 @@ import {
     NEWS_URL_VIDOE_PHOTO_URL,
     NOTIFICATION_COMPOSE_URL,
     CREATE_CLIENT_URL,
-    DELETE_CLIENT_ADMIN_URL
+    DELETE_CLIENT_ADMIN_URL,
+    ADD_CLIENT_ADMIN_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
 import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDialog';
-import DeleteClientAdminDialog from '../pages/createClient/components/adminAcess/DeletAdminDialog';
 import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
+import DeleteClientAdminDialog from '../pages/createClient/components/adminAcess/DeletAdminDialog';
+import AddClientAdminDialog from '../pages/createClient/components/adminAcess/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 
 const LoadingCircle = memo(() => (
@@ -103,6 +105,10 @@ const MainRoutes = createBrowserRouter([
                     {
                         path: `${DELETE_CLIENT_ADMIN_URL}/:id`,
                         element: <DeleteClientAdminDialog />
+                    },
+                    {
+                        path: `${ADD_CLIENT_ADMIN_URL}/:id`,
+                        element: <AddClientAdminDialog />
                     },
                 ],
 

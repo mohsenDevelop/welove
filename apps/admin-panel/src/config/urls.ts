@@ -7,6 +7,7 @@ export const PANEL_URL = '/panel';
 export const CLIENT_MANAGEMENT_URL = '/panel/client-management';
 export const CREATE_CLIENT_URL = '/panel/client/create';
 export const DELETE_CLIENT_ADMIN_URL = '/panel/client/create/admin/delete';
+export const ADD_CLIENT_ADMIN_URL = '/panel/client/create/admin/add';
 // Reward
 export const REWARD_URL = '/panel/rewards';
 export const REWARD_CLEINT_URL = '/panel/rewards/clients';
