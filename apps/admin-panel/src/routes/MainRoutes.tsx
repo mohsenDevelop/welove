@@ -23,11 +23,13 @@ import {
     NEWS_URL_COPY_ITEM_URL,
     NEWS_URL_VIDOE_PHOTO_URL,
     NOTIFICATION_COMPOSE_URL,
-    CREATE_CLIENT_URL
+    CREATE_CLIENT_URL,
+    DELETE_CLIENT_ADMIN_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
 import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDialog';
+import DeleteClientAdminDialog from '../pages/createClient/components/adminAcess/DeletAdminDialog';
 import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 
@@ -94,8 +96,15 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <CreateClientPage />
+                        <Outlet />
                     </Suspense>
                 ),
+                children: [
+                    {
+                        path: `${DELETE_CLIENT_ADMIN_URL}/:id`,
+                        element: <DeleteClientAdminDialog />
+                    },
+                ],
 
             },
             {

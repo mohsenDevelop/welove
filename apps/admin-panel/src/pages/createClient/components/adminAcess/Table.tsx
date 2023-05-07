@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TableContainer from '@mui/material/TableContainer';
@@ -8,6 +9,7 @@ import TableCell from '@mui/material/TableCell';
 
 import { Paper, Button, colorPalette } from 'ui';
 import { TrashIcon } from 'assets-ui';
+import { DELETE_CLIENT_ADMIN_URL } from '@config/urls';
 import TableHeader from './TableHeader';
 
 const rows = [
@@ -44,6 +46,9 @@ const rows = [
 ];
 
 const Table = () => {
+
+    const navigate = useNavigate();
+
     return (
         <Paper
             sx={{
@@ -98,7 +103,7 @@ const Table = () => {
                                                 fontWeight: 500,
                                                 width: 105
                                             }}
-                                        // onClick={() => navigate(DELETE_ADMIN_URL)}
+                                            onClick={() => navigate(`${DELETE_CLIENT_ADMIN_URL}/1`)}
                                         >
                                             Delete
                                         </Button>
