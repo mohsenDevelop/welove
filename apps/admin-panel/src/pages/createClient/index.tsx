@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { BreadCrumb, Paper } from 'ui';
 import { CLIENT_MANAGEMENT_URL } from '@config/urls';
 import ClientForm from './components/clientForm';
+import AdminAccess from './components/adminAcess';
 
 const CreateClientPage = () => {
 
@@ -41,6 +42,7 @@ const CreateClientPage = () => {
                 </Typography>
 
                 <ClientForm />
+                <AdminAccess />
 
             </Paper>
         </Stack>
