@@ -5,6 +5,7 @@ export const PANEL_URL = '/panel';
 
 // Client Management
 export const CLIENT_MANAGEMENT_URL = '/panel/client-management';
+export const CREATE_CLIENT_URL = '/panel/client/create';
 // Reward
 export const REWARD_URL = '/panel/rewards';
 export const REWARD_CLEINT_URL = '/panel/rewards/clients';
