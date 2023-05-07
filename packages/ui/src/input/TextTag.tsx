@@ -123,6 +123,7 @@ export const TextTag: FC<TextTagProps> = ({ sx, onTags }) => {
                         onChange={(event: ChangeEvent<any>) => setValue(event.target.value)}
                         onKeyDown={handleSubmit}
                         value={value}
+                        placeholder={'Type here...'}
                         sx={{ fontSize: 14, fontWeight: 400 }}
                     />
 
