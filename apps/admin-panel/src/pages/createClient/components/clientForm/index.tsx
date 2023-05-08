@@ -29,6 +29,8 @@ const ClientForm = () => {
                     <form onSubmit={handleSubmit}>
                         <Stack
                             gap={'44px'}
+                            borderBottom={'1px solid rgba(0,0,0,.15)'}
+                            pb={'44px'}
                         >
                             <UploadLogo />
                             <CompantName />

@@ -6,6 +6,7 @@ import { BreadCrumb, Paper } from 'ui';
 import { CLIENT_MANAGEMENT_URL } from '@config/urls';
 import ClientForm from './components/clientForm';
 import AdminAccess from './components/adminAcess';
+import AdminTheme from './components/adminTheme';
 
 const CreateClientPage = () => {
 
@@ -42,6 +43,7 @@ const CreateClientPage = () => {
                 </Typography>
 
                 <ClientForm />
+                <AdminTheme />
                 <AdminAccess />
 
             </Paper>

@@ -1,5 +1,6 @@
 export { ReactComponent as Logo } from './images/logo.svg';
 export { ReactComponent as LogingImg } from './images/login_img.svg';
+export { ReactComponent as SidebarImg } from './images/sidebar.svg';
 
 export { ReactComponent as EyeIcon } from './icons/eye_icon.svg';
 export { ReactComponent as DashboardIcon } from './icons/dashboard_icon.svg';
@@ -30,3 +31,4 @@ export { ReactComponent as SearchIcon } from './icons/search_icon.svg';
 export { ReactComponent as VideoIcon } from './icons/video_call_icon.svg';
 export { ReactComponent as ReportFillIcon } from './icons/report_fill_icon.svg';
 export { ReactComponent as CalendarIcon } from './icons/calendar_icon.svg';
+export { ReactComponent as ColorIcon } from './icons/color_icon.svg';
