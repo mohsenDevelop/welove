@@ -10,16 +10,20 @@ const LoginSideBar = () => {
             height={'100%'}
             alignItems={'center'}
             pt={'44px'}
+            bgcolor={colorPalette.blue10}
         >
-            <Logo style={{ width: 105, height: 50 }} />
 
-            <Stack pt={'208px'} alignItems={'center'}>
+            <Stack
+                pt={'171px'}
+                alignItems={'center'}
+                maxWidth={570}
+            >
                 <LogingImg style={{ width: 130, height: 130 }} />
                 <Typography
                     fontSize={24}
                     fontWeight={500}
                     lineHeight={'33px'}
-                    color={colorPalette.white}
+                    color={colorPalette.blue800}
                     textAlign={'center'}
                     p={'66px 50px 25px 50px'}
                 >
@@ -29,7 +33,7 @@ const LoginSideBar = () => {
                 <Typography
                     fontSize={14}
                     fontWeight={500}
-                    color={colorPalette.white}
+                    color={colorPalette.blue800}
                     textAlign={'center'}
                 >
                     Colby Howard — Founding Partner, Paragon Intel

@@ -46,6 +46,7 @@ const LoginForm = () => {
                     height={'100%'}
                     justifyContent={'center'}
                     alignItems={'center'}
+                    pt={'110px'}
                 >
                     <Typography
                         fontSize={32}
@@ -57,11 +58,46 @@ const LoginForm = () => {
                     >
                         Lorem ipsum WeLove9Am
                     </Typography>
+                    <Typography
+                        fontSize={14}
+                        fontWeight={400}
+                    >
+                        By Log in, I agree to WeLove9Am’s
+                        <Typography
+                            component={'span'}
+                            fontSize={14}
+                            fontWeight={600}
+                            color={colorPalette.pink200}
+                            px={'4px'}
+                            sx={{
+                                textDecoration: 'underline',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            Terms
+                        </Typography>
+                        and
+                        <Typography
+                            component={'span'}
+                            fontSize={14}
+                            fontWeight={600}
+                            color={colorPalette.pink200}
+                            px={'4px'}
+                            sx={{
+                                textDecoration: 'underline',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            Privacy Policy.
+                        </Typography>
+
+                    </Typography>
 
                     <Stack
                         gap={'26px'}
                         maxWidth={'548px'}
                         width={'100%'}
+                        pt={'44px'}
                     >
 
                         <Stack

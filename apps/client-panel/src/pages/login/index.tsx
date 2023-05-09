@@ -4,34 +4,35 @@ import Grid from '@mui/material/Grid';
 import { colorPalette } from 'ui';
 import LoginSideBar from './components/LoginSideBar';
 import LoginForm from './components/LoginForm';
+import LoginHeader from './components/LoginHeader';
 
 const LoginPage = () => {
 
     return (
         <Stack
             height={'100vh'}
-            flexDirection={'row'}
-            alignItems={'center'}
         >
+            <LoginHeader />
+
             <Grid container={true} height={'100%'}>
                 <Grid
                     item={true}
-                    xs={5}
-                    bgcolor={colorPalette.blue900}
+                    xs={6}
                 >
-                    <LoginSideBar />
+                    <LoginForm />
                 </Grid>
 
                 <Grid
                     item={true}
-                    xs={7}
+                    xs={6}
                 >
                     <Stack
                         height={'100%'}
                         justifyContent={'center'}
                     >
 
-                        <LoginForm />
+                        <LoginSideBar />
+
                     </Stack>
 
                 </Grid>
