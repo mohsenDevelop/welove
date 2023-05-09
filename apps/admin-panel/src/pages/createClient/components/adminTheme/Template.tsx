@@ -1,7 +1,12 @@
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 import { UseAdminTheme } from '@hooks/useAdminTheme';
-import { SidebarImg } from 'assets-ui';
+import {
+    SidebarImg,
+    StatisticsImg
+} from 'assets-ui';
+import { colorPalette } from 'ui';
 
 const Template = () => {
 
@@ -31,6 +36,58 @@ const Template = () => {
                 }}
             >
                 <SidebarImg />
+            </Stack>
+
+            <Stack
+                bgcolor={colorPalette.pink10}
+                width={'100%'}
+                pl={'78px'}
+                pt={'45px'}
+            >
+
+                <Typography
+                    variant={'h1'}
+                    fontWeight={600}
+                    fontSize={15}
+                    pb={'12px'}
+                >
+                    Dashboard
+                </Typography>
+
+                <Stack
+                    bgcolor={colorPalette.white}
+                    padding={'15px 10px'}
+                    width={'fit-content'}
+                    sx={{
+
+                        'svg > g.circle-item > path:nth-child(14)': {
+                            fill: themeColors.hiresColor,
+                        },
+                        'svg > g.circle-item > path:nth-child(11)': {
+                            fill: themeColors.applicationsColor,
+                        },
+                        'svg > g.circle-item > path:nth-child(18)': {
+                            fill: themeColors.sharesColor,
+                        },
+                        'svg > g.circle-item > path:nth-child(23)': {
+                            fill: themeColors.pointsColor,
+                        },
+                        'svg > rect:nth-child(3)': {
+                            fill: themeColors.hiresColor,
+                        },
+                        'svg > rect:nth-child(6)': {
+                            fill: themeColors.applicationsColor,
+                        },
+                        'svg > rect:nth-child(9)': {
+                            fill: themeColors.sharesColor,
+                        },
+                        'svg > rect:nth-child(12)': {
+                            fill: themeColors.pointsColor,
+                        },
+                    }}
+                >
+                    <StatisticsImg />
+                </Stack>
             </Stack>
         </Stack >
     );

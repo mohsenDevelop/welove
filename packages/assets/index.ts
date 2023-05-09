@@ -1,6 +1,7 @@
 export { ReactComponent as Logo } from './images/logo.svg';
 export { ReactComponent as LogingImg } from './images/login_img.svg';
 export { ReactComponent as SidebarImg } from './images/sidebar.svg';
+export { ReactComponent as StatisticsImg } from './images/statistics.svg';
 
 export { ReactComponent as EyeIcon } from './icons/eye_icon.svg';
 export { ReactComponent as DashboardIcon } from './icons/dashboard_icon.svg';
