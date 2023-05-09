@@ -1,6 +1,7 @@
 export const _TOKEN_NAME = 'welove_admin';
 
 export const LOGIN_URL = '/';
+export const SET_PASSWORD_URL = '/set-password';
 export const PANEL_URL = '/panel';
 
 // Client Management

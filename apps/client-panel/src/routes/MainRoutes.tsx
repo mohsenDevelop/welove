@@ -25,7 +25,8 @@ import {
     NOTIFICATION_COMPOSE_URL,
     CREATE_CLIENT_URL,
     DELETE_CLIENT_ADMIN_URL,
-    ADD_CLIENT_ADMIN_URL
+    ADD_CLIENT_ADMIN_URL,
+    SET_PASSWORD_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -48,6 +49,7 @@ const LoadingCircle = memo(() => (
 ));
 
 const LoginPage = lazy(() => import('@pages/login'));
+const SetPasswordPage = lazy(() => import('@pages/setPassword'));
 const DashboardPage = lazy(() => import('@pages/dashboard'));
 const LeadershipBoardPage = lazy(() => import('@pages/leadershipBoard'));
 const RewardsPage = lazy(() => import('@pages/rewards'));
@@ -70,6 +72,14 @@ const MainRoutes = createBrowserRouter([
         element: (
             <Suspense fallback={<LoadingCircle />}>
                 <LoginPage />
+            </Suspense>
+        ),
+    },
+    {
+        path: SET_PASSWORD_URL,
+        element: (
+            <Suspense fallback={<LoadingCircle />}>
+                <SetPasswordPage />
             </Suspense>
         ),
     },

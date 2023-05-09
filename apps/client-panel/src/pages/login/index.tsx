@@ -1,7 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 
-import { colorPalette } from 'ui';
 import LoginSideBar from './components/LoginSideBar';
 import LoginForm from './components/LoginForm';
 import LoginHeader from './components/LoginHeader';
