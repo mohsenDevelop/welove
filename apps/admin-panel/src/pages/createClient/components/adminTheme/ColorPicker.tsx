@@ -8,9 +8,9 @@ import {
 } from 'assets-ui';
 import { colorsType } from './AdminThemeProvider';
 
-const ColorPicker: FC<ColorPickerProps> = ({ name, title, caption, onChange }) => {
+const ColorPicker: FC<ColorPickerProps> = ({ name, title, caption, defaultColor, onChange }) => {
 
-    const [colorValue, setColor] = useState<string>('#000');
+    const [colorValue, setColor] = useState<string>(defaultColor);
 
     const handleChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
         setColor(event.target.value);
@@ -71,6 +71,7 @@ const ColorPicker: FC<ColorPickerProps> = ({ name, title, caption, onChange }) =
 export interface ColorPickerProps {
     title: string;
     caption: string;
+    defaultColor: string;
     name: keyof colorsType;
     onChange: (color: string, name: keyof colorsType) => void;
 }

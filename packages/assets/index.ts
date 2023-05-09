@@ -2,6 +2,9 @@ export { ReactComponent as Logo } from './images/logo.svg';
 export { ReactComponent as LogingImg } from './images/login_img.svg';
 export { ReactComponent as SidebarImg } from './images/sidebar.svg';
 export { ReactComponent as StatisticsImg } from './images/statistics.svg';
+export { ReactComponent as PendingPointsImg } from './images/pending_points.svg';
+export { ReactComponent as LatestNewsImg } from './images/latest_news.svg';
+export { ReactComponent as LatesJobsImg } from './images/latest_jobs.svg';
 
 export { ReactComponent as EyeIcon } from './icons/eye_icon.svg';
 export { ReactComponent as DashboardIcon } from './icons/dashboard_icon.svg';

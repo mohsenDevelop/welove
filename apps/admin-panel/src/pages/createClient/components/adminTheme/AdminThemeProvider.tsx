@@ -19,13 +19,13 @@ export type State = {
 };
 
 const initColors = {
-  mainColor: '#000',
+  mainColor: '#E5167A',
   sidebarSecondaryColor: '#fff',
-  sidebarTextColor: '#000',
-  hiresColor: '#000',
-  applicationsColor: '#000',
-  sharesColor: '#000',
-  pointsColor: '#000',
+  sidebarTextColor: '#274052',
+  hiresColor: '#884EB9',
+  applicationsColor: '#C2BE33',
+  sharesColor: '#2DACC2',
+  pointsColor: '#FFA600',
 }
 export const AdminThemeContext = createContext<State | undefined>(undefined);
 
