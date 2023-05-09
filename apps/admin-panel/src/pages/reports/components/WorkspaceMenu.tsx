@@ -146,7 +146,7 @@ const WorkspaceMenu = () => {
                                             bgcolor: 'rgba(138, 138, 138, 0.1)'
                                         },
                                         '& svg > path': {
-                                            fill: colorPalette.pink20
+                                            fill: colorPalette.pink200
                                         }
                                     }}
 
