@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:prod": "turbo run build:prod",
+    "build:prod:admin": "turbo run build:prod:admin",
+    "build:prod:client": "turbo run build:prod:client",
     "dev:client:panel": "turbo run dev --no-cache --continue --filter=client-panel",
     "dev:admin:panel": "turbo run dev --no-cache --continue --filter=admin-panel",
     "lint": "turbo run lint",

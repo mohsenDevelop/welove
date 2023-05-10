@@ -12,9 +12,17 @@
         "dist/**"
       ]
     },
-    "build:prod": {
+    "build:prod:admin": {
       "dependsOn": [
-        "^build:prod"
+        "^build:prod:admin"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "build:prod:client": {
+      "dependsOn": [
+        "^build:prod:client"
       ],
       "outputs": [
         "dist/**"
