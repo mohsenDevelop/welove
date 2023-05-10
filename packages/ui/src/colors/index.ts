@@ -28,6 +28,7 @@ export const colorPalette = {
     blue20: '#E4F0F3',
     blue10: '#E7E7FD',
     gray10: '#FAFAFA',
+    gray12: '#F0F0F0',
     gray15: '#F5F5F5;',
     gray20: '#EEEEEE',
     gray30: '#E5E5E5',

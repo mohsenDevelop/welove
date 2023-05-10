@@ -26,7 +26,9 @@ import {
     CREATE_CLIENT_URL,
     DELETE_CLIENT_ADMIN_URL,
     ADD_CLIENT_ADMIN_URL,
-    SET_PASSWORD_URL
+    SET_PASSWORD_URL,
+    APP_SET_PASSWORD_URL,
+    QRCODE_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -35,6 +37,7 @@ import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
 import DeleteClientAdminDialog from '../pages/createClient/components/adminAcess/DeletAdminDialog';
 import AddClientAdminDialog from '../pages/createClient/components/adminAcess/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
+import QrCodeDialog from '@pages/qrCode';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -50,6 +53,7 @@ const LoadingCircle = memo(() => (
 
 const LoginPage = lazy(() => import('@pages/login'));
 const SetPasswordPage = lazy(() => import('@pages/setPassword'));
+const AppSetPasswordPage = lazy(() => import('@pages/appSetPassword'));
 const DashboardPage = lazy(() => import('@pages/dashboard'));
 const LeadershipBoardPage = lazy(() => import('@pages/leadershipBoard'));
 const RewardsPage = lazy(() => import('@pages/rewards'));
@@ -80,6 +84,22 @@ const MainRoutes = createBrowserRouter([
         element: (
             <Suspense fallback={<LoadingCircle />}>
                 <SetPasswordPage />
+            </Suspense>
+        ),
+    },
+    {
+        path: APP_SET_PASSWORD_URL,
+        element: (
+            <Suspense fallback={<LoadingCircle />}>
+                <AppSetPasswordPage />
+            </Suspense>
+        ),
+    },
+    {
+        path: QRCODE_URL,
+        element: (
+            <Suspense fallback={<LoadingCircle />}>
+                <QrCodeDialog />
             </Suspense>
         ),
     },
