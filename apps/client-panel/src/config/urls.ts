@@ -27,8 +27,8 @@ export const NEWS_URL = '/panel/news';
 export const NEWS_URL_COPY_ITEM_URL = '/panel/news/copy-item';
 export const NEWS_URL_VIDOE_PHOTO_URL = '/panel/news/video-photo';
 export const NEWS_DELETE_URL = '/panel/news/delete';
-// Report
-export const REPORT_URL = '/panel/report';
+// Contact Support
+export const CONTACT_SUPPORT_URL = '/panel/contact-support';
 // Setting
 export const SETTING_URL = '/panel/setting';
 export const CHNAGE_PASSWORD_URL = '/panel/setting/change-password';

@@ -11,7 +11,7 @@ import {
     LEADERSHIP_BOARD_URL,
     NOTIFICATION_URL,
     NEWS_URL,
-    REPORT_URL,
+    CONTACT_SUPPORT_URL,
     SETTING_URL,
     REWARD_CLEINT_URL,
     REWARD_COMPANY_URL,
@@ -68,7 +68,7 @@ const ClientsPage = lazy(() => import('@pages/clients'));
 const CreateClientPage = lazy(() => import('@pages/createClient'));
 const NotificationsPage = lazy(() => import('@pages/notifications'));
 const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
-const ReportsPage = lazy(() => import('@pages/reports'));
+const ContactSupportPage = lazy(() => import('@pages/contactSupport'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -226,10 +226,10 @@ const MainRoutes = createBrowserRouter([
                 ),
             },
             {
-                path: REPORT_URL,
+                path: CONTACT_SUPPORT_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <ReportsPage />
+                        <ContactSupportPage />
                     </Suspense>
                 )
             },

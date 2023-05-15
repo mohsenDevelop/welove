@@ -5,7 +5,7 @@ import {
     LEADERSHIP_BOARD_URL,
     NOTIFICATION_URL,
     NEWS_URL,
-    REPORT_URL,
+    CONTACT_SUPPORT_URL,
     SETTING_URL
 } from './urls';
 import {
@@ -16,7 +16,7 @@ import {
     NotifIcon,
     SettingIcon,
     NewsIcon,
-    ReportIcon
+    ServiceIcon
 } from 'assets-ui';
 
 export const mainMenu = [
@@ -60,9 +60,9 @@ export const generalsMenu = [
 
     },
     {
-        title: 'Reports',
-        url: REPORT_URL,
-        icon: ReportIcon
+        title: 'Contact Support',
+        url: CONTACT_SUPPORT_URL,
+        icon: ServiceIcon
 
     },
     {

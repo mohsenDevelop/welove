@@ -105,7 +105,7 @@ const LoginForm = () => {
                             flex={1}
                         >
 
-                            <Typography fontSize={14} fontWeight={500} pb={''}>Email address</Typography>
+                            <Typography fontSize={14} fontWeight={500}>Email address</Typography>
                             <LoginTextField
                                 placeholder={'Enter email address'}
                                 fullWidth={true}
@@ -126,7 +126,7 @@ const LoginForm = () => {
                             flex={1}
                         >
 
-                            <Typography fontSize={14} fontWeight={500} pb={''}>Password</Typography>
+                            <Typography fontSize={14} fontWeight={500}>Password</Typography>
                             <LoginTextField
                                 placeholder={'Enter password...'}
                                 type={showPassword ? 'text' : 'password'}

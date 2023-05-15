@@ -5,15 +5,16 @@ import Box from '@mui/material/Box';
 import { colorPalette } from '../colors';
 
 export interface PaperProps {
-    children: ReactNode,
-    sx?: SxProps
+    children: ReactNode;
+    sx?: SxProps;
+    type?: 'admin' | 'client';
 }
 
-export const Paper: FC<PaperProps> = ({ children, sx }) => {
+export const Paper: FC<PaperProps> = ({ children, sx, type }) => {
     return (
         <Box
             bgcolor={colorPalette.white}
-            border={'1px solid rgba(0, 0, 0, 0.18)'}
+            border={type === 'admin' ? '1px solid rgba(0, 0, 0, 0.18)' : '1px solid rgba(0, 0, 0, 0.08)'}
             borderRadius={'12px'}
             sx={sx}
         >
@@ -23,4 +24,8 @@ export const Paper: FC<PaperProps> = ({ children, sx }) => {
 
         </Box>
     );
+};
+
+Paper.defaultProps = {
+    type: 'admin'
 };

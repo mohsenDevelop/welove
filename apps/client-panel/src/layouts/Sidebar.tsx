@@ -93,7 +93,7 @@ const Sidebar = () => {
                     color={colorPalette.white}
                     sx={{ opacity: .5 }}
                 >
-                    GENERALS
+                    Others
                 </Typography>
 
                 {
@@ -116,6 +116,10 @@ const Sidebar = () => {
                                 '& svg > g': {
                                     opacity: match(_el.url) ? 1 : .5
                                 },
+                                '& svg > g > path': {
+                                    opacity: match(_el.url) ? 1 : .5,
+                                    fill: '#fff'
+                                },
                                 '& svg > path': {
                                     opacity: match(_el.url) ? 1 : .5
                                 },
@@ -127,6 +131,10 @@ const Sidebar = () => {
                                     },
                                     '& svg > g': {
                                         opacity: 1
+                                    },
+                                    '& svg > g > path': {
+                                        opacity: 1,
+                                        fill: '#fff'
                                     },
                                     '& svg > path': {
                                         opacity: 1
