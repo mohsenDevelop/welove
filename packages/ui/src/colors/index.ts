@@ -37,6 +37,7 @@ export const colorPalette = {
     gray200: '#C4C4C4',
     gray500: '#7A7A7A',
     gray550: '#566D7D',
+    gray600: '#707070',
     gray900: '#363537',
     pink200: '#E5167A',
     pink10: '#F8F7F8',

@@ -2,6 +2,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import Statistics from './components/statistics';
+import PendingPointes from './components/pendingPointes';
+import LatestNews from './components/latestNews';
 
 const DashboardPage = () => {
     return (
@@ -11,10 +13,11 @@ const DashboardPage = () => {
 
             <Stack
                 display={'grid'}
-                gridTemplateColumns={'repeat(2, 1ft)'}
+                gridTemplateColumns={'repeat(2, 1fr)'}
                 columnGap={'24px'}
             >
-
+                <PendingPointes />
+                <LatestNews />
             </Stack>
 
         </Stack>
