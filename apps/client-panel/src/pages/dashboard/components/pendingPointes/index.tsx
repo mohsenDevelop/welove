@@ -38,7 +38,9 @@ const PendingPointes = () => {
         <Paper
             type={'client'}
             sx={{
-                p: '30px 24px'
+                p: '30px 24px',
+                height: 429,
+                overflowY: 'scroll'
             }}
         >
             <Stack
@@ -69,7 +71,7 @@ const PendingPointes = () => {
             </Stack>
 
             {
-                pendingList.map((_el, _index) => (
+                pendingList.map((_el, _index: number) => (
                     <Stack
                         key={_el.id}
                         flexDirection={'row'}
