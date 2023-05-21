@@ -1,9 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import Reports from './components/reports';
-import AdminNotifications from './components/adminNotifications';
-import TopPerforming from './components/topPerforming';
 import Statistics from './components/statistics';
 
 const DashboardPage = () => {
@@ -11,6 +8,15 @@ const DashboardPage = () => {
         <Stack gap={'24px'}>
             <Typography variant={'h1'} p={'24px 0px'}>Dashboard</Typography>
             <Statistics />
+
+            <Stack
+                display={'grid'}
+                gridTemplateColumns={'repeat(2, 1ft)'}
+                columnGap={'24px'}
+            >
+
+            </Stack>
+
         </Stack>
     );
 };
