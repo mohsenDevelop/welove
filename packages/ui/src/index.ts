@@ -19,4 +19,5 @@ export * from './switch/AcountSwitch';
 export * from './companyList/CompanyList';
 export * from './upload/NewsUploadFile';
 export * from './progress/CircularSocialProgress';
+export * from './progress/StatisticsProgress';
 export * from './search/Search';

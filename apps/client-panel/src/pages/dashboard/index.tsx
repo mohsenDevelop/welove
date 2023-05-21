@@ -1,21 +1,16 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import {
-    DashboardFillIcon
-} from 'assets-ui';
 import Reports from './components/reports';
 import AdminNotifications from './components/adminNotifications';
 import TopPerforming from './components/topPerforming';
+import Statistics from './components/statistics';
 
 const DashboardPage = () => {
     return (
-        <Stack>
-            <DashboardFillIcon style={{ width: 54, height: 54 }} />
+        <Stack gap={'24px'}>
             <Typography variant={'h1'} p={'24px 0px'}>Dashboard</Typography>
-            <Reports />
-            <AdminNotifications />
-            <TopPerforming />
+            <Statistics />
         </Stack>
     );
 };
