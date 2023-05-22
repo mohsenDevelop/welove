@@ -17,7 +17,7 @@ const locationList = [
     },
 ];
 
-const ActiveJobs = () => {
+const ExpireJobsTab = () => {
 
     const [filters, setFilters] = useState<commonTypes.Filters>({ page: 1, limit: 20 });
 
@@ -53,4 +53,4 @@ const ActiveJobs = () => {
     );
 };
 
-export default ActiveJobs;
+export default ExpireJobsTab;
