@@ -7,9 +7,11 @@ import {
     colorPalette,
 } from 'ui';
 import AllJobsTab from './allJobsTab';
+import ActiveJobs from './activeJobs';
 
 const renderTabs: { [key: string]: any } = {
-    '1': <AllJobsTab />
+    '1': <AllJobsTab />,
+    '2': <ActiveJobs />,
 };
 
 const JobsTabs = () => {

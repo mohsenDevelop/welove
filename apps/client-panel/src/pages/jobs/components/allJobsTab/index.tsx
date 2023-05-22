@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 
-import { Paper, ClientPagination, OfficeLocationMenu } from 'ui';
+import { Paper, ClientPagination, OfficeLocationMenu, Search } from 'ui';
 import { commonTypes } from '@models/common';
 import Table from './Table';
 import Filters from './Filters';
-import SearchFilter from './SearchFilter';
 
 const locationList = [
     {
@@ -31,7 +30,7 @@ const AllJobsTab = () => {
             }}
         >
             <Filters
-                renderSearch={() => <SearchFilter onSearch={(searchValue) => { return; }} />}
+                renderSearch={() => <Search placeHolder={'Enter a job role or ...'} onSearch={(searchValue) => { return; }} />}
                 renderLocation={() => <OfficeLocationMenu list={locationList} />}
             />
             <Table />
