@@ -10,7 +10,7 @@ import SearchFilter from './SearchFilter';
 const locationList = [
     {
         id: '1',
-        name: 'Londong'
+        name: 'London'
     },
     {
         id: '2',
