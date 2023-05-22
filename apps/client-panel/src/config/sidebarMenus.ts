@@ -6,7 +6,8 @@ import {
     NOTIFICATION_URL,
     NEWS_URL,
     CONTACT_SUPPORT_URL,
-    SETTING_URL
+    SETTING_URL,
+    JOBS_URL
 } from './urls';
 import {
     DashboardIcon,
@@ -16,7 +17,8 @@ import {
     NotifIcon,
     SettingIcon,
     NewsIcon,
-    ServiceIcon
+    ServiceIcon,
+    BagIcon
 } from 'assets-ui';
 
 export const mainMenu = [
@@ -27,7 +29,19 @@ export const mainMenu = [
         icon: DashboardIcon
     },
     {
-        title: 'Clients',
+
+        title: 'Jobs',
+        url: JOBS_URL,
+        icon: BagIcon
+    },
+    {
+        title: 'Leadership board',
+        url: LEADERSHIP_BOARD_URL,
+        icon: LeadershipIcon
+
+    },
+    {
+        title: 'Employees',
         url: CLIENT_MANAGEMENT_URL,
         icon: UsersIcon
 
@@ -36,12 +50,6 @@ export const mainMenu = [
         title: 'Rewards',
         url: REWARD_URL,
         icon: RewardIcon
-
-    },
-    {
-        title: 'Leadership board',
-        url: LEADERSHIP_BOARD_URL,
-        icon: LeadershipIcon
 
     },
     {

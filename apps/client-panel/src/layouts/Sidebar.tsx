@@ -56,6 +56,10 @@ const Sidebar = () => {
                                 '& svg > g': {
                                     opacity: match(_el.url) ? 1 : .5
                                 },
+                                '& svg > g > path': {
+                                    opacity: match(_el.url) ? 1 : .5,
+                                    fill: '#fff'
+                                },
                                 ':hover': {
                                     bgcolor: 'rgba(255, 255, 255, 0.08)',
                                     borderRadius: '150px',

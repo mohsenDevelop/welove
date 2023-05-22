@@ -2,7 +2,7 @@ import { useState, FC } from 'react';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 
-const SearchField: FC<SearchFieldProps> = ({ onSearch }) => {
+const SearchFilter: FC<SearchFilterProps> = ({ onSearch }) => {
 
     const [value, setValue] = useState('');
 
@@ -14,7 +14,7 @@ const SearchField: FC<SearchFieldProps> = ({ onSearch }) => {
 
     return (
         <Box
-            width={387}
+            width={304}
             height={40}
             display={'flex'}
             alignItems={'center'}
@@ -28,7 +28,7 @@ const SearchField: FC<SearchFieldProps> = ({ onSearch }) => {
             <InputBase
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                placeholder='Search by name or email then Enter'
+                placeholder='Enter a job role or ...'
                 sx={{
                     width: '100%',
                     '& input': {
@@ -40,8 +40,8 @@ const SearchField: FC<SearchFieldProps> = ({ onSearch }) => {
     );
 };
 
-export interface SearchFieldProps {
+export interface SearchFilterProps {
     onSearch: (val: string) => void;
 }
 
-export default SearchField;
+export default SearchFilter;

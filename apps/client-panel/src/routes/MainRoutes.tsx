@@ -6,7 +6,6 @@ import {
     DASHBOARD_URL,
     LOGIN_URL,
     PANEL_URL,
-    CLIENT_MANAGEMENT_URL,
     REWARD_URL,
     LEADERSHIP_BOARD_URL,
     NOTIFICATION_URL,
@@ -23,19 +22,15 @@ import {
     NEWS_URL_COPY_ITEM_URL,
     NEWS_URL_VIDOE_PHOTO_URL,
     NOTIFICATION_COMPOSE_URL,
-    CREATE_CLIENT_URL,
-    DELETE_CLIENT_ADMIN_URL,
-    ADD_CLIENT_ADMIN_URL,
     SET_PASSWORD_URL,
     APP_SET_PASSWORD_URL,
-    QRCODE_URL
+    QRCODE_URL,
+    JOBS_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
 import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDialog';
 import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
-import DeleteClientAdminDialog from '../pages/createClient/components/adminAcess/DeletAdminDialog';
-import AddClientAdminDialog from '../pages/createClient/components/adminAcess/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 import QrCodeDialog from '@pages/qrCode';
 
@@ -64,8 +59,7 @@ const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/p
 const NewsPage = lazy(() => import('@pages/news'));
 const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'));
-const ClientsPage = lazy(() => import('@pages/clients'));
-const CreateClientPage = lazy(() => import('@pages/createClient'));
+const JobsPage = lazy(() => import('@pages/jobs'));
 const NotificationsPage = lazy(() => import('@pages/notifications'));
 const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
 const ContactSupportPage = lazy(() => import('@pages/contactSupport'));
@@ -116,32 +110,12 @@ const MainRoutes = createBrowserRouter([
                 )
             },
             {
-                path: CLIENT_MANAGEMENT_URL,
+                path: JOBS_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <ClientsPage />
+                        <JobsPage />
                     </Suspense>
                 )
-            },
-            {
-                path: CREATE_CLIENT_URL,
-                element: (
-                    <Suspense fallback={<LoadingCircle />}>
-                        <CreateClientPage />
-                        <Outlet />
-                    </Suspense>
-                ),
-                children: [
-                    {
-                        path: `${DELETE_CLIENT_ADMIN_URL}/:id`,
-                        element: <DeleteClientAdminDialog />
-                    },
-                    {
-                        path: `${ADD_CLIENT_ADMIN_URL}/:id`,
-                        element: <AddClientAdminDialog />
-                    },
-                ],
-
             },
             {
                 path: REWARD_URL,

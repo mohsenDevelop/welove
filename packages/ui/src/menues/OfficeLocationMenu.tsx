@@ -20,13 +20,13 @@ const MenuProps = {
     },
 };
 
-export const SortMenu: FC<SelectProps> = (props) => {
+export const OfficeLocationMenu: FC<SelectProps & { list: any[] }> = (props) => {
     return (
         <Select
             label={''}
             sx={{
                 height: 40,
-                minWidth: 130,
+                minWidth: 218,
                 fontSize: 14,
                 '& fieldset': {
                     borderRadius: '130px',
@@ -45,7 +45,7 @@ export const SortMenu: FC<SelectProps> = (props) => {
                             fontWeight={400}
                             color={colorPalette.blue800}
                         >
-                            Sort by
+                            Office location
                         </Typography>
                     );
                 }
@@ -55,8 +55,20 @@ export const SortMenu: FC<SelectProps> = (props) => {
             MenuProps={MenuProps}
             {...props}
         >
-            <MenuItem value={'Ascending'} sx={{ fontSize: 14 }}>Ascending</MenuItem>
-            <MenuItem value={'Descending'} sx={{ fontSize: 14 }}>Descending</MenuItem>
+            {
+                props.list ? props.list.map((_el) => (
+
+                    <MenuItem
+                        key={_el.id}
+                        value={_el.name}
+                        sx={{ fontSize: 14 }}
+                    >
+                        {_el.name}
+                    </MenuItem>
+                ))
+                    :
+                    null
+            }
         </Select>
     );
 };

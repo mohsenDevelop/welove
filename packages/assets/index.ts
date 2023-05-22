@@ -38,3 +38,4 @@ export { ReactComponent as CalendarIcon } from './icons/calendar_icon.svg';
 export { ReactComponent as ColorIcon } from './icons/color_icon.svg';
 export { ReactComponent as QrCodeIcon } from './icons/qrcode_icon.svg';
 export { ReactComponent as ServiceIcon } from './icons/serviceline_icon.svg';
+export { ReactComponent as BagIcon } from './icons/bag_icon.svg';
