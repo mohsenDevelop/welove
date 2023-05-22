@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Statistics from './components/statistics';
 import PendingPointes from './components/pendingPointes';
 import LatestNews from './components/latestNews';
+import LatestJobs from './components/latestJobs';
 
 const DashboardPage = () => {
     return (
@@ -19,6 +20,8 @@ const DashboardPage = () => {
                 <PendingPointes />
                 <LatestNews />
             </Stack>
+
+            <LatestJobs />
 
         </Stack>
     );
