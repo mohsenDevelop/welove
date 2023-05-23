@@ -9,6 +9,10 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import TableHeader from './TableHeader';
 
+import {
+    colorPalette
+} from 'ui';
+
 const rows = [
     {
         id: '1',
@@ -100,7 +104,17 @@ const Table = () => {
                             <TableRow
                                 key={_el.id}
                                 hover={false}
-                                sx={{ '& td': { borderBottom: rows.length !== _index + 1 ? '1px solid rgba(0, 0, 0, 0.08)' : 'unset', pb: '20px', } }}
+                                sx={
+                                    {
+                                        '& td': {
+                                            borderBottom: 'unset',
+                                            pb: '20px',
+                                            bgcolor: _index % 2 === 0 ? colorPalette.pink10 : 'inherit',
+                                            ':first-child': { borderRadius: '10px 0px 0px 10px' },
+                                            ':last-child': { borderRadius: '0px 10px 10px 0px' },
+                                        },
+                                        borderRadius: '10px'
+                                    }}
                             >
 
                                 <TableCell align={'left'} sx={{ pl: '0px' }}>
