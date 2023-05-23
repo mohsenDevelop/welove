@@ -3,8 +3,6 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 
-import { colorPalette } from 'ui';
-
 const TopEarners = () => {
     return (
         <Stack gap={'16px'}>
