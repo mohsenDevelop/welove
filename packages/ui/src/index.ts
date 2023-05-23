@@ -13,6 +13,7 @@ export * from './pagination/ClientPagination';
 export * from './tab/Tab';
 export * from './menues/SortMenu';
 export * from './menues/OfficeLocationMenu';
+export * from './menues/DivisionMenu';
 export * from './menues/RemindMenu';
 export * from './menues/AddNewsMenu';
 export * from './rewardCard/RewardCard';

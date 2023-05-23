@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 
-import { Paper, ClientPagination, OfficeLocationMenu, Search } from 'ui';
+import {
+    Paper,
+    ClientPagination,
+    OfficeLocationMenu,
+    Search,
+    DivisionMenu
+} from 'ui';
 import { commonTypes } from '@models/common';
 import Filters from './Filters';
 import Table from './Table';
@@ -14,6 +20,17 @@ const locationList = [
     {
         id: '2',
         name: 'French'
+    },
+];
+
+const divisionList = [
+    {
+        id: '1',
+        name: 'IT'
+    },
+    {
+        id: '2',
+        name: 'Human Resources'
     },
 ];
 
@@ -36,6 +53,7 @@ const TopPointEarners = () => {
                     sx={{ width: 387 }}
                 />}
                 renderLocation={() => <OfficeLocationMenu list={locationList} />}
+                renderDivision={() => <DivisionMenu list={divisionList} />}
             />
 
             <Table />
