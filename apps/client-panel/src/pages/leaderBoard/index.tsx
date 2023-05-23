@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 
 import { commonTypes } from '@models/common';
 import TopEarners from './components/topEarners';
+import TopPointEarners from './components/topPointEarners';
 
 const LeaderBoardPage = () => {
 
@@ -16,7 +17,7 @@ const LeaderBoardPage = () => {
             <Stack>
 
                 <TopEarners />
-
+                <TopPointEarners />
             </Stack>
         </Stack>
     );

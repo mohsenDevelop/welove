@@ -23,21 +23,14 @@ const TableHeader = () => {
                     align={'left'}
                     sx={{ color: colorPalette.blue800 }}
                 >
-                    Company
+                    Full name
                 </TableCell>
 
                 <TableCell
-                    align={'right'}
+                    align={'left'}
                     sx={{ color: colorPalette.blue800 }}
                 >
-                    Sectors
-                </TableCell>
-
-                <TableCell
-                    align={'right'}
-                    sx={{ color: colorPalette.blue800 }}
-                >
-                    Points
+                    Title & Division
                 </TableCell>
 
                 <TableCell
@@ -59,6 +52,13 @@ const TableHeader = () => {
                     sx={{ color: colorPalette.blue800 }}
                 >
                     Hires
+                </TableCell>
+
+                <TableCell
+                    align={'right'}
+                    sx={{ color: colorPalette.blue800 }}
+                >
+                    Points
                 </TableCell>
 
             </TableRow>

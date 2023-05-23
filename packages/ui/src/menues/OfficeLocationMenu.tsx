@@ -26,7 +26,7 @@ export const OfficeLocationMenu: FC<SelectProps & { list: any[] }> = (props) => 
             label={''}
             sx={{
                 height: 40,
-                minWidth: 218,
+                minWidth: 166,
                 fontSize: 14,
                 '& fieldset': {
                     borderRadius: '130px',
