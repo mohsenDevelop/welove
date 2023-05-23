@@ -25,7 +25,8 @@ import {
     SET_PASSWORD_URL,
     APP_SET_PASSWORD_URL,
     QRCODE_URL,
-    JOBS_URL
+    JOBS_URL,
+    LEADER_BORD_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -50,7 +51,7 @@ const LoginPage = lazy(() => import('@pages/login'));
 const SetPasswordPage = lazy(() => import('@pages/setPassword'));
 const AppSetPasswordPage = lazy(() => import('@pages/appSetPassword'));
 const DashboardPage = lazy(() => import('@pages/dashboard'));
-const LeadershipBoardPage = lazy(() => import('@pages/leadershipBoard'));
+const LeaderBoardPage = lazy(() => import('@pages/leaderBoard'));
 const RewardsPage = lazy(() => import('@pages/rewards'));
 const RewardsClientPage = lazy(() => import('@pages/rewardsClient'));
 const RewardsCompanyPage = lazy(() => import('@pages/rewardCompany'));
@@ -145,10 +146,10 @@ const MainRoutes = createBrowserRouter([
 
             },
             {
-                path: LEADERSHIP_BOARD_URL,
+                path: LEADER_BORD_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <LeadershipBoardPage />
+                        <LeaderBoardPage />
                     </Suspense>
                 )
             },

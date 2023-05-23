@@ -17,6 +17,7 @@ export const REWARD_CLEINT_URL = '/panel/rewards/clients';
 export const REWARD_COMPANY_URL = '/panel/rewards/company';
 // Leadership Board
 export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
+export const LEADER_BORD_URL = '/panel/leaderbord';
 // Notifications
 export const NOTIFICATION_URL = '/panel/notification';
 export const NOTIFICATION_COMPOSE_URL = '/panel/notification/compose';

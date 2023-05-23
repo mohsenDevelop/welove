@@ -2,12 +2,12 @@ import {
     DASHBOARD_URL,
     CLIENT_MANAGEMENT_URL,
     REWARD_URL,
-    LEADERSHIP_BOARD_URL,
     NOTIFICATION_URL,
     NEWS_URL,
     CONTACT_SUPPORT_URL,
     SETTING_URL,
-    JOBS_URL
+    JOBS_URL,
+    LEADER_BORD_URL
 } from './urls';
 import {
     DashboardIcon,
@@ -35,8 +35,8 @@ export const mainMenu = [
         icon: BagIcon
     },
     {
-        title: 'Leadership board',
-        url: LEADERSHIP_BOARD_URL,
+        title: 'Leaderboard',
+        url: LEADER_BORD_URL,
         icon: LeadershipIcon
 
     },
