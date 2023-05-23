@@ -12,7 +12,7 @@ const LeaderBoardPage = () => {
 
     return (
         <Stack>
-            <Typography variant={'h1'} p={'24px 0px'}>Leadership board</Typography>
+            <Typography variant={'h1'} p={'24px 0px'}>Leaderboard</Typography>
 
             <Stack>
 
