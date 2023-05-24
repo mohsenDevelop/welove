@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-const Filters: FC<PerformanceHeaderProps> = ({ renderSearch, renderLocation }) => {
+const Filters: FC<ActiveJobsFiltersProps> = ({ renderSearch, renderLocation }) => {
     return (
         <Stack gap={'24px'}>
             <Typography fontSize={17} fontWeight={600} > All Jobs</Typography>
@@ -24,7 +24,7 @@ const Filters: FC<PerformanceHeaderProps> = ({ renderSearch, renderLocation }) =
     );
 };
 
-export interface PerformanceHeaderProps {
+export interface ActiveJobsFiltersProps {
     renderSearch: () => ReactNode;
     renderLocation: () => ReactNode;
 }

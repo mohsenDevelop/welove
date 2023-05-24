@@ -41,3 +41,7 @@ export { ReactComponent as ServiceIcon } from './icons/serviceline_icon.svg';
 export { ReactComponent as BagIcon } from './icons/bag_icon.svg';
 export { ReactComponent as FileUploadIcon } from './icons/file_upload_icon.svg';
 export { ReactComponent as FolderUploadIcon } from './icons/folder_upload_icon.svg';
+export { ReactComponent as EditTableIcon } from './icons/edit_table_icon.svg';
+export { ReactComponent as RefreshTableIcon } from './icons/refresh_table_icon.svg';
+export { ReactComponent as DisabledTableIcon } from './icons/disabled_table_icon.svg';
+export { ReactComponent as TrashTableIcon } from './icons/trash_table_icon.svg';

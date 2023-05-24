@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-const Filters: FC<TopPointEarnersFiltersProps> = ({ renderSearch, renderLocation, renderDivision }) => {
+const Filters: FC<EmployeesFiltersProps> = ({ renderSearch }) => {
     return (
         <Stack gap={'24px'}>
             <Typography fontSize={17} fontWeight={600} > All Jobs</Typography>
@@ -16,21 +16,14 @@ const Filters: FC<TopPointEarnersFiltersProps> = ({ renderSearch, renderLocation
                 {
                     renderSearch()
                 }
-                {
-                    renderLocation()
-                }
-                {
-                    renderDivision()
-                }
+
             </Stack>
         </Stack>
     );
 };
 
-export interface TopPointEarnersFiltersProps {
+export interface EmployeesFiltersProps {
     renderSearch: () => ReactNode;
-    renderLocation: () => ReactNode;
-    renderDivision: () => ReactNode;
 }
 
 export default Filters;
