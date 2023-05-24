@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFormik, Form, FormikProvider } from 'formik';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { SelectChangeEvent } from '@mui/material/Select';
 
 import {
     Dialog,
@@ -12,7 +10,7 @@ import {
     Button,
     DivisionMenu
 } from 'ui';
-import { CloseIcon, EyeIcon } from 'assets-ui';
+import { CloseIcon } from 'assets-ui';
 import UploadAvatar from './UploadAvatar';
 
 const divisionList = [

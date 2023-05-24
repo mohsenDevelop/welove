@@ -1,4 +1,4 @@
-import { FC, useCallback, useState, memo } from 'react';
+import { FC, useCallback, memo } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Stack from '@mui/material/Stack';
 
