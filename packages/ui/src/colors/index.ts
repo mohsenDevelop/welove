@@ -40,6 +40,7 @@ export const colorPalette = {
     gray600: '#707070',
     gray900: '#363537',
     pink200: '#E5167A',
+    pink220: '#DB0C70',
     pink10: '#F8F7F8',
     AquaBlue200: '#2DACC2',
     Grape200: '#C2BE33',

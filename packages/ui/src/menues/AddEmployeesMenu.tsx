@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from 'react';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
@@ -7,7 +7,7 @@ import { Button } from '../button/Button';
 import { colorPalette } from '../colors';
 import { StyledMenu } from './style';
 
-export interface AddNewsMenuProps {
+export interface AddEmployeesMenuProps {
     title: string;
     btnBgcolor: string;
     menuHeight?: string;
@@ -19,7 +19,7 @@ export interface AddNewsMenuProps {
     onOpen: (event: MouseEvent<any>) => void;
 }
 
-export const AddNewsMenu: FC<AddNewsMenuProps> = (
+export const AddEmployeesMenu: FC<AddEmployeesMenuProps> = (
     {
         btnBgcolor,
         children,
@@ -34,14 +34,14 @@ export const AddNewsMenu: FC<AddNewsMenuProps> = (
     return (
         <div>
             <Button
-                id='role-news-more-button'
-                aria-controls={open ? 'role-news-more-menu' : undefined}
+                id='role-employees-more-button'
+                aria-controls={open ? 'role-employees-more-button' : undefined}
                 aria-haspopup='true'
                 aria-expanded={open ? 'true' : undefined}
                 variant={'contained'}
                 backgroundColor={btnBgcolor}
                 LabelColor={colorPalette.white}
-                startIcon={<AddOutlinedIcon />}
+                startIcon={<FileUploadOutlinedIcon />}
                 endIcon={open ? <ExpandLessOutlinedIcon /> : <ExpandMoreOutlinedIcon />}
                 sx={{
                     height: 48,
@@ -53,7 +53,7 @@ export const AddNewsMenu: FC<AddNewsMenuProps> = (
             </Button>
 
             <StyledMenu
-                id='role-news-more-menu'
+                id='role-employees-more-menu'
                 anchorEl={anchorEl}
                 open={open}
                 onClose={onClose}
@@ -66,7 +66,7 @@ export const AddNewsMenu: FC<AddNewsMenuProps> = (
                     horizontal: 'right',
                 }}
                 MenuListProps={{
-                    'aria-labelledby': 'role-news-more-button',
+                    'aria-labelledby': 'role-employees-more-button',
                 }}
                 sx={{
                     '.MuiMenu-paper': { width: poperWidth }
@@ -79,6 +79,6 @@ export const AddNewsMenu: FC<AddNewsMenuProps> = (
     );
 };
 
-AddNewsMenu.defaultProps = {
+AddEmployeesMenu.defaultProps = {
     poperWidth: '271px',
 };

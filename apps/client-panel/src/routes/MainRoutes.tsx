@@ -26,7 +26,8 @@ import {
     APP_SET_PASSWORD_URL,
     QRCODE_URL,
     JOBS_URL,
-    LEADER_BORD_URL
+    LEADER_BORD_URL,
+    EMPLOYEES_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -64,6 +65,7 @@ const JobsPage = lazy(() => import('@pages/jobs'));
 const NotificationsPage = lazy(() => import('@pages/notifications'));
 const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
 const ContactSupportPage = lazy(() => import('@pages/contactSupport'));
+const EmployeesPage = lazy(() => import('@pages/employees'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -119,6 +121,22 @@ const MainRoutes = createBrowserRouter([
                 )
             },
             {
+                path: LEADER_BORD_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <LeaderBoardPage />
+                    </Suspense>
+                )
+            },
+            {
+                path: EMPLOYEES_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <EmployeesPage />
+                    </Suspense>
+                )
+            },
+            {
                 path: REWARD_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
@@ -144,14 +162,6 @@ const MainRoutes = createBrowserRouter([
                     </Suspense>
                 ),
 
-            },
-            {
-                path: LEADER_BORD_URL,
-                element: (
-                    <Suspense fallback={<LoadingCircle />}>
-                        <LeaderBoardPage />
-                    </Suspense>
-                )
             },
             {
                 path: NOTIFICATION_URL,

@@ -38,3 +38,5 @@ export const CREATE_ADMIN_URL = '/panel/setting/admin/create';
 export const POLICY_URL = '/panel/setting/policy';
 // Jobs
 export const JOBS_URL = '/panel/jobs';
+// Employees
+export const EMPLOYEES_URL = '/panel/employees';

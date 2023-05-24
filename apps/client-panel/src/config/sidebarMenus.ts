@@ -1,6 +1,6 @@
 import {
     DASHBOARD_URL,
-    CLIENT_MANAGEMENT_URL,
+    EMPLOYEES_URL,
     REWARD_URL,
     NOTIFICATION_URL,
     NEWS_URL,
@@ -42,7 +42,7 @@ export const mainMenu = [
     },
     {
         title: 'Employees',
-        url: CLIENT_MANAGEMENT_URL,
+        url: EMPLOYEES_URL,
         icon: UsersIcon
 
     },
