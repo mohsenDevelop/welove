@@ -27,7 +27,8 @@ import {
     QRCODE_URL,
     JOBS_URL,
     LEADER_BORD_URL,
-    EMPLOYEES_URL
+    EMPLOYEES_URL,
+    EMPLOYEES_INDIVIDUAL_FROM_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -35,6 +36,7 @@ import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDia
 import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 import QrCodeDialog from '@pages/qrCode';
+import EmployeeFormDialog from '@pages/employees/components/employeeForm';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -133,8 +135,15 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <EmployeesPage />
+                        <Outlet />
                     </Suspense>
-                )
+                ),
+                children: [
+                    {
+                        path: EMPLOYEES_INDIVIDUAL_FROM_URL,
+                        element: <EmployeeFormDialog />
+                    },
+                ],
             },
             {
                 path: REWARD_URL,

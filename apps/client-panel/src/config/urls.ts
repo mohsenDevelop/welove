@@ -40,3 +40,4 @@ export const POLICY_URL = '/panel/setting/policy';
 export const JOBS_URL = '/panel/jobs';
 // Employees
 export const EMPLOYEES_URL = '/panel/employees';
+export const EMPLOYEES_INDIVIDUAL_FROM_URL = '/panel/employees/individual-form';

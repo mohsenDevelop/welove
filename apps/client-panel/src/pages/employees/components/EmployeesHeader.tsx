@@ -12,6 +12,8 @@ import {
     FileUploadIcon,
     FolderUploadIcon
 } from 'assets-ui';
+import { EMPLOYEES_INDIVIDUAL_FROM_URL } from '@config/urls';
+
 const EmployeesHeader = () => {
 
     const navigate = useNavigate();
@@ -91,7 +93,7 @@ const EmployeesHeader = () => {
                             display={'flex'}
                             flexDirection={'column'}
                             gap={'4px'}
-                        // onClick={() => navigate(NEWS_URL_COPY_ITEM_URL)}
+                            onClick={() => navigate(EMPLOYEES_INDIVIDUAL_FROM_URL)}
                         >
                             <Typography
                                 variant={'h1'}
