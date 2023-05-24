@@ -31,11 +31,9 @@ const UploadAvatar: FC<UploadAvatarProps> = ({ avatar, onUploaded, onRemove }) =
         maxFiles: 1
     });
 
-
     return (
         <>
             <input {...getInputProps()} />
-
 
             <Stack
                 flexDirection={'row'}
@@ -62,6 +60,7 @@ const UploadAvatar: FC<UploadAvatarProps> = ({ avatar, onUploaded, onRemove }) =
                 <Stack gap={'8px'} flex={1}>
                     <Button
                         variant={'contained'}
+                        type={'button'}
                         backgroundColor={colorPalette.blue800}
                         LabelColor={colorPalette.white}
                         fullWidth={true}
@@ -76,6 +75,7 @@ const UploadAvatar: FC<UploadAvatarProps> = ({ avatar, onUploaded, onRemove }) =
 
                     <Button
                         variant={'outlined'}
+                        type={'button'}
                         borderColor={'rgba(39, 64, 82, 0.2)'}
                         LabelColor={colorPalette.blue800}
                         fullWidth={true}
@@ -83,7 +83,7 @@ const UploadAvatar: FC<UploadAvatarProps> = ({ avatar, onUploaded, onRemove }) =
                             fontSize: 16,
                             fontWeight: 700
                         }}
-                        onClick={onRemove}
+                        onClick={() => onRemove()}
                     >
                         Remove
                     </Button>
@@ -99,4 +99,4 @@ export interface UploadAvatarProps {
     onUploaded: (file: File | string) => void;
     onRemove: () => void;
 }
-export default UploadAvatar;
+export default memo(UploadAvatar, (prev, next) => prev.avatar === next.avatar);

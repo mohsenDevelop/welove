@@ -20,19 +20,19 @@ const MenuProps = {
     },
 };
 
-export const DivisionMenu: FC<SelectProps & { list: any[] }> = (props) => {
+export const DivisionMenu: FC<SelectProps & { list: any[], height?: number, radiusBorder?: string }> = (props) => {
     return (
         <Select
             label={''}
             sx={{
-                height: 40,
+                height: props.height ?? 40,
                 minWidth: 117,
                 fontSize: 14,
                 '& fieldset': {
-                    borderRadius: '130px',
+                    borderRadius: props.radiusBorder ?? '130px',
                     border: '1px solid rgba(39, 64, 82, 0.15) !important',
                 },
-
+                ...props.sx,
             }}
             IconComponent={ExpandMoreOutlinedIcon}
             displayEmpty={true}
