@@ -14,7 +14,7 @@ const TableHeader = () => {
 
                 <TableCell
                     align={'left'}
-                    sx={{ color: colorPalette.blue800 }}
+                    sx={{ color: colorPalette.blue800, pl: '16px !important' }}
                 >
                     #
                 </TableCell>

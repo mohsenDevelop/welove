@@ -117,7 +117,7 @@ const Table = () => {
                                     }}
                             >
 
-                                <TableCell align={'left'} sx={{ pl: '0px' }}>
+                                <TableCell align={'left'} sx={{ pl: '16px' }}>
                                     <Typography fontSize={14}>{_el.id}</Typography>
                                 </TableCell>
 
