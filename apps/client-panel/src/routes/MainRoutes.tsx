@@ -29,7 +29,8 @@ import {
     EMPLOYEES_URL,
     EMPLOYEES_INDIVIDUAL_FROM_URL,
     EMPLOYEES_DELETE_URL,
-    EMPLOYEES_DISABLED_URL
+    EMPLOYEES_DISABLED_URL,
+    EMPLOYEES_BULKUPLOAD_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -38,6 +39,7 @@ import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 import QrCodeDialog from '@pages/qrCode';
 import EmployeeFormDialog from '@pages/employees/components/employeeForm';
+import EmployeeBulkUploadDialog from '@pages/employees/components/employeeBulkUpload';
 import EmployeeDeleteDialog from '@pages/employees/components/employeeDelete';
 import EmployeeDisabledDialog from '@pages/employees/components/employeeDisabled';
 
@@ -153,6 +155,10 @@ const MainRoutes = createBrowserRouter([
                     {
                         path: EMPLOYEES_DISABLED_URL,
                         element: <EmployeeDisabledDialog />
+                    },
+                    {
+                        path: EMPLOYEES_BULKUPLOAD_URL,
+                        element: <EmployeeBulkUploadDialog />
                     },
                 ],
             },

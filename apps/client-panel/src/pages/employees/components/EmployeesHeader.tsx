@@ -12,7 +12,7 @@ import {
     FileUploadIcon,
     FolderUploadIcon
 } from 'assets-ui';
-import { EMPLOYEES_INDIVIDUAL_FROM_URL } from '@config/urls';
+import { EMPLOYEES_INDIVIDUAL_FROM_URL, EMPLOYEES_BULKUPLOAD_URL } from '@config/urls';
 
 const EmployeesHeader = () => {
 
@@ -62,7 +62,7 @@ const EmployeesHeader = () => {
                             display={'flex'}
                             flexDirection={'column'}
                             gap={'4px'}
-                        // onClick={() => navigate(NEWS_URL_VIDOE_PHOTO_URL)}
+                            onClick={() => navigate(EMPLOYEES_BULKUPLOAD_URL)}
                         >
                             <Typography
                                 variant={'h1'}
