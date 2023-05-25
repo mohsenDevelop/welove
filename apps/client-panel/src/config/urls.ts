@@ -41,3 +41,5 @@ export const JOBS_URL = '/panel/jobs';
 // Employees
 export const EMPLOYEES_URL = '/panel/employees';
 export const EMPLOYEES_INDIVIDUAL_FROM_URL = '/panel/employees/individual-form';
+export const EMPLOYEES_DELETE_URL = '/panel/employees/delete';
+export const EMPLOYEES_DISABLED_URL = '/panel/employees/disabled';

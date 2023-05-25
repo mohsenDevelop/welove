@@ -1,4 +1,4 @@
-import Stack from '@mui/material/Stack';
+import { useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 
 import { TableMenu, MenuItem, colorPalette } from 'ui';
@@ -8,8 +8,12 @@ import {
     RefreshTableIcon,
     TrashTableIcon
 } from 'assets-ui';
+import { EMPLOYEES_DELETE_URL, EMPLOYEES_DISABLED_URL } from '@config/urls';
 
 const TableActions = () => {
+
+    const navigate = useNavigate();
+
     return (
         <TableMenu>
 
@@ -44,7 +48,9 @@ const TableActions = () => {
                     fontSize={14}
                     fontWeight={500}
                     pl={'10px'}
+                    onClick={() => navigate(EMPLOYEES_DISABLED_URL)}
                 >
+
                     Disabled
                 </Typography>
             </MenuItem>
@@ -56,6 +62,7 @@ const TableActions = () => {
                     fontSize={14}
                     fontWeight={500}
                     pl={'10px'}
+                    onClick={() => navigate(EMPLOYEES_DELETE_URL)}
                 >
                     Delete
                 </Typography>

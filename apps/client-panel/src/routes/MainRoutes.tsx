@@ -7,7 +7,6 @@ import {
     LOGIN_URL,
     PANEL_URL,
     REWARD_URL,
-    LEADERSHIP_BOARD_URL,
     NOTIFICATION_URL,
     NEWS_URL,
     CONTACT_SUPPORT_URL,
@@ -28,7 +27,9 @@ import {
     JOBS_URL,
     LEADER_BORD_URL,
     EMPLOYEES_URL,
-    EMPLOYEES_INDIVIDUAL_FROM_URL
+    EMPLOYEES_INDIVIDUAL_FROM_URL,
+    EMPLOYEES_DELETE_URL,
+    EMPLOYEES_DISABLED_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -37,6 +38,8 @@ import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 import QrCodeDialog from '@pages/qrCode';
 import EmployeeFormDialog from '@pages/employees/components/employeeForm';
+import EmployeeDeleteDialog from '@pages/employees/components/employeeDelete';
+import EmployeeDisabledDialog from '@pages/employees/components/employeeDisabled';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -142,6 +145,14 @@ const MainRoutes = createBrowserRouter([
                     {
                         path: EMPLOYEES_INDIVIDUAL_FROM_URL,
                         element: <EmployeeFormDialog />
+                    },
+                    {
+                        path: EMPLOYEES_DELETE_URL,
+                        element: <EmployeeDeleteDialog />
+                    },
+                    {
+                        path: EMPLOYEES_DISABLED_URL,
+                        element: <EmployeeDisabledDialog />
                     },
                 ],
             },
