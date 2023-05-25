@@ -23,10 +23,9 @@ const LoginForm = () => {
         validationSchema: validationSchema,
         onSubmit: (values) => {
 
-            console.log({ values });
             navigate(DASHBOARD_URL, { replace: true });
             /// if there is error, captcha must be reset
-            if (captchaRef) { captchaRef?.current.reset(); }
+            // if (captchaRef) { captchaRef?.current.reset(); }
         },
     });
 
@@ -116,13 +115,13 @@ const LoginForm = () => {
                             />
                         </Stack>
 
-                        <ReCAPTCHA
+                        {/* <ReCAPTCHA
                             ref={captchaRef}
                             sitekey={'6Lc1kpIjAAAAAJ8A9pxpuR-a4uc1UZZLYQo0aaH-'}
                             onChange={handleChangeCaptcha}
                             size={'normal'}
                             className={'login-captcha'}
-                        />
+                        /> */}
 
                         <Button
                             variant={'contained'}
