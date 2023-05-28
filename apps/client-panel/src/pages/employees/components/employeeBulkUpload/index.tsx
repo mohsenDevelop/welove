@@ -5,13 +5,10 @@ import Typography from '@mui/material/Typography';
 
 import {
     Dialog,
-    colorPalette,
-    TextField,
-    Button,
-    DivisionMenu
 } from 'ui';
 import { CloseIcon } from 'assets-ui';
 import UploadFile from './UploadFile';
+import EmployeesList from './EmployeesList';
 
 const divisionList = [
     {
@@ -85,6 +82,8 @@ const EmployeeBulkUpload = () => {
                             onUploaded={(file: File | string) => setFieldValue('fileUploaded', file)}
                             onRemove={() => setFieldValue('fileUploaded', '')}
                         />
+
+                        <EmployeesList />
                     </Form>
                 </FormikProvider>
 
