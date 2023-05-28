@@ -46,3 +46,4 @@ export { ReactComponent as RefreshTableIcon } from './icons/refresh_table_icon.s
 export { ReactComponent as DisabledTableIcon } from './icons/disabled_table_icon.svg';
 export { ReactComponent as TrashTableIcon } from './icons/trash_table_icon.svg';
 export { ReactComponent as EyeTableIcon } from './icons/eye_table_icon.svg';
+export { ReactComponent as EditWhiteIcon } from './icons/edit_white_icon.svg';

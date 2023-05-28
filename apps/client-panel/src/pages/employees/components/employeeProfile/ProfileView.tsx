@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -7,9 +8,14 @@ import {
     Paper,
     Button
 } from 'ui';
+import { EditWhiteIcon } from 'assets-ui';
+import { EMPLOYEES_INDIVIDUAL_FROM_URL } from '@config/urls';
 import MoreButton from './MoreButton';
 
 const ProfileView = () => {
+
+    const navigate = useNavigate();
+
     return (
         <Paper
             type={'client'}
@@ -61,12 +67,14 @@ const ProfileView = () => {
                     type={'submit'}
                     backgroundColor={colorPalette.blue800}
                     LabelColor={colorPalette.white}
+                    startIcon={<EditWhiteIcon />}
                     sx={{
                         fontSize: 16,
                         fontWeight: 700,
                         width: 204,
                         mr: '5px'
                     }}
+                    onClick={() => navigate(EMPLOYEES_INDIVIDUAL_FROM_URL)}
                 >
                     Edit profile
                 </Button>
