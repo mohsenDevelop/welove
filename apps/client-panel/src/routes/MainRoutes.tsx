@@ -30,7 +30,9 @@ import {
     EMPLOYEES_INDIVIDUAL_FROM_URL,
     EMPLOYEES_DELETE_URL,
     EMPLOYEES_DISABLED_URL,
-    EMPLOYEES_BULKUPLOAD_URL
+    EMPLOYEES_BULKUPLOAD_URL,
+    EMPLOYEES_PROFILE_URL,
+    EMPLOYEES_PROFILE_POINT_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -42,6 +44,7 @@ import EmployeeFormDialog from '@pages/employees/components/employeeForm';
 import EmployeeBulkUploadDialog from '@pages/employees/components/employeeBulkUpload';
 import EmployeeDeleteDialog from '@pages/employees/components/employeeDelete';
 import EmployeeDisabledDialog from '@pages/employees/components/employeeDisabled';
+import AddEmployeePointDialog from '@pages/employees/components/employeeProfile/AddEmployeePointDialog';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -73,6 +76,7 @@ const NotificationsPage = lazy(() => import('@pages/notifications'));
 const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
 const ContactSupportPage = lazy(() => import('@pages/contactSupport'));
 const EmployeesPage = lazy(() => import('@pages/employees'));
+const EmployeesProfilePage = lazy(() => import('@pages/employees/components/employeeProfile'));
 
 const MainRoutes = createBrowserRouter([
     {
@@ -144,6 +148,7 @@ const MainRoutes = createBrowserRouter([
                     </Suspense>
                 ),
                 children: [
+
                     {
                         path: EMPLOYEES_INDIVIDUAL_FROM_URL,
                         element: <EmployeeFormDialog />
@@ -159,6 +164,22 @@ const MainRoutes = createBrowserRouter([
                     {
                         path: EMPLOYEES_BULKUPLOAD_URL,
                         element: <EmployeeBulkUploadDialog />
+                    },
+                ],
+            },
+            {
+                path: EMPLOYEES_PROFILE_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <EmployeesProfilePage />
+                        <Outlet />
+                    </Suspense>
+                ),
+                children: [
+
+                    {
+                        path: EMPLOYEES_PROFILE_POINT_URL,
+                        element: <AddEmployeePointDialog />
                     },
                 ],
             },

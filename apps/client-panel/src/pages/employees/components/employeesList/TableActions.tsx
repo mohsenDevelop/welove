@@ -6,9 +6,14 @@ import {
     EditTableIcon,
     DisabledTableIcon,
     RefreshTableIcon,
-    TrashTableIcon
+    TrashTableIcon,
+    EyeTableIcon
 } from 'assets-ui';
-import { EMPLOYEES_DELETE_URL, EMPLOYEES_DISABLED_URL } from '@config/urls';
+import {
+    EMPLOYEES_DELETE_URL,
+    EMPLOYEES_DISABLED_URL,
+    EMPLOYEES_PROFILE_URL
+} from '@config/urls';
 
 const TableActions = () => {
 
@@ -17,6 +22,18 @@ const TableActions = () => {
     return (
         <TableMenu>
 
+            <MenuItem>
+                <EyeTableIcon />
+                <Typography
+                    variant={'h1'}
+                    fontSize={14}
+                    fontWeight={500}
+                    pl={'10px'}
+                    onClick={() => navigate(EMPLOYEES_PROFILE_URL)}
+                >
+                    View profile
+                </Typography>
+            </MenuItem>
             <MenuItem>
                 <EditTableIcon />
                 <Typography

@@ -44,3 +44,5 @@ export const EMPLOYEES_INDIVIDUAL_FROM_URL = '/panel/employees/individual-form';
 export const EMPLOYEES_BULKUPLOAD_URL = '/panel/employees/bulkupload';
 export const EMPLOYEES_DELETE_URL = '/panel/employees/delete';
 export const EMPLOYEES_DISABLED_URL = '/panel/employees/disabled';
+export const EMPLOYEES_PROFILE_URL = '/panel/employees/profile';
+export const EMPLOYEES_PROFILE_POINT_URL = '/panel/employees/profile/point';
