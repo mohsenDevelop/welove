@@ -1,3 +1,4 @@
+import { SxProps } from '@mui/material';
 import { FC } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
@@ -8,10 +9,11 @@ import ArrowForwardIosRounded from '@mui/icons-material/ArrowForwardIosRounded';
 export interface ClientPaginationProps {
     page: number;
     count: number;
+    sx?: SxProps
     onChange: (page: number) => void;
 }
 
-export const ClientPagination: FC<ClientPaginationProps> = ({ page, count, onChange }) => {
+export const ClientPagination: FC<ClientPaginationProps> = ({ page, count, sx, onChange }) => {
     return (
         <Stack
             alignItems={'center'}
@@ -22,6 +24,7 @@ export const ClientPagination: FC<ClientPaginationProps> = ({ page, count, onCha
             width={132}
             height={44}
             gap={'8px'}
+            sx={sx}
         >
             <IconButton
                 onClick={page <= 1 ? () => { return; } : () => onChange(page - 1)}>
