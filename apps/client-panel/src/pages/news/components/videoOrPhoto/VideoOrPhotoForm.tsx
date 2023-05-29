@@ -6,7 +6,7 @@ import HeaderFormItem from '../copyItem/HeaderFormItem';
 import BodyTextFormItem from '../copyItem/BodyTextFormItem';
 import TagFormItem from '../copyItem/TagFormItem';
 import LinkFormItem from '../copyItem/LinkFormItem';
-import ShareFormItem from '../copyItem/ShareFormItem';
+import ShareFormItem from '../ShareFormItem';
 import UploadVideoFormItem from './UploadVideoFormItem';
 import UploadImageFormItem from './UploadImageFormItem';
 

@@ -72,7 +72,7 @@ export const CompanyList: FC<CompanyListProps> = ({ rows, sx }) => {
                                         role={'checkbox'}
                                         aria-checked={isItemSelected}
                                         tabIndex={-1}
-                                        selected={isItemSelected}
+                                        selected={false}
                                         sx={{ '& td': { borderBottom: rows.length !== _index + 1 ? '1px solid rgba(0, 0, 0, 0.08)' : 'unset', pb: '20px', } }}
                                     >
                                         <TableCell

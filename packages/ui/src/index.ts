@@ -22,6 +22,7 @@ export * from './rewardCard/RewardCard';
 export * from './switch/Switch';
 export * from './switch/AcountSwitch';
 export * from './companyList/CompanyList';
+export * from './individualList/IndividualList';
 export * from './upload/NewsUploadFile';
 export * from './progress/CircularSocialProgress';
 export * from './progress/StatisticsProgress';

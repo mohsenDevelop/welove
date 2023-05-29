@@ -5,7 +5,7 @@ import { Button, colorPalette } from 'ui';
 import HeaderFormItem from './HeaderFormItem';
 import BodyTextFormItem from './BodyTextFormItem';
 import LinkFormItem from './LinkFormItem';
-import ShareFormItem from './ShareFormItem';
+import ShareFormItem from '../ShareFormItem';
 import TagFormItem from './TagFormItem';
 
 const CopyItemForm = () => {

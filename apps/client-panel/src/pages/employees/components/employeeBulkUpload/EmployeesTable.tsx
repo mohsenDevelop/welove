@@ -187,13 +187,70 @@ const EmployeesTable = () => {
                                                         flexDirection={'column'}
                                                         gap={'6px'}
                                                     >
-                                                        <Typography
-                                                            fontSize={14}
-                                                            fontWeight={500}
+                                                        <Stack
+                                                            flexDirection={'row'}
+                                                            alignItems={'center'}
+                                                            gap={'6px'}
                                                         >
-                                                            {_el.fullName}
-                                                        </Typography>
-                                                        <Typography fontSize={12}>{_el.email}</Typography>
+                                                            <Typography
+                                                                fontSize={15}
+                                                                fontWeight={600}
+                                                            >
+                                                                Randy Calzoni
+                                                            </Typography>
+
+                                                            <Typography
+                                                                component={'span'}
+                                                                bgcolor={colorPalette.gray900}
+                                                                padding={'1.5px'}
+                                                                borderRadius={'50%'} />
+
+                                                            <Typography
+                                                                fontSize={14}
+                                                                fontWeight={600}
+                                                            >
+                                                                IT
+                                                            </Typography>
+                                                        </Stack>
+
+                                                        <Stack
+                                                            flexDirection={'row'}
+                                                            alignItems={'center'}
+                                                            gap={'6px'}
+                                                        >
+                                                            <Typography
+                                                                fontSize={12}
+                                                                fontWeight={400}
+                                                            >
+                                                                London,United kingdom
+                                                            </Typography>
+
+                                                            <Typography
+                                                                component={'span'}
+                                                                bgcolor={colorPalette.gray900}
+                                                                padding={'1.5px'}
+                                                                borderRadius={'50%'} />
+
+                                                            <Typography
+                                                                fontSize={12}
+                                                                fontWeight={600}
+                                                            >
+                                                                WP:GU16 7HF
+                                                            </Typography>
+
+                                                            <Typography
+                                                                component={'span'}
+                                                                bgcolor={colorPalette.gray900}
+                                                                padding={'1.5px'}
+                                                                borderRadius={'50%'} />
+
+                                                            <Typography
+                                                                fontSize={12}
+                                                                fontWeight={600}
+                                                            >
+                                                                HP: 0NY
+                                                            </Typography>
+                                                        </Stack>
 
                                                     </Box>
 
