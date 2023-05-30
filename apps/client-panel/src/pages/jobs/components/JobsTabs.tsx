@@ -28,8 +28,8 @@ const JobsTabs = () => {
         <Stack>
             <Stack
                 flexDirection={'row'}
+                borderBottom={'1px solid rgba(0, 0, 0, 0.08);'}
             >
-
                 <Tabs
                     indicatecolor={colorPalette.purple}
                     value={tabValue}

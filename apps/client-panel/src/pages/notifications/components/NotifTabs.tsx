@@ -1,20 +1,20 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Tab from '@mui/material/Tab';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 import {
     Tabs,
     colorPalette,
-    Button
 } from 'ui';
-import { NOTIFICATION_COMPOSE_URL } from '@config/urls';
 import ActiveList from './activeList';
 
-const NotifTabs = () => {
+const renderTabs: { [key: string]: any } = {
+    '1': <ActiveList />,
+    '2': <ActiveList />,
+    '3': <ActiveList />,
+};
 
-    const navigate = useNavigate();
+const NotifTabs = () => {
 
     const [tabValue, setTabValue] = useState('1');
 
@@ -23,50 +23,28 @@ const NotifTabs = () => {
     };
 
     return (
-        <Stack>
-
+        <Stack
+            gap={'38px'}
+        >
             <Stack
                 flexDirection={'row'}
-                alignItems={'center'}
-                justifyContent={'space-between'}
+                borderBottom={'1px solid rgba(0, 0, 0, 0.08);'}
             >
                 <Tabs
                     indicatecolor={colorPalette.purple}
                     value={tabValue}
                     onChange={handleChangeTabs}
                 >
-                    <Tab value={'1'} label={'Active (12)'} />
-                    <Tab value={'2'} label={'Archive (1)'} />
+                    <Tab value={'1'} label={'Super admin (12)'} />
+                    <Tab value={'2'} label={'Reminder (1)'} />
+                    <Tab value={'3'} label={'Voucher claim (3)'} />
+                    <Tab value={'4'} label={'Pending point (0)'} />
+                    <Tab value={'5'} label={'App users (0)'} />
                 </Tabs>
-
-                <Button
-                    variant={'contained'}
-                    backgroundColor={colorPalette.purple}
-                    LabelColor={colorPalette.white}
-                    startIcon={
-                        <EditOutlinedIcon
-                            sx={{
-                                width: 24,
-                                height: 24,
-                                '& path': {
-                                    fill: `${colorPalette.white} !important`
-                                }
-                            }}
-                        />
-                    }
-                    sx={{
-                        width: 140,
-                        height: 48,
-                        fontWeight: 700
-                    }}
-                    onClick={() => navigate(NOTIFICATION_COMPOSE_URL)}
-                >
-                    Compose
-                </Button>
             </Stack>
 
             {
-                tabValue === '1' ? <ActiveList /> : <ActiveList />
+                renderTabs[tabValue]
             }
         </Stack>
     );
