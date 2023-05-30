@@ -31,7 +31,7 @@ const JobsTabs = () => {
                 borderBottom={'1px solid rgba(0, 0, 0, 0.08);'}
             >
                 <Tabs
-                    indicatecolor={colorPalette.purple}
+                    indicatecolor={colorPalette.pink200}
                     value={tabValue}
                     onChange={handleChangeTabs}
                 >

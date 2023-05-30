@@ -6,12 +6,12 @@ import {
     Tabs,
     colorPalette,
 } from 'ui';
-import ActiveList from './activeList';
+import SuperAdminTab from './superAdmin';
 
 const renderTabs: { [key: string]: any } = {
-    '1': <ActiveList />,
-    '2': <ActiveList />,
-    '3': <ActiveList />,
+    '1': <SuperAdminTab />,
+    '2': <SuperAdminTab />,
+    '3': <SuperAdminTab />,
 };
 
 const NotifTabs = () => {
@@ -31,7 +31,7 @@ const NotifTabs = () => {
                 borderBottom={'1px solid rgba(0, 0, 0, 0.08);'}
             >
                 <Tabs
-                    indicatecolor={colorPalette.purple}
+                    indicatecolor={colorPalette.pink200}
                     value={tabValue}
                     onChange={handleChangeTabs}
                 >
