@@ -2,8 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { BreadCrumb, Paper } from 'ui';
-import { NEWS_URL } from '@config/urls';
+import { Paper, BackButton } from 'ui';
 import CopyItemForm from './CopyItemForm';
 
 const CopyItemPage = () => {
@@ -12,12 +11,8 @@ const CopyItemPage = () => {
 
     return (
         <Stack>
-            <BreadCrumb
-                list={[
-                    { link: NEWS_URL, name: 'News' },
-                    { link: '', name: 'Add News item' },
-                ]}
-                onClick={(link: string) => navigate(link)}
+            <BackButton
+                onClick={() => navigate(-1)}
             />
 
             <Paper
