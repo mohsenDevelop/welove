@@ -1,9 +1,8 @@
-import { NEWS_URL } from '@config/urls';
 import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { BreadCrumb, Paper } from 'ui';
+import { Paper, BackButton } from 'ui';
 import VideoOrPhotoForm from './VideoOrPhotoForm';
 
 const VideoOrPhotoPage = () => {
@@ -12,13 +11,8 @@ const VideoOrPhotoPage = () => {
 
     return (
         <Stack>
-
-            <BreadCrumb
-                list={[
-                    { link: NEWS_URL, name: 'News' },
-                    { link: '', name: 'Add News item' },
-                ]}
-                onClick={(link: string) => navigate(link)}
+            <BackButton
+                onClick={() => navigate(-1)}
             />
 
             <Paper

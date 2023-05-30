@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+
 import { colorPalette } from 'ui';
 
 const sectorLists = ['Company', 'Sector', 'Individuals', 'Sector', 'Company', 'Individuals', 'Company', 'Individuals'];
