@@ -13,12 +13,12 @@ const AppUsersTab = () => {
                 border={'1px solid rgba(0, 0, 0, 0.08)'}
                 borderRadius={'12px'}
                 p={'20px'}
-                gap={'14px'}
                 bgcolor={colorPalette.white}
             >
                 <Stack
                     flexDirection={'row'}
                     justifyContent={'space-between'}
+                    pb={'14px'}
                 >
 
                     <Box
@@ -59,25 +59,50 @@ const AppUsersTab = () => {
 
                 <Typography
                     fontSize={14}
-                    fontWeight={400}
-                    lineHeight={'22px'}
-                    maxWidth={'90%'}
+                    fontWeight={500}
+                    pb={'6px'}
                     sx={{ opacity: .8 }}
                 >
-                    Lorem ipsum dolor sit amet consectetur. Volutpat velit condimentum ligula donec sagittis elit non in sed. Duis nunc fringilla non nulla sagittis. Ante tortor pellentesque placerat nunc varius vestibulum diam cursus.
+                    {`From: Johnwick`}
                 </Typography>
+                <Typography
+                    fontSize={14}
+                    fontWeight={500}
+                    pb={'16px'}
+                    sx={{ opacity: .8 }}
+                >
+                    {`Email: Johnwick@gmail.com`}
+                </Typography>
+
+                <Box
+                    bgcolor={colorPalette.gray15}
+                    p={'20px'}
+                >
+
+                    <Typography
+                        fontSize={14}
+                        fontWeight={400}
+                        lineHeight={'22px'}
+                        maxWidth={'90%'}
+                        sx={{ opacity: .8 }}
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue montes, mauris, consectetur cursus lacus,
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue montes, mauris, consectetur cursus lacus
+                    </Typography>
+
+                </Box>
             </Stack>
 
             <Stack
                 border={'1px solid rgba(0, 0, 0, 0.08)'}
                 borderRadius={'12px'}
                 p={'20px'}
-                gap={'14px'}
                 bgcolor={colorPalette.white}
             >
                 <Stack
                     flexDirection={'row'}
                     justifyContent={'space-between'}
+                    pb={'14px'}
                 >
 
                     <Box
@@ -118,13 +143,37 @@ const AppUsersTab = () => {
 
                 <Typography
                     fontSize={14}
-                    fontWeight={400}
-                    lineHeight={'22px'}
-                    maxWidth={'90%'}
+                    fontWeight={500}
+                    pb={'6px'}
                     sx={{ opacity: .8 }}
                 >
-                    Lorem ipsum dolor sit amet consectetur. Volutpat velit condimentum ligula donec sagittis elit non in sed. Duis nunc fringilla non nulla sagittis. Ante tortor pellentesque placerat nunc varius vestibulum diam cursus.
+                    {`From: Johnwick`}
                 </Typography>
+                <Typography
+                    fontSize={14}
+                    fontWeight={500}
+                    pb={'16px'}
+                    sx={{ opacity: .8 }}
+                >
+                    {`Email: Johnwick@gmail.com`}
+                </Typography>
+
+                <Box
+                    bgcolor={colorPalette.gray15}
+                    p={'20px'}
+                >
+
+                    <Typography
+                        fontSize={14}
+                        fontWeight={400}
+                        lineHeight={'22px'}
+                        maxWidth={'90%'}
+                        sx={{ opacity: .8 }}
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue montes, mauris, consectetur cursus lacus,
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue montes, mauris, consectetur cursus lacus
+                    </Typography>
+                </Box>
             </Stack>
 
         </Stack>
