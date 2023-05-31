@@ -10,12 +10,14 @@ import SuperAdminTab from './superAdmin';
 import ReminderTab from './reminder';
 import VoucherClaimTab from './voucherClaim';
 import PendingPointTab from './pendingPoint';
+import AppUsersTab from './appUsers';
 
 const renderTabs: { [key: string]: any } = {
     '1': <SuperAdminTab />,
     '2': <ReminderTab />,
     '3': <VoucherClaimTab />,
     '4': <PendingPointTab />,
+    '5': <AppUsersTab />,
 };
 
 const NotifTabs = () => {
