@@ -8,11 +8,12 @@ import {
 } from 'ui';
 import SuperAdminTab from './superAdmin';
 import ReminderTab from './reminder';
+import VoucherClaimTab from './voucherClaim';
 
 const renderTabs: { [key: string]: any } = {
     '1': <SuperAdminTab />,
     '2': <ReminderTab />,
-    '3': <SuperAdminTab />,
+    '3': <VoucherClaimTab />,
 };
 
 const NotifTabs = () => {
