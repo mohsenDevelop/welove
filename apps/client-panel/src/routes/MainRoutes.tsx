@@ -20,7 +20,6 @@ import {
     NEWS_DELETE_URL,
     NEWS_URL_COPY_ITEM_URL,
     NEWS_URL_VIDOE_PHOTO_URL,
-    NOTIFICATION_COMPOSE_URL,
     SET_PASSWORD_URL,
     APP_SET_PASSWORD_URL,
     QRCODE_URL,
@@ -73,7 +72,6 @@ const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'));
 const JobsPage = lazy(() => import('@pages/jobs'));
 const NotificationsPage = lazy(() => import('@pages/notifications'));
-const NotifComposePage = lazy(() => import('@pages/notifications/components/compose'));
 const ContactSupportPage = lazy(() => import('@pages/contactSupport'));
 const EmployeesPage = lazy(() => import('@pages/employees'));
 const EmployeesProfilePage = lazy(() => import('@pages/employees/components/employeeProfile'));
@@ -215,14 +213,6 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <NotificationsPage />
-                    </Suspense>
-                )
-            },
-            {
-                path: NOTIFICATION_COMPOSE_URL,
-                element: (
-                    <Suspense fallback={<LoadingCircle />}>
-                        <NotifComposePage />
                     </Suspense>
                 )
             },
