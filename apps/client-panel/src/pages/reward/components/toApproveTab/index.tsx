@@ -9,7 +9,7 @@ import {
     colorPalette,
     ClientPagination
 } from 'ui';
-import { REWARD_APPROVE_URL } from '@config/urls';
+import { REWARD_APPROVE_URL, REWARD_DECLINE_URL } from '@config/urls';
 
 const approveList = [
     {
@@ -114,6 +114,7 @@ const ToApproveTab = () => {
                                         borderColor={'rgba(39, 64, 82, 0.12)'}
                                         LabelColor={colorPalette.gray900}
                                         fullWidth={true}
+                                        onClick={() => navigate(`${REWARD_DECLINE_URL}/2`)}
                                     >
                                         Decline
                                     </Button>

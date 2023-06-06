@@ -14,6 +14,7 @@ export const ADD_CLIENT_ADMIN_URL = '/panel/client/create/admin/add';
 // Reward
 export const REWARD_URL = '/panel/rewards';
 export const REWARD_APPROVE_URL = '/panel/rewards/approve';
+export const REWARD_DECLINE_URL = '/panel/rewards/decline';
 // Leadership Board
 export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
 export const LEADER_BORD_URL = '/panel/leaderbord';
