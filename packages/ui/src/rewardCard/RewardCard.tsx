@@ -237,16 +237,24 @@ export const RewardCard: FC<RewardCardProps> = ({
                     </Stack>
                 </Stack>
 
-                <Divider flexItem={true} variant={'fullWidth'} />
+                {
+                    actions ?
+                        <>
+                            <Divider flexItem={true} variant={'fullWidth'} />
 
-                <Stack
-                    alignItems={'center'}
-                    justifyContent={'center'}
-                    p={'0px 24px'}
-                    height={83}
-                >
-                    {actions}
-                </Stack>
+                            <Stack
+                                alignItems={'center'}
+                                justifyContent={'center'}
+                                p={'0px 24px'}
+                                height={83}
+                            >
+                                {actions}
+                            </Stack>
+                        </>
+                        :
+                        null
+                }
+
             </Stack>
         </Stack>
     );

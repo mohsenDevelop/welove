@@ -29,7 +29,8 @@ import {
     EMPLOYEES_DISABLED_URL,
     EMPLOYEES_BULKUPLOAD_URL,
     EMPLOYEES_PROFILE_URL,
-    EMPLOYEES_PROFILE_POINT_URL
+    EMPLOYEES_PROFILE_POINT_URL,
+    REWARD_APPROVE_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -42,6 +43,7 @@ import EmployeeBulkUploadDialog from '@pages/employees/components/employeeBulkUp
 import EmployeeDeleteDialog from '@pages/employees/components/employeeDelete';
 import EmployeeDisabledDialog from '@pages/employees/components/employeeDisabled';
 import AddEmployeePointDialog from '@pages/employees/components/employeeProfile/AddEmployeePointDialog';
+import ApprovedDialog from '@pages/reward/components/approvedDialog';
 
 const LoadingCircle = memo(() => (
     <CircularProgress
@@ -182,8 +184,16 @@ const MainRoutes = createBrowserRouter([
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <Rewards />
+                        <Outlet />
                     </Suspense>
                 ),
+                children: [
+
+                    {
+                        path: `${REWARD_APPROVE_URL}/:id`,
+                        element: <ApprovedDialog />
+                    },
+                ],
 
             },
             {

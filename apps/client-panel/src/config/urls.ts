@@ -13,8 +13,7 @@ export const DELETE_CLIENT_ADMIN_URL = '/panel/client/create/admin/delete';
 export const ADD_CLIENT_ADMIN_URL = '/panel/client/create/admin/add';
 // Reward
 export const REWARD_URL = '/panel/rewards';
-export const REWARD_CLEINT_URL = '/panel/rewards/clients';
-export const REWARD_COMPANY_URL = '/panel/rewards/company';
+export const REWARD_APPROVE_URL = '/panel/rewards/approve';
 // Leadership Board
 export const LEADERSHIP_BOARD_URL = '/panel/leadership-board';
 export const LEADER_BORD_URL = '/panel/leaderbord';
