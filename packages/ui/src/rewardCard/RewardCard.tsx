@@ -35,8 +35,7 @@ export const RewardCard: FC<RewardCardProps> = ({
     actions
 }) => {
     return (
-        <Stack
-        >
+        <Stack>
             <Stack
                 flexDirection={'row'}
                 alignItems={'center'}
@@ -95,6 +94,7 @@ export const RewardCard: FC<RewardCardProps> = ({
                 border={'1px solid rgba(0, 0, 0, 0.08)'}
                 boxShadow={'0px 1px 12px rgba(168, 168, 168, 0.08)'}
                 borderRadius={'0px 0px 12px 12px'}
+                bgcolor={colorPalette.white}
             >
                 <Stack
                     p={'30px 24px'}

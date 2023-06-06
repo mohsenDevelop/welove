@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 import { commonTypes } from '@models/common';
 import {
     RewardCard,
-    TablePagination,
-    Button,
+    ClientPagination,
     colorPalette
 } from 'ui';
+import { DoneBoldIcon } from 'assets-ui';
 
 const approveList = [
     {
@@ -67,7 +67,8 @@ const approveList = [
     },
 ];
 
-const ToApprove = () => {
+
+const ClaimsTab = () => {
 
     const [filters, setFilters] = useState<commonTypes.Filters>({ page: 1, limit: 20 });
 
@@ -89,30 +90,25 @@ const ToApprove = () => {
                             paltform={_el.paltform}
                             employee={_el.employee}
                             referral={_el.referral}
-                            theme={'darkBlue'}
+                            theme={'lightBlue'}
                             actions={(
                                 <Stack
-                                    width={'100%'}
                                     flexDirection={'row'}
                                     alignItems={'center'}
-                                    gap={'23px'}
+                                    justifyContent={'center'}
+                                    width={'100%'}
+                                    height={44}
+                                    bgcolor={'rgba(179, 252, 195, 0.4)'}
+                                    borderRadius={'176px'}
                                 >
-                                    <Button
-                                        variant={'contained'}
-                                        backgroundColor={colorPalette.purple}
-                                        LabelColor={colorPalette.white}
-                                        fullWidth={true}
+                                    <DoneBoldIcon />
+                                    <Typography
+                                        fontSize={14}
+                                        fontWeight={500}
+                                        color={colorPalette.green500}
                                     >
-                                        Approve reward
-                                    </Button>
-                                    <Button
-                                        variant={'outlined'}
-                                        borderColor={'rgba(39, 64, 82, 0.12)'}
-                                        LabelColor={colorPalette.gray900}
-                                        fullWidth={true}
-                                    >
-                                        Decline
-                                    </Button>
+                                        Approved
+                                    </Typography>
                                 </Stack>
                             )}
                         />
@@ -120,24 +116,22 @@ const ToApprove = () => {
                 }
             </Stack>
 
-            <Box
-                display={'flex'}
-                justifyContent={'flex-end'}
-                pt={'24px'}
+            <Stack
+                alignItems={'flex-end'}
+                pt={'33px'}
             >
-                <TablePagination
-                    // count={Math.ceil(paginationData?.total / UtilsHelper.tableRowCount)}
+
+                <ClientPagination
                     count={10}
                     page={filters.page ?? 1}
-                    defaultPage={1}
-                    onChange={(event: React.ChangeEvent<unknown>, page: number) => {
+                    onChange={(page: number) => {
                         setFilters((prev) => ({ ...prev, page: page }));
                     }}
-                    shape='rounded'
                 />
-            </Box>
+
+            </Stack>
         </>
     );
 };
 
-export default ToApprove;
+export default ClaimsTab;

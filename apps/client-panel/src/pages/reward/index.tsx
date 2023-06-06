@@ -1,27 +1,24 @@
 import { useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Tab from '@mui/material/Tab';
 
 import {
-    BreadCrumb,
     Tabs,
     colorPalette,
     SortMenu,
 } from 'ui';
-import {
-    REWARD_CLEINT_URL,
-    REWARD_COMPANY_URL,
-    REWARD_URL
-} from '@config/urls';
-import ToApprove from './components/toApprove';
-import Completed from './components/completed';
+import ToApproveTab from './components/toApproveTab';
+import CompletedTab from './components/completedTab';
+import ClaimsTab from './components/claimsTab';
+
+const renderTabs: { [key: string]: any } = {
+    '1': <ToApproveTab />,
+    '2': <CompletedTab />,
+    '3': <ClaimsTab />,
+};
 
 const RewardCompanyPage = () => {
-
-    const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useSearchParams();
 
     const [tabValue, setTabValue] = useState('1');
 
@@ -32,34 +29,29 @@ const RewardCompanyPage = () => {
     return (
         <Stack>
 
-            <BreadCrumb
-                list={[
-                    { link: REWARD_URL, name: 'Rewards' },
-                    { link: REWARD_CLEINT_URL, name: 'Rewards by clients' },
-                    { link: REWARD_COMPANY_URL, name: `${searchParams.get('company') ?? ''}- Rewards` },
-                ]}
-                onClick={(link: string) => navigate(link)}
-            />
-            <Typography variant={'h1'} p={'12px 0px 24px 0px'}>{`${searchParams.get('company') ?? ''}- Rewards`}</Typography>
+            <Typography variant={'h1'} p={'24px 0px'}>Rewards</Typography>
 
             <Stack
                 flexDirection={'row'}
                 alignItems={'center'}
                 justifyContent={'space-between'}
+                borderBottom={'1px solid rgba(0, 0, 0, 0.08);'}
+
             >
                 <Tabs
-                    indicatecolor={colorPalette.purple}
+                    indicatecolor={colorPalette.pink200}
                     value={tabValue}
                     onChange={handleChangeTabs}
                 >
                     <Tab value={'1'} label={'To Aprove (34)'} />
                     <Tab value={'2'} label={'Completed (134)'} />
+                    <Tab value={'3'} label={'Claims (24)'} />
                 </Tabs>
                 <SortMenu />
             </Stack>
 
             {
-                tabValue === '1' ? <ToApprove /> : <Completed />
+                renderTabs[tabValue]
             }
 
         </Stack>

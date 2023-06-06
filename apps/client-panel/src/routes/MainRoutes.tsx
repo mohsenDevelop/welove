@@ -11,8 +11,6 @@ import {
     NEWS_URL,
     CONTACT_SUPPORT_URL,
     SETTING_URL,
-    REWARD_CLEINT_URL,
-    REWARD_COMPANY_URL,
     CHNAGE_PASSWORD_URL,
     DELETE_ADMIN_URL,
     POLICY_URL,
@@ -62,9 +60,7 @@ const SetPasswordPage = lazy(() => import('@pages/setPassword'));
 const AppSetPasswordPage = lazy(() => import('@pages/appSetPassword'));
 const DashboardPage = lazy(() => import('@pages/dashboard'));
 const LeaderBoardPage = lazy(() => import('@pages/leaderBoard'));
-const RewardsPage = lazy(() => import('@pages/rewards'));
-const RewardsClientPage = lazy(() => import('@pages/rewardsClient'));
-const RewardsCompanyPage = lazy(() => import('@pages/rewardCompany'));
+const Rewards = lazy(() => import('@pages/reward'));
 const SettingPage = lazy(() => import('@pages/setting'));
 const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/policy'));
 const NewsPage = lazy(() => import('@pages/news'));
@@ -185,25 +181,7 @@ const MainRoutes = createBrowserRouter([
                 path: REWARD_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
-                        <RewardsPage />
-                    </Suspense>
-                ),
-
-            },
-            {
-                path: REWARD_CLEINT_URL,
-                element: (
-                    <Suspense fallback={<LoadingCircle />}>
-                        <RewardsClientPage />
-                    </Suspense>
-                ),
-
-            },
-            {
-                path: `${REWARD_COMPANY_URL}/:id`,
-                element: (
-                    <Suspense fallback={<LoadingCircle />}>
-                        <RewardsCompanyPage />
+                        <Rewards />
                     </Suspense>
                 ),
 
