@@ -123,6 +123,7 @@ const CompletedTab = () => {
                 <ClientPagination
                     count={10}
                     page={filters.page ?? 1}
+                    sx={{ bgcolor: colorPalette.white }}
                     onChange={(page: number) => {
                         setFilters((prev) => ({ ...prev, page: page }));
                     }}
