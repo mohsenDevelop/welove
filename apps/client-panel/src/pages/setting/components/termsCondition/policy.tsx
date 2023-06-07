@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -9,7 +9,8 @@ import {
     Paper,
     Button,
     colorPalette,
-    BackButton
+    BackButton,
+    TextField
 } from 'ui';
 
 const policy = () => {
@@ -17,6 +18,8 @@ const policy = () => {
     const editor = useRef<SunEditorCore>();
 
     const navigate = useNavigate();
+
+    const [values, setValues] = useState<{ title: string, description: string }>({ title: '', description: '' });
 
     return (
         <Stack>
@@ -30,11 +33,27 @@ const policy = () => {
             <Paper
                 sx={{ p: '30px 49px 30px 24px', maxWidth: 872 }}
             >
+                <Stack
+                    gap={'10px'}
+                    mb={'24px'}
+                >
+                    <Typography fontSize={16} fontWeight={500}>Title</Typography>
+                    <TextField
+                        placeholder={'Enter your title'}
+                        fullWidth={true}
+                        onChange={(event) => setValues({ ...values, title: event.target.value })}
+                        value={values.title}
+                        inputProps={{
+                            autoComplete: 'off',
+                        }}
+                    />
+                </Stack>
+
                 <Typography fontSize={16} fontWeight={500} pb={'10px'}>Description</Typography>
 
                 <SunEditor
                     getSunEditorInstance={(sunEditor: SunEditorCore) => { editor.current = sunEditor; }}
-                    onChange={(_val) => { console.log(_val); }}
+                    onChange={(_val) => setValues({ ...values, description: _val })}
                     setOptions={{
                         buttonList: [
                             ['undo', 'redo'],
