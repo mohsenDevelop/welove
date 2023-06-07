@@ -31,7 +31,8 @@ import {
     EMPLOYEES_PROFILE_URL,
     EMPLOYEES_PROFILE_POINT_URL,
     REWARD_APPROVE_URL,
-    REWARD_DECLINE_URL
+    REWARD_DECLINE_URL,
+    POLICY_ADMIN_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -67,6 +68,7 @@ const LeaderBoardPage = lazy(() => import('@pages/leaderBoard'));
 const Rewards = lazy(() => import('@pages/reward'));
 const SettingPage = lazy(() => import('@pages/setting'));
 const PolicyPage = lazy(() => import('@pages/setting/components/termsCondition/policy'));
+const AdminPolicyPage = lazy(() => import('@pages/setting/components/termsCondition/AdminPolicy'));
 const NewsPage = lazy(() => import('@pages/news'));
 const NewsCopyItemPage = lazy(() => import('@pages/news/components/copyItem'));
 const VideoOrPhotoPage = lazy(() => import('@pages/news/components/videoOrPhoto'));
@@ -273,10 +275,18 @@ const MainRoutes = createBrowserRouter([
                 ],
             },
             {
-                path: `${POLICY_URL}/:id`,
+                path: POLICY_URL,
                 element: (
                     <Suspense fallback={<LoadingCircle />}>
                         <PolicyPage />
+                    </Suspense>
+                ),
+            },
+            {
+                path: POLICY_ADMIN_URL,
+                element: (
+                    <Suspense fallback={<LoadingCircle />}>
+                        <AdminPolicyPage />
                     </Suspense>
                 ),
             },

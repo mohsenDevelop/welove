@@ -1,36 +1,31 @@
 import { useRef } from 'react';
-import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SunEditor from 'suneditor-react';
 import SunEditorCore from 'suneditor/src/lib/core';
 
 import {
-    BreadCrumb,
     Paper,
     Button,
-    colorPalette
+    colorPalette,
+    BackButton
 } from 'ui';
-import { SETTING_URL } from '@config/urls';
 
 const policy = () => {
 
     const editor = useRef<SunEditorCore>();
 
     const navigate = useNavigate();
-    const location = useLocation();
-    const [searchParams, setSearchParams] = useSearchParams();
 
     return (
         <Stack>
-            <BreadCrumb
-                list={[
-                    { link: SETTING_URL, name: 'Settings' },
-                    { link: `${location.pathname}${location.search}`, name: `${searchParams.get('title') ?? ''}` },
-                ]}
-                onClick={(link: string) => navigate(link)}
+
+            <BackButton
+                onClick={(event: any) => navigate(-1)}
             />
-            <Typography variant={'h1'} p={'12px 0px 24px 0px'}>{`${searchParams.get('title') ?? ''}`}</Typography>
+
+            <Typography variant={'h1'} p={'12px 0px 24px 0px'}>Edit Terms and Conditions</Typography>
 
             <Paper
                 sx={{ p: '30px 49px 30px 24px', maxWidth: 872 }}
@@ -77,7 +72,7 @@ const policy = () => {
                 >
                     <Button
                         variant={'contained'}
-                        backgroundColor={colorPalette.purple}
+                        backgroundColor={colorPalette.pink200}
                         LabelColor={colorPalette.white}
                         // disabled={!isValid}
                         sx={{ width: 171 }}

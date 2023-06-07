@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 import { Button, colorPalette } from 'ui';
 import { EditIcon } from 'assets-ui';
-import { POLICY_URL } from '@config/urls';
+import { POLICY_ADMIN_URL, POLICY_URL } from '@config/urls';
 
 const TermsConditionTab = () => {
 
@@ -20,6 +20,9 @@ const TermsConditionTab = () => {
                 border={'1px solid rgba(0, 0, 0, 0.08)'}
                 borderRadius={'12px'}
                 p={'24px 17px 24px 24px'}
+                bgcolor={colorPalette.white}
+                sx={{ cursor: 'pointer' }}
+                onClick={() => navigate(POLICY_ADMIN_URL)}
             >
                 <Stack
                     flexDirection={'row'}
@@ -32,18 +35,9 @@ const TermsConditionTab = () => {
                         fontSize={18}
                         fontWeight={600}
                     >
-                        Terms & Conditions
+                        WeLove9am
                     </Typography>
 
-                    <Button
-                        variant={'outlined'}
-                        borderColor={'rgba(39, 64, 82, 0.15)'}
-                        LabelColor={colorPalette.purple}
-                        startIcon={<EditIcon />}
-                        onClick={() => navigate(`${POLICY_URL}/1?title=Edit terms and conditions`)}
-                    >
-                        Edit
-                    </Button>
                 </Stack>
 
                 <Typography
@@ -63,6 +57,7 @@ const TermsConditionTab = () => {
                 border={'1px solid rgba(0, 0, 0, 0.08)'}
                 borderRadius={'12px'}
                 p={'24px 17px 24px 24px'}
+                bgcolor={colorPalette.white}
             >
                 <Stack
                     flexDirection={'row'}
@@ -75,15 +70,22 @@ const TermsConditionTab = () => {
                         fontSize={18}
                         fontWeight={600}
                     >
-                        Privacy Policy
+                        Client
                     </Typography>
 
                     <Button
                         variant={'outlined'}
                         borderColor={'rgba(39, 64, 82, 0.15)'}
-                        LabelColor={colorPalette.purple}
+                        LabelColor={colorPalette.pink200}
                         startIcon={<EditIcon />}
-                        onClick={() => navigate(`${POLICY_URL}/2?title=Edit Privacy Policy`)}
+                        onClick={() => navigate(POLICY_URL)}
+                        sx={{
+                            '& .MuiButton-startIcon': {
+                                '& svg > path': {
+                                    stroke: colorPalette.pink200
+                                }
+                            }
+                        }}
                     >
                         Edit
                     </Button>

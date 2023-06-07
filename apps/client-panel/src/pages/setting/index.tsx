@@ -16,8 +16,8 @@ import TermsConditionTab from './components/termsCondition';
 const TabsPage: { [key: string]: any } = {
     '1': <MyAccountTab />,
     '2': <PushNotifsTab />,
-    '3': <AdminsTab />,
-    '4': <TermsConditionTab />
+    '3': <TermsConditionTab />,
+    '4': <AdminsTab />,
 };
 
 const SettingPage = () => {
@@ -30,28 +30,18 @@ const SettingPage = () => {
 
     return (
         <Stack>
-            <SettingFillIcon />
-            <Typography
-                variant={'h1'}
-                pt={'24px'}
-                pb={'12px'}
-                fontSize={14}
-                fontWeight={600}
-                sx={{ opacity: .7 }}
-            >
-                Super admin
-            </Typography>
-            <Typography variant={'h1'} pb={'24px'}>Settings</Typography>
+
+            <Typography variant={'h1'} p={'24px 0px'}>Leaderboard</Typography>
 
             <Tabs
-                indicatecolor={colorPalette.purple}
+                indicatecolor={colorPalette.pink200}
                 value={tabValue}
                 onChange={handleChangeTabs}
             >
-                <Tab value={'1'} label={'My Account'} />
-                <Tab value={'2'} label={'Push notifications'} />
-                <Tab value={'3'} label={'Admins'} />
-                <Tab value={'4'} label={'Terms & conditions'} />
+                <Tab value={'1'} label={'Reward Settings'} />
+                <Tab value={'2'} label={'Notifications'} />
+                <Tab value={'3'} label={'Terms & Conditions'} />
+                <Tab value={'4'} label={'Manage admins'} />
             </Tabs>
 
             {

@@ -36,6 +36,7 @@ export const CHNAGE_PASSWORD_URL = '/panel/setting/change-password';
 export const DELETE_ADMIN_URL = '/panel/setting/admin/delete';
 export const CREATE_ADMIN_URL = '/panel/setting/admin/create';
 export const POLICY_URL = '/panel/setting/policy';
+export const POLICY_ADMIN_URL = '/panel/setting/admin/policy';
 // Jobs
 export const JOBS_URL = '/panel/jobs';
 // Employees
