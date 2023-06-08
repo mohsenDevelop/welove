@@ -18,6 +18,7 @@ const TabsPage: { [key: string]: any } = {
     '2': <PushNotifsTab />,
     '3': <TermsConditionTab />,
     '4': <AdminsTab />,
+    '5': <MyAccountTab />,
 };
 
 const SettingPage = () => {
@@ -42,6 +43,7 @@ const SettingPage = () => {
                 <Tab value={'2'} label={'Notifications'} />
                 <Tab value={'3'} label={'Terms & Conditions'} />
                 <Tab value={'4'} label={'Manage admins'} />
+                <Tab value={'5'} label={'My Account'} />
             </Tabs>
 
             {

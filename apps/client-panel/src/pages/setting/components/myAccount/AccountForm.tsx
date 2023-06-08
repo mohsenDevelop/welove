@@ -125,7 +125,7 @@ const AccountForm = () => {
                             <Button
                                 variant={'contained'}
                                 type={'submit'}
-                                backgroundColor={colorPalette.purple}
+                                backgroundColor={colorPalette.pink200}
                                 LabelColor={colorPalette.white}
                                 disabled={!isValid}
                                 sx={{ width: 93 }}
