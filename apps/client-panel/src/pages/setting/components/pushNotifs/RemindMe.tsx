@@ -41,14 +41,14 @@ const RemindMe = () => {
                         fontSize={18}
                         fontWeight={600}
                     >
-                        Remind me for no shares
+                        Remind me to authorise pending points after:
                     </Typography>
 
                     <Typography
                         fontSize={14}
                         fontWeight={400}
                     >
-                        Lorem ipsum
+                        Know when your video has been watched and interacted with.
                     </Typography>
                 </Stack>
             </Stack>
