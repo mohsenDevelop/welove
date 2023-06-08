@@ -16,8 +16,23 @@ const TableHeader = () => {
                     align={'left'}
                     sx={{ color: colorPalette.blue800 }}
                 >
-                    Full name
+                    Admin
                 </TableCell>
+
+                <TableCell
+                    align={'left'}
+                    sx={{ color: colorPalette.blue800 }}
+                >
+                    Date added
+                </TableCell>
+
+                <TableCell
+                    align={'left'}
+                    sx={{ color: colorPalette.blue800 }}
+                >
+                    Email address
+                </TableCell>
+
 
             </TableRow>
 

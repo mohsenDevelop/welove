@@ -46,7 +46,8 @@ const Table = () => {
                                             borderBottom: 'unset',
                                             pb: '20px',
                                             bgcolor: _index % 2 === 0 ? colorPalette.pink10 : 'inherit',
-                                            borderRadius: '10px'
+                                            ':first-child': { borderRadius: '10px 0px 0px 10px' },
+                                            ':last-child': { borderRadius: '0px 10px 10px 0px' },
                                         }
                                     }}
                             >

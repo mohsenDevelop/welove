@@ -3,9 +3,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { Paper, Button, colorPalette } from 'ui';
-import Table from './Table';
-import SearchForm from './SearchForm';
 import { CREATE_ADMIN_URL } from '@config/urls';
+import Table from './Table';
 
 const AdminsTab = () => {
 
@@ -16,7 +15,7 @@ const AdminsTab = () => {
             pt={'24px'}
         >
             <Paper
-                sx={{ p: '42px 24px' }}
+                sx={{ p: '30px 24px' }}
             >
                 <Stack
                     flexDirection={'row'}
@@ -28,23 +27,20 @@ const AdminsTab = () => {
                         variant={'h1'}
                         fontSize={17}
                         fontWeight={600}
-                        pb={'39px'}
                     >
-                        Admins list
+                        Admins list (4)
                     </Typography>
 
                     <Button
                         variant={'contained'}
-                        backgroundColor={colorPalette.purple}
+                        backgroundColor={colorPalette.blue800}
                         LabelColor={colorPalette.white}
-                        sx={{ width: 114 }}
+                        sx={{ width: 144, height: 40 }}
                         onClick={() => navigate(CREATE_ADMIN_URL)}
                     >
-                        Add admin
+                        Add Admin
                     </Button>
                 </Stack>
-
-                <SearchForm onSearch={(val: string) => { return; }} />
 
                 <Table />
 
