@@ -33,17 +33,24 @@ const SettingPage = () => {
 
             <Typography variant={'h1'} p={'24px 0px'}>Leaderboard</Typography>
 
-            <Tabs
-                indicatecolor={colorPalette.pink200}
-                value={tabValue}
-                onChange={handleChangeTabs}
+            <Stack
+                flexDirection={'row'}
+                borderBottom={'1px solid rgba(0, 0, 0, 0.08);'}
             >
-                <Tab value={'1'} label={'Reward Settings'} />
-                <Tab value={'2'} label={'Notifications'} />
-                <Tab value={'3'} label={'Terms & Conditions'} />
-                <Tab value={'4'} label={'Manage admins'} />
-                <Tab value={'5'} label={'My Account'} />
-            </Tabs>
+                <Tabs
+
+                    indicatecolor={colorPalette.pink200}
+                    value={tabValue}
+                    onChange={handleChangeTabs}
+                >
+                    <Tab value={'1'} label={'Reward Settings'} />
+                    <Tab value={'2'} label={'Notifications'} />
+                    <Tab value={'3'} label={'Terms & Conditions'} />
+                    <Tab value={'4'} label={'Manage admins'} />
+                    <Tab value={'5'} label={'My Account'} />
+                </Tabs>
+
+            </Stack>
 
             {
                 tabValue ? TabsPage[tabValue] : null
