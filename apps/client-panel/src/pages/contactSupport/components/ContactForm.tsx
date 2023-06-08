@@ -115,7 +115,7 @@ const ContactForm = () => {
                     <Button
                         variant={'contained'}
                         LabelColor={colorPalette.white}
-                        backgroundColor={colorPalette.purple}
+                        backgroundColor={colorPalette.pink200}
                         fullWidth={false}
                         disabled={!isValid}
                         sx={{ width: 155 }}
