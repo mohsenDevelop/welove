@@ -164,7 +164,7 @@ const LoginForm = () => {
                             variant={'contained'}
                             type={'submit'}
                             fullWidth={true}
-                            backgroundColor={colorPalette.purple}
+                            backgroundColor={colorPalette.pink200}
                             disabled={!isValid}
                             sx={{ mt: '5px', height: 54 }}
                         >
