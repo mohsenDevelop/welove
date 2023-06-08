@@ -3,7 +3,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Tab from '@mui/material/Tab';
 
-import { SettingFillIcon } from 'assets-ui';
 import {
     Tabs,
     colorPalette,
