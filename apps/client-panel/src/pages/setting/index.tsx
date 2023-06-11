@@ -11,9 +11,10 @@ import MyAccountTab from './components/myAccount';
 import PushNotifsTab from './components/pushNotifs';
 import AdminsTab from './components/admins';
 import TermsConditionTab from './components/termsCondition';
+import RewardSettingTab from './components/rewardSetting';
 
 const TabsPage: { [key: string]: any } = {
-    '1': <MyAccountTab />,
+    '1': <RewardSettingTab />,
     '2': <PushNotifsTab />,
     '3': <TermsConditionTab />,
     '4': <AdminsTab />,
