@@ -163,7 +163,7 @@ const NotifList = () => {
                     alignItems={'center'}
                     justifyContent={'space-between'}
                     p={'34px 95px 34px 24px'}
-                    bgcolor={colorPalette.gray10}
+                    bgcolor={colorPalette.white}
                     borderRadius={'12px'}
                 >
                     <Typography
@@ -232,7 +232,7 @@ const NotifList = () => {
                     alignItems={'center'}
                     justifyContent={'space-between'}
                     p={'34px 95px 34px 24px'}
-                    bgcolor={colorPalette.gray10}
+                    bgcolor={colorPalette.white}
                     borderRadius={'12px'}
                 >
                     <Typography
