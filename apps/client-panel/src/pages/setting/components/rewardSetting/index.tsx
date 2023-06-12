@@ -1,5 +1,7 @@
 import Stack from '@mui/material/Stack';
 import RewardSettings from './RewardSettings';
+import ShareJob from './ShareJob';
+import MinimumClaim from './MinimumClaim';
 
 const RewardSettingTab = () => {
     return (
@@ -7,6 +9,8 @@ const RewardSettingTab = () => {
             pt={'38px'}
         >
             <RewardSettings />
+            <ShareJob />
+            <MinimumClaim />
         </Stack>
     );
 };

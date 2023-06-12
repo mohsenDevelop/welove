@@ -13,7 +13,7 @@ export class Helper {
 
             // Convsert the `value` to string
             // Value += '';
-            return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
             // Return value.toLocaleString('en')
         }
         catch (e) {
