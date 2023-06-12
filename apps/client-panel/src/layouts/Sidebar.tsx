@@ -33,7 +33,7 @@ const Sidebar = () => {
                     color={colorPalette.white}
                     sx={{ opacity: .5 }}
                 >
-                    MAIN MENU
+                    Main
                 </Typography>
 
                 {
