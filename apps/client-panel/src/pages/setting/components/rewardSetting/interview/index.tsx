@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import { colorPalette } from 'ui';
 import AddInterviewButton from './AddInterviewButton';
+import InterviewItem from './InterviewItem';
 
 const InterviewStage = () => {
     return (
@@ -23,8 +24,13 @@ const InterviewStage = () => {
                     Interview’s
                 </Typography>
                 <AddInterviewButton />
-
             </Stack>
+
+            <Stack gap={'38px'}>
+                <InterviewItem />
+                <InterviewItem />
+            </Stack>
+
         </Stack>
     );
 };
