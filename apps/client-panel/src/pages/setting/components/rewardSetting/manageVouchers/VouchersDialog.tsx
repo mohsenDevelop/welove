@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useFormik, Form, FormikProvider } from 'formik';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import {
     Dialog,
     colorPalette,
-    Button
 } from 'ui';
 import { CloseIcon } from 'assets-ui';
 import AddVoucher from './AddVoucher';
@@ -15,19 +13,6 @@ import VoucherList from './VoucherList';
 const VouchersDialog = () => {
 
     const navigate = useNavigate();
-
-    const formik = useFormik({
-        initialValues: {
-            vouchers: []
-        },
-        validationSchema: {},
-        onSubmit: (values) => {
-
-            console.log({ values });
-        },
-    });
-
-    const { errors, touched, values, isValid, handleSubmit, getFieldProps } = formik;
 
     return (
         <Dialog

@@ -52,9 +52,9 @@ const AddVoucher = () => {
                                         >
                                             <Button
                                                 variant={'outlined'}
-                                                borderColor={colorPalette.red200}
+                                                borderColor={'rgba(229, 31, 55, 0.15)'}
                                                 LabelColor={colorPalette.red200}
-                                                sx={{ height: 30, width: 100, fontWeight: 600 }}
+                                                sx={{ height: 30, width: 100 }}
                                                 startIcon={<TrashTableIcon style={{ width: '18px', height: '18px' }} />}
                                                 onClick={handleDelete}
                                             >
