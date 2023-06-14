@@ -34,7 +34,8 @@ import {
     REWARD_DECLINE_URL,
     POLICY_ADMIN_URL,
     VOUCHERS_ADMIN_URL,
-    INTERVIEW_STAGE_ADMIN_URL
+    INTERVIEW_STAGE_ADMIN_URL,
+    OFFER_SETTING_ADMIN_URL
 } from '@config/urls';
 import PanelLayout from '@layouts/PanelLayout';
 import ChangePasswordDialog from '@pages/setting/components/myAccount/ChangePasswordDialog';
@@ -42,6 +43,7 @@ import DeleteAdminDialog from '../pages/setting/components/admins/DeleteAdminDia
 import AddAdminDialog from '../pages/setting/components/admins/AddAdminDialog';
 import VouchersDialog from '../pages/setting/components/rewardSetting/manageVouchers/VouchersDialog';
 import AddInterviewDialog from '../pages/setting/components/rewardSetting/interview/AddInterviewDialog';
+import EditOfferDialog from '../pages/setting/components/rewardSetting/offerSetting/EditOfferDialog';
 import NewsDeleteDialog from '../pages/news/components/NewsDeleteDialog';
 import QrCodeDialog from '@pages/qrCode';
 import EmployeeFormDialog from '@pages/employees/components/employeeForm';
@@ -283,6 +285,10 @@ const MainRoutes = createBrowserRouter([
                     {
                         path: INTERVIEW_STAGE_ADMIN_URL,
                         element: <AddInterviewDialog />
+                    },
+                    {
+                        path: OFFER_SETTING_ADMIN_URL,
+                        element: <EditOfferDialog />
                     },
                 ],
             },

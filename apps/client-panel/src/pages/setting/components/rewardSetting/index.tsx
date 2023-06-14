@@ -1,8 +1,10 @@
 import Stack from '@mui/material/Stack';
+
 import RewardSettings from './RewardSettings';
 import ShareJob from './ShareJob';
 import MinimumClaim from './MinimumClaim';
 import InterviewStage from './interview';
+import OfferSetting from './offerSetting';
 
 const RewardSettingTab = () => {
     return (
@@ -12,6 +14,7 @@ const RewardSettingTab = () => {
             <RewardSettings />
             <ShareJob />
             <InterviewStage />
+            <OfferSetting />
             <MinimumClaim />
         </Stack>
     );

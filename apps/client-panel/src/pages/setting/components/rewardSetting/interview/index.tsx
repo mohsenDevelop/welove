@@ -16,13 +16,23 @@ const InterviewStage = () => {
                 justifyItems={'center'}
                 justifyContent={'space-between'}
             >
-                <Typography
-                    color={colorPalette.blue800}
-                    fontSize={16}
-                    fontWeight={600}
-                >
-                    Interview’s
-                </Typography>
+                <Stack>
+                    <Typography
+                        color={colorPalette.blue800}
+                        fontSize={16}
+                        fontWeight={600}
+                    >
+                        Interview’s
+                    </Typography>
+                    <Typography
+                        color={colorPalette.gray550}
+                        fontSize={14}
+                        fontWeight={400}
+                        pb={'38px'}
+                    >
+                        Lorem ipsum dolor sit amet consectetur.
+                    </Typography>
+                </Stack>
                 <AddInterviewButton />
             </Stack>
 

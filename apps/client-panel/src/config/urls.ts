@@ -39,6 +39,7 @@ export const POLICY_URL = '/panel/setting/policy';
 export const POLICY_ADMIN_URL = '/panel/setting/admin/policy';
 export const VOUCHERS_ADMIN_URL = '/panel/setting/admin/vouchers';
 export const INTERVIEW_STAGE_ADMIN_URL = '/panel/setting/admin/interview-stage';
+export const OFFER_SETTING_ADMIN_URL = '/panel/setting/admin/offer-setting';
 // Jobs
 export const JOBS_URL = '/panel/jobs';
 // Employees
