@@ -76,7 +76,6 @@ const AddInterviewDialog = () => {
                 >
                     {
                         ({ handleSubmit, isValid, touched, errors, values, getFieldProps }) => {
-                            console.log({ values });
                             return (
                                 <Form
                                     onSubmit={handleSubmit}
