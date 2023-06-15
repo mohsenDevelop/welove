@@ -39,6 +39,7 @@ const LinkFormItem = () => {
 
             <TextField
                 {...getFieldProps('link')}
+                placeholder={'https://www.....'}
                 sx={{ flex: 1 }}
             />
         </Stack>
