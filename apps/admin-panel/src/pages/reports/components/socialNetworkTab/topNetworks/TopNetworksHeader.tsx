@@ -20,7 +20,7 @@ const TopNetworksHeader = () => {
                     fontSize={17}
                     fontWeight={600}
                 >
-                    Top social media by hires
+                    Top social networks by shares
                 </Typography>
 
                 <Typography

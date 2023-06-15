@@ -91,7 +91,7 @@ const LoginForm = () => {
 
                             <Typography fontSize={14} fontWeight={500} pb={''}>Password</Typography>
                             <LoginTextField
-                                placeholder={'Enter password...'}
+                                placeholder={'Enter 6 digit password...'}
                                 type={showPassword ? 'text' : 'password'}
                                 fullWidth={true}
                                 {...getFieldProps('password')}

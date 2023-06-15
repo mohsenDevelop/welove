@@ -21,7 +21,7 @@ const AdminsTab = () => {
                     flexDirection={'row'}
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    pb={'39px'}
+                    pb={'24px'}
                 >
                     <Typography
                         variant={'h1'}

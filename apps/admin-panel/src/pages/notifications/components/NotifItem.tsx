@@ -54,7 +54,7 @@ const NotifItem: FC<NotifItemProps> = ({
                         }}
                     />
                     <Typography
-                        fontSize={14}
+                        fontSize={18}
                         fontWeight={600}
                     >
                         Title Placeholde
@@ -118,6 +118,14 @@ const NotifItem: FC<NotifItemProps> = ({
                     sx={{ opacity: .8 }}
                 >
                     {`Email: ${'Johnwick@gmail.com'}`}
+                </Typography>
+
+                <Typography
+                    fontSize={14}
+                    fontWeight={500}
+                    sx={{ opacity: .8 }}
+                >
+                    {`Phone number: ${'+44 89128XXXXX'}`}
                 </Typography>
 
             </Stack>

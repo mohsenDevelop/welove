@@ -16,19 +16,18 @@ const AdminsTab = () => {
             pt={'24px'}
         >
             <Paper
-                sx={{ p: '42px 24px' }}
+                sx={{ p: '32px 24px' }}
             >
                 <Stack
                     flexDirection={'row'}
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    pb={'39px'}
+                    pb={'24px'}
                 >
                     <Typography
                         variant={'h1'}
                         fontSize={17}
                         fontWeight={600}
-                        pb={'39px'}
                     >
                         Admins list
                     </Typography>
