@@ -151,7 +151,7 @@ const NewsUploadFileMemo: FC<NewsUploadFileProps> = ({ type, onDrop, uploadedFil
                     }}
                     {...getRootProps({ className: 'dropzone' })}
                 >
-                    {uploadedFile.length ? 'Added' : 'Add'}
+                    {uploadedFile.length ? 'Uploaded' : 'Upload'}
                 </Button>
 
             </Stack>

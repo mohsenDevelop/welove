@@ -52,7 +52,7 @@ const Companies = () => {
                         fontSize={16}
                         fontWeight={500}
                     >
-                        * Choose company
+                        * Choose employee
                     </Typography>
 
                     <Typography

@@ -132,7 +132,7 @@ const ChangePasswordDialog = () => {
                             <Stack
                                 gap={'10px'}
                             >
-                                <Typography fontSize={14} fontWeight={500}>New password</Typography>
+                                <Typography fontSize={14} fontWeight={500}>Confirm new password</Typography>
                                 <TextField
                                     placeholder={''}
                                     type={showPassword.rePass ? 'text' : 'password'}
