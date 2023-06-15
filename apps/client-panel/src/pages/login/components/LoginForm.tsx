@@ -54,7 +54,7 @@ const LoginForm = () => {
                         lineHeight={'33px'}
                         textAlign={'center'}
                         variant={'h1'}
-                        pb={'44px'}
+                        pb={'24px'}
                     >
                         Lorem ipsum WeLove9Am
                     </Typography>
