@@ -121,7 +121,7 @@ const AddAdminDialog = () => {
 
                                 <Button
                                     variant={'outlined'}
-                                    borderColor={'rgba(39, 64, 82, 0.15)'}
+                                    borderColor={colorPalette.white}
                                     LabelColor={colorPalette.gray900}
                                     onClick={() => navigate(-1)}
                                 >
